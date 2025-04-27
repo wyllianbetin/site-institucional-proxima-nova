@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
@@ -39,9 +40,11 @@ const Header = () => {
     >
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center">
-          <h1 className="text-xl md:text-2xl font-bold text-proximanova-blue">
-            Próxima<span className="text-proximanova-yellow">Nova</span>
-          </h1>
+          <img 
+            src="/logo.png" 
+            alt="Próxima Nova Logo"
+            className="h-8 md:h-10 w-auto"
+          />
         </Link>
 
         <nav className="hidden md:flex space-x-8 items-center">
