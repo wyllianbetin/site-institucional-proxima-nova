@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
@@ -25,11 +24,11 @@ const Header = () => {
 
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Solutions', path: '/solutions' },
-    { name: 'Ecosystem', path: '/ecosystem' },
-    { name: 'Success Cases', path: '/success-cases' },
-    { name: 'Contact', path: '/contact' },
+    { name: 'Sobre', path: '/about' },
+    { name: 'Soluções', path: '/solutions' },
+    { name: 'Ecossistema', path: '/ecosystem' },
+    { name: 'Casos de Sucesso', path: '/success-cases' },
+    { name: 'Contato', path: '/contact' },
   ];
 
   return (
@@ -45,7 +44,6 @@ const Header = () => {
           </h1>
         </Link>
 
-        {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8 items-center">
           {navLinks.map((link) => (
             <NavLink
@@ -65,11 +63,10 @@ const Header = () => {
             className="bg-proximanova-yellow text-proximanova-blue hover:opacity-90 rounded shadow-sm whitespace-nowrap"
             size="sm"
           >
-            Get Started
+            Comece Agora
           </Button>
         </nav>
 
-        {/* Mobile Menu Button */}
         <Button
           variant="ghost"
           size="icon"
@@ -84,7 +81,6 @@ const Header = () => {
         </Button>
       </div>
 
-      {/* Mobile Navigation */}
       {isMenuOpen && (
         <nav className="md:hidden bg-white shadow-md py-4 animate-slide-in">
           <div className="container mx-auto space-y-3">
@@ -107,7 +103,7 @@ const Header = () => {
               <Button 
                 className="w-full bg-proximanova-yellow text-proximanova-blue hover:opacity-90 rounded"
               >
-                Get Started
+                Comece Agora
               </Button>
             </div>
           </div>

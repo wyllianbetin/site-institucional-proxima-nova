@@ -10,17 +10,17 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div className="text-white space-y-6 animate-fade-in">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight hero-text-shadow">
-              We transform physical stores into digital leaders
+              Transformamos lojas físicas em líderes digitais
             </h1>
             <p className="text-lg md:text-xl text-gray-100 max-w-lg">
-              A complete ecosystem to accelerate your growth on marketplaces.
+              Um ecossistema completo para acelerar seu crescimento nos marketplaces.
             </p>
             <div>
               <Link 
                 to="/contact" 
                 className="inline-flex items-center gap-2 secondary-btn"
               >
-                I want to digitalize my business
+                Quero digitalizar meu negócio
                 <ArrowRight className="h-5 w-5" />
               </Link>
             </div>

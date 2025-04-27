@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -8,12 +7,12 @@ import { Check } from 'lucide-react';
 
 const About = () => {
   const differentials = [
-    "Unique ecosystem in Brazil", 
-    "Specialized in marketplaces",
-    "Over 11 years of online sales expertise",
-    "Customized solutions for each business stage",
-    "Full support from strategy to execution",
-    "Focus on sustainable and profitable growth"
+    "Ecossistema único no Brasil", 
+    "Especializado em marketplaces",
+    "Mais de 11 anos de expertise em vendas online",
+    "Soluções personalizadas para cada estágio do negócio",
+    "Suporte completo da estratégia à execução",
+    "Foco em crescimento sustentável e lucrativo"
   ];
 
   return (
@@ -23,7 +22,7 @@ const About = () => {
       {/* Page Header */}
       <div className="bg-proximanova-blue pt-32 pb-16 md:pt-36 md:pb-20 text-white">
         <div className="container mx-auto text-center">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">About Próxima Nova</h1>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Sobre a Próxima Nova</h1>
           <div className="h-1 w-24 bg-proximanova-yellow mx-auto"></div>
         </div>
       </div>
@@ -33,22 +32,25 @@ const About = () => {
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue mb-4">Our Story</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue mb-4">Nossa História</h2>
               <div className="h-1 w-16 bg-proximanova-yellow mb-6"></div>
               <div className="space-y-4 text-gray-700">
                 <p>
-                  Próxima Nova was founded in 2012 with a clear mission: to help physical retailers 
-                  successfully navigate the digital transformation journey. What started as a small 
-                  consulting firm has grown into Brazil's leading ecosystem for marketplace success.
+                  A Próxima Nova foi fundada em 2012 com uma missão clara: ajudar varejistas 
+                  físicos a navegar com sucesso na jornada de transformação digital. O que começou 
+                  como uma pequena consultoria cresceu e se tornou o principal ecossistema do 
+                  Brasil para o sucesso em marketplaces.
                 </p>
                 <p>
-                  Over the years, we've worked with hundreds of retailers of all sizes, helping them 
-                  establish, grow, and optimize their online presence. Our focus has always been on 
-                  creating sustainable growth through strategic planning and operational excellence.
+                  Ao longo dos anos, trabalhamos com centenas de varejistas de todos os portes, 
+                  ajudando-os a estabelecer, crescer e otimizar sua presença online. Nosso foco 
+                  sempre foi criar crescimento sustentável através de planejamento estratégico e 
+                  excelência operacional.
                 </p>
                 <p>
-                  Today, Próxima Nova offers a complete set of solutions designed to address all 
-                  aspects of digital retail, from education and technology to management and operations.
+                  Hoje, a Próxima Nova oferece um conjunto completo de soluções projetadas para 
+                  abordar todos os aspectos do varejo digital, desde educação e tecnologia até 
+                  gestão e operações.
                 </p>
               </div>
             </div>
@@ -67,35 +69,37 @@ const About = () => {
       <section className="section bg-gray-50">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue mb-4">Our Purpose</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue mb-4">Nosso Propósito</h2>
             <div className="h-1 w-16 bg-proximanova-yellow mx-auto mb-6"></div>
             <p className="text-xl font-medium text-gray-700 max-w-3xl mx-auto">
-              Empowering physical retail to thrive in the digital environment.
+              Capacitar o varejo físico para prosperar no ambiente digital.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl shadow-md p-6 text-center">
               <div className="text-4xl mb-4">🎯</div>
-              <h3 className="text-xl font-semibold text-proximanova-blue mb-3">Mission</h3>
+              <h3 className="text-xl font-semibold text-proximanova-blue mb-3">Missão</h3>
               <p className="text-gray-700">
-                To provide retailers with the knowledge, tools, and support needed to succeed in the digital marketplace.
+                Fornecer aos varejistas o conhecimento, as ferramentas e o suporte necessários 
+                para ter sucesso no marketplace digital.
               </p>
             </div>
             
             <div className="bg-white rounded-xl shadow-md p-6 text-center">
               <div className="text-4xl mb-4">👁️</div>
-              <h3 className="text-xl font-semibold text-proximanova-blue mb-3">Vision</h3>
+              <h3 className="text-xl font-semibold text-proximanova-blue mb-3">Visão</h3>
               <p className="text-gray-700">
-                To be the leading digital transformation partner for retail businesses across Latin America.
+                Ser o principal parceiro de transformação digital para empresas varejistas em 
+                toda a América Latina.
               </p>
             </div>
             
             <div className="bg-white rounded-xl shadow-md p-6 text-center">
               <div className="text-4xl mb-4">💎</div>
-              <h3 className="text-xl font-semibold text-proximanova-blue mb-3">Values</h3>
+              <h3 className="text-xl font-semibold text-proximanova-blue mb-3">Valores</h3>
               <p className="text-gray-700">
-                Excellence, Innovation, Partnership, Transparency, and Results-oriented approach.
+                Excelência, Inovação, Parceria, Transparência e Foco em Resultados.
               </p>
             </div>
           </div>
@@ -105,7 +109,7 @@ const About = () => {
       {/* Key Differentials Section */}
       <section className="section bg-white">
         <div className="container mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue mb-4">Key Differentials</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue mb-4">Diferenciais</h2>
           <div className="h-1 w-16 bg-proximanova-yellow mb-10"></div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
@@ -122,8 +126,8 @@ const About = () => {
       </section>
       
       <CallToAction 
-        title="Want to learn more about how we can help your business?"
-        buttonText="Get in touch"
+        title="Quer saber mais sobre como podemos ajudar seu negócio?"
+        buttonText="Entre em contato"
         buttonLink="/contact"
       />
       

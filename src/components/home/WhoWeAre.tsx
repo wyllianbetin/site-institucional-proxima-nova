@@ -11,12 +11,12 @@ const WhoWeAre = () => {
             <Users className="h-6 w-6 text-proximanova-blue" />
           </div>
           <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue mb-3">
-            Who We Are
+            Quem Somos
           </h2>
           <div className="h-1 w-20 bg-proximanova-yellow mb-6"></div>
           <p className="text-lg max-w-3xl mx-auto text-gray-700">
-            Experts in connecting physical retail to the digital world. With over 11 years of online sales expertise, 
-            we've developed a unique ecosystem in Brazil specialized in marketplaces.
+            Especialistas em conectar o varejo físico ao mundo digital. Com mais de 11 anos de experiência 
+            em vendas online, desenvolvemos um ecossistema único no Brasil especializado em marketplaces.
           </p>
         </div>
         
@@ -25,24 +25,24 @@ const WhoWeAre = () => {
             <div className="h-20 w-20 rounded-full bg-proximanova-blue/10 flex items-center justify-center mx-auto mb-4">
               <span className="text-3xl font-bold text-proximanova-blue">11+</span>
             </div>
-            <h3 className="text-xl font-semibold mb-2">Years of Experience</h3>
-            <p className="text-gray-600">Over a decade of marketplace expertise</p>
+            <h3 className="text-xl font-semibold mb-2">Anos de Experiência</h3>
+            <p className="text-gray-600">Mais de uma década de expertise em marketplace</p>
           </div>
           
           <div className="text-center">
             <div className="h-20 w-20 rounded-full bg-proximanova-blue/10 flex items-center justify-center mx-auto mb-4">
               <span className="text-3xl font-bold text-proximanova-blue">300+</span>
             </div>
-            <h3 className="text-xl font-semibold mb-2">Businesses Transformed</h3>
-            <p className="text-gray-600">Retailers that grew with our solutions</p>
+            <h3 className="text-xl font-semibold mb-2">Negócios Transformados</h3>
+            <p className="text-gray-600">Varejistas que cresceram com nossas soluções</p>
           </div>
           
           <div className="text-center">
             <div className="h-20 w-20 rounded-full bg-proximanova-blue/10 flex items-center justify-center mx-auto mb-4">
-              <span className="text-3xl font-bold text-proximanova-blue">1st</span>
+              <span className="text-3xl font-bold text-proximanova-blue">1º</span>
             </div>
-            <h3 className="text-xl font-semibold mb-2">In Brazil</h3>
-            <p className="text-gray-600">Unique retail digital transformation ecosystem</p>
+            <h3 className="text-xl font-semibold mb-2">No Brasil</h3>
+            <p className="text-gray-600">Ecossistema único de transformação digital do varejo</p>
           </div>
         </div>
       </div>

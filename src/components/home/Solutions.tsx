@@ -6,20 +6,20 @@ import { Link } from 'react-router-dom';
 const Solutions = () => {
   const solutions = [
     {
-      title: "Strategic Consulting",
-      description: "Complete diagnostics, custom action plan, and strategic consulting for digital transformation.",
+      title: "Consultoria Estratégica",
+      description: "Diagnóstico completo, plano de ação personalizado e consultoria estratégica para transformação digital.",
       icon: "📊",
       link: "/solutions#consulting",
     },
     {
-      title: "Digital Retailer Program",
-      description: "A practical solution for physical stores wanting to sell on Mercado Livre quickly and professionally.",
+      title: "Programa Varejista Digital",
+      description: "Uma solução prática para lojas físicas que querem vender no Mercado Livre de forma rápida e profissional.",
       icon: "🚀",
       link: "/solutions#digital-retailer",
     },
     {
-      title: "Seller Program",
-      description: "Account management for established sellers aiming to scale efficiently with high-performance sales intelligence.",
+      title: "Programa Seller",
+      description: "Gestão de conta para vendedores estabelecidos que buscam escalar com eficiência usando inteligência de vendas.",
       icon: "📈",
       link: "/solutions#seller-program",
     },
@@ -33,11 +33,11 @@ const Solutions = () => {
             <Briefcase className="h-6 w-6 text-proximanova-blue" />
           </div>
           <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue mb-3">
-            Our Solutions
+            Nossas Soluções
           </h2>
           <div className="h-1 w-20 bg-proximanova-yellow mb-6"></div>
           <p className="text-lg max-w-3xl mx-auto text-gray-700">
-            Tailored programs to support your business at any stage of the digital journey.
+            Programas personalizados para apoiar seu negócio em qualquer estágio da jornada digital.
           </p>
         </div>
 
@@ -66,7 +66,7 @@ const Solutions = () => {
             to="/solutions" 
             className="primary-btn"
           >
-            View All Solutions
+            Ver Todas as Soluções
           </Link>
         </div>
       </div>

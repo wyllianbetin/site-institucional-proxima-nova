@@ -13,12 +13,12 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-xl font-bold mb-4">Próxima<span className="text-proximanova-yellow">Nova</span></h3>
             <p className="text-sm leading-relaxed">
-              Empowering physical retail to thrive in the digital environment with our complete ecosystem of solutions.
+              Capacitando o varejo físico a prosperar no ambiente digital com nosso ecossistema completo de soluções.
             </p>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Quick Links</h4>
+            <h4 className="font-semibold mb-4">Links Rápidos</h4>
             <ul className="space-y-3">
               <li>
                 <Link to="/" className="text-sm hover:text-proximanova-yellow transition-colors">
@@ -27,55 +27,55 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/about" className="text-sm hover:text-proximanova-yellow transition-colors">
-                  About Us
+                  Sobre Nós
                 </Link>
               </li>
               <li>
                 <Link to="/solutions" className="text-sm hover:text-proximanova-yellow transition-colors">
-                  Solutions
+                  Soluções
                 </Link>
               </li>
               <li>
                 <Link to="/ecosystem" className="text-sm hover:text-proximanova-yellow transition-colors">
-                  Our Ecosystem
+                  Nosso Ecossistema
                 </Link>
               </li>
               <li>
                 <Link to="/success-cases" className="text-sm hover:text-proximanova-yellow transition-colors">
-                  Success Cases
+                  Casos de Sucesso
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Our Solutions</h4>
+            <h4 className="font-semibold mb-4">Nossas Soluções</h4>
             <ul className="space-y-3">
               <li>
                 <Link to="/solutions#consulting" className="text-sm hover:text-proximanova-yellow transition-colors">
-                  Strategic Consulting
+                  Consultoria Estratégica
                 </Link>
               </li>
               <li>
                 <Link to="/solutions#digital-retailer" className="text-sm hover:text-proximanova-yellow transition-colors">
-                  Digital Retailer Program
+                  Programa Varejista Digital
                 </Link>
               </li>
               <li>
                 <Link to="/solutions#seller-program" className="text-sm hover:text-proximanova-yellow transition-colors">
-                  Seller Program
+                  Programa Seller
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Contact Us</h4>
+            <h4 className="font-semibold mb-4">Contato</h4>
             <ul className="space-y-3">
               <li className="flex items-center">
                 <Mail className="h-4 w-4 mr-2 text-proximanova-yellow" />
-                <a href="mailto:contact@proximanova.com" className="text-sm hover:text-proximanova-yellow transition-colors">
-                  contact@proximanova.com
+                <a href="mailto:contato@proximanova.com" className="text-sm hover:text-proximanova-yellow transition-colors">
+                  contato@proximanova.com
                 </a>
               </li>
               <li className="flex items-center">
@@ -87,7 +87,7 @@ const Footer = () => {
               <li className="flex items-start">
                 <MapPin className="h-4 w-4 mr-2 text-proximanova-yellow mt-1" />
                 <span className="text-sm">
-                  São Paulo, SP - Brazil
+                  São Paulo, SP - Brasil
                 </span>
               </li>
             </ul>
@@ -97,14 +97,14 @@ const Footer = () => {
         <div className="border-t border-white/20 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-xs mb-4 md:mb-0">
-              &copy; {currentYear} Próxima Nova. All rights reserved.
+              &copy; {currentYear} Próxima Nova. Todos os direitos reservados.
             </p>
             <div className="flex space-x-4">
               <Link to="/privacy-policy" className="text-xs hover:text-proximanova-yellow transition-colors">
-                Privacy Policy
+                Política de Privacidade
               </Link>
               <Link to="/terms-of-service" className="text-xs hover:text-proximanova-yellow transition-colors">
-                Terms of Service
+                Termos de Serviço
               </Link>
             </div>
           </div>

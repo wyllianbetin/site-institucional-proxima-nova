@@ -10,7 +10,7 @@ const WhatsAppButton = () => {
   return (
     <button
       onClick={openWhatsApp}
-      aria-label="Chat on WhatsApp"
+      aria-label="Converse no WhatsApp"
       className="whatsapp-btn"
     >
       <MessageSquare className="h-6 w-6" />

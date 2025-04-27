@@ -6,23 +6,23 @@ import { Link } from 'react-router-dom';
 const Ecosystem = () => {
   const ecosystemComponents = [
     {
-      title: "Education",
-      description: "Practical training and courses for marketplace success.",
+      title: "Educação",
+      description: "Treinamentos práticos e cursos para sucesso no marketplace.",
       icon: "🎓",
     },
     {
-      title: "Technology",
-      description: "Sales, ad, and inventory management tools.",
+      title: "Tecnologia",
+      description: "Ferramentas de gestão de vendas, anúncios e estoque.",
       icon: "💻",
     },
     {
-      title: "Management",
-      description: "Growth strategies and KPI monitoring.",
+      title: "Gestão",
+      description: "Estratégias de crescimento e monitoramento de KPIs.",
       icon: "📋",
     },
     {
-      title: "Operations",
-      description: "Support for shipping, customer service, listings, and ads.",
+      title: "Operações",
+      description: "Suporte para envios, atendimento, anúncios e publicidade.",
       icon: "⚙️",
     },
   ];
@@ -35,11 +35,11 @@ const Ecosystem = () => {
             <Layers className="h-6 w-6 text-proximanova-blue" />
           </div>
           <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue mb-3">
-            Próxima Nova Ecosystem
+            Ecossistema Próxima Nova
           </h2>
           <div className="h-1 w-20 bg-proximanova-yellow mb-6"></div>
           <p className="text-lg max-w-3xl mx-auto text-gray-700">
-            Our comprehensive ecosystem helps retailers at every stage of their digital transformation journey.
+            Nosso ecossistema completo ajuda varejistas em cada etapa da sua jornada de transformação digital.
           </p>
         </div>
 
@@ -61,7 +61,7 @@ const Ecosystem = () => {
             to="/ecosystem" 
             className="inline-flex items-center gap-2 text-proximanova-blue font-medium hover:text-proximanova-yellow transition-colors"
           >
-            Learn more about our ecosystem
+            Saiba mais sobre nosso ecossistema
             <ArrowRight className="h-5 w-5" />
           </Link>
         </div>

@@ -20,8 +20,8 @@ const Index = () => {
       <Ecosystem />
       <SuccessCases />
       <CallToAction 
-        title="Ready to start your digital transformation?"
-        buttonText="Schedule a consultation"
+        title="Pronto para iniciar sua transformação digital?"
+        buttonText="Agende uma consultoria"
         buttonLink="/contact"
       />
       <Footer />
