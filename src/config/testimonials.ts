@@ -25,7 +25,7 @@ export const testimonials: Testimonial[] = [
   {
     name: "Tiago",
     company: "Fatelli",
-    text: "Começamos sem nenhuma venda e, em poucos meses, já estávamos faturando diariamente no Mercado Livre. A Próxima Nova não ficou só na teoria: entrou no dia a dia da operação e realmente fez acontecer.",
+    text: "Começamos sem nenhuma venda e, em poucos meses, já estávamos faturando diariamente no Mercado Livre. A Próxima Nova não ficou só na teoria: entrou no dia a dia da operação e realmente fez acontecer. Hoje temos uma operação organizada, enxuta e com escalabilidade.",
     image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
     stars: 5
   }
