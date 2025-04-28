@@ -20,7 +20,7 @@ const Hero = () => {
           
           <div className="relative h-64 md:h-80 lg:h-96 overflow-hidden rounded-lg shadow-xl animate-fade-in">
             <img 
-              src="https://drive.google.com/uc?export=view&id=1cd0MUZcQfoSR1ZGWCFAlPdxLBHjq7l1b" 
+              src="https://raw.githubusercontent.com/wyllianbetin/site-institucional-proxima-nova/main/public/imagem%20principal%20site.webp" 
               alt="Centro de distribuição do Mercado Livre com ambiente logístico" 
               className="absolute w-full h-full object-cover object-center" 
             />
