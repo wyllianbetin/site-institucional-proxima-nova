@@ -1,28 +1,37 @@
+
 import React from 'react';
 import { Layers, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
 const Ecosystem = () => {
-  const ecosystemComponents = [{
+  const ecosystemComponentsTop = [{
     title: "Educação",
-    description: "Treinamentos práticos e cursos para sucesso no marketplace.",
+    description: "Treinamos você e sua equipe para dominar as vendas online e crescer no digital.",
     icon: "🎓"
   }, {
     title: "Tecnologia",
-    description: "Ferramentas de gestão de vendas, anúncios e estoque.",
+    description: "Conectamos seu negócio a sistemas inteligentes para controlar e escalar suas vendas.",
     icon: "💻"
   }, {
     title: "Gestão",
-    description: "Estratégias de crescimento e monitoramento de KPIs.",
+    description: "Planejamos estratégias e acompanhamos métricas para impulsionar seu crescimento.",
     icon: "📋"
-  }, {
-    title: "Operações",
-    description: "Suporte para envios, atendimento, anúncios e publicidade.",
+  }];
+
+  const ecosystemComponentsBottom = [{
+    title: "Operação",
+    description: "Executamos cadastro e revisão de anúncios, atendimento, campanhas de Ads e promoções.",
     icon: "⚙️"
   }, {
-    title: "Armazenamento & Logística",
-    description: "Soluções de estoque e envios para maximizar eficiência.",
+    title: "Armazenamento & Expedição",
+    description: "Gerenciamos o armazenamento e a expedição dos seus pedidos com eficiência e agilidade.",
     icon: "📦"
+  }, {
+    title: "Logística Flex e Full",
+    description: "Oferecemos soluções de transporte para as modalidades Flex e Full, integrando sua logística.",
+    icon: "🚚"
   }];
+
   return <section className="section bg-white">
       <div className="container mx-auto">
         <div className="flex flex-col items-center text-center mb-12">
@@ -35,12 +44,22 @@ const Ecosystem = () => {
           <div className="h-1 w-20 bg-proximanova-yellow mb-6"></div>
           <p className="text-lg max-w-3xl mx-auto text-gray-700">Na Próxima Nova, desenvolvemos um ecossistema completo para atender nossos clientes de ponta a ponta.
 Nosso ecossistema reúne:
-Educação, Tecnologia, Gestão, Operação e Armazenamento & Logística.
+Educação, Tecnologia, Gestão, Operação e Armazenamento & Expedição.
 Terceirize a rotina das vendas online e foque no que realmente importa: levar o seu negócio para o próximo nível. Deixe a parte operacional com a gente.</p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
-          {ecosystemComponents.map((component, index) => <div key={index} className="bg-gray-50 rounded-lg p-6 text-center hover:shadow-md transition-shadow duration-300">
+        {/* Top row of ecosystem components */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-6">
+          {ecosystemComponentsTop.map((component, index) => <div key={index} className="bg-gray-50 rounded-lg p-6 text-center hover:shadow-md transition-shadow duration-300">
+              <div className="text-4xl mb-4">{component.icon}</div>
+              <h3 className="text-xl font-semibold text-proximanova-blue mb-2">{component.title}</h3>
+              <p className="text-gray-600">{component.description}</p>
+            </div>)}
+        </div>
+
+        {/* Bottom row of ecosystem components */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
+          {ecosystemComponentsBottom.map((component, index) => <div key={index} className="bg-gray-50 rounded-lg p-6 text-center hover:shadow-md transition-shadow duration-300">
               <div className="text-4xl mb-4">{component.icon}</div>
               <h3 className="text-xl font-semibold text-proximanova-blue mb-2">{component.title}</h3>
               <p className="text-gray-600">{component.description}</p>
