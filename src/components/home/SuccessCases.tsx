@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Star, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -41,7 +42,7 @@ const SuccessCases = () => {
 
         <div className="text-center mt-10">
           <Link to="/success-cases" className="inline-flex items-center gap-2 primary-btn">
-            View All Success Cases
+            Confira os Casos de Sucesso
             <ArrowRight className="h-5 w-5" />
           </Link>
         </div>
