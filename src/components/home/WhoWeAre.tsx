@@ -9,17 +9,7 @@ const WhoWeAre = () => {
           </div>
           <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue mb-3">Sobre Nós</h2>
           <div className="h-1 w-20 bg-proximanova-yellow mb-6"></div>
-          <p className="text-lg max-w-3xl mx-auto text-gray-700">Na Próxima Nova, acreditamos que o presente e o futuro do varejo são cada vez mais digitais — e estamos aqui para construir essa transformação ao lado das empresas.
-
-Oferecemos um ecossistema completo que viabiliza que lojas físicas, marcas, distribuidores, importadores e fabricantes vendam no Mercado Livre, por meio de tecnologia, cursos e treinamentos, gestão, operação e logística. Tudo reunido em um único parceiro estratégico.
-
-Nosso time é formado por consultores certificados, especialistas em marketplaces e profissionais operacionais, prontos para cuidar de todas as etapas das vendas online de nossos clientes.
-
-Mais do que uma consultoria ou assessoria, somos um fullcommerce. Nós orientamos, executamos e entregamos resultados.
-
-Somos comprometidos em proporcionar crescimento real e sustentável para cada empresa que confia na nossa expertise.
-Nossa missão é simples: Transformar o potencial do varejo tradicional em histórias de sucesso no universo do varejo digital.
-Bem-vindo à Próxima Nova. O sucesso das suas vendas online começa aqui.</p>
+          <p className="text-lg max-w-3xl mx-auto text-gray-700">Na Próxima Nova, acreditamos que o presente e o futuro do varejo é cada vez mais digital — e estamos aqui para construir essa transformação ao lado das empresas. Oferecemos um ecossistema completo que viabiliza que lojas físicas, marcas, distribuidores, importadores e fabricantes vendam no Mercado Livre, por meio de tecnologia, cursos e treinamentos, gestão, operação e logística. Tudo reunido em um único parceiro estratégico. Nosso time é formado por consultores certificados, especialistas em marketplaces e profissionais operacionais, prontos para cuidar de todas as etapas das vendas online de nossos clientes. Mais do que uma consultoria ou assessoria, somos um fullcommerce. Nós orientamos, executamos e entregamos resultados. Somos comprometidos em proporcionar crescimento real e sustentável para cada empresa que confia na nossa expertise. Nossa missão é simples: Transformar o potencial do varejo tradicional em histórias de sucesso no universo do varejo digital. Bem-vindo à Próxima Nova. O sucesso das suas vendas online começa aqui.</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
