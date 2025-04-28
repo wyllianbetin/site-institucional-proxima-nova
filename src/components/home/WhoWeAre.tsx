@@ -7,7 +7,7 @@ const WhoWeAre = () => {
           <div className="bg-proximanova-blue/10 p-3 rounded-full mb-4">
             <Users className="h-6 w-6 text-proximanova-blue" />
           </div>
-          <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue mb-3">Sobre nós</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue mb-3">Sobre Nós</h2>
           <div className="h-1 w-20 bg-proximanova-yellow mb-6"></div>
           <p className="text-lg max-w-3xl mx-auto text-gray-700">Na Próxima Nova, acreditamos que o presente e o futuro do varejo são cada vez mais digitais — e estamos aqui para construir essa transformação ao lado das empresas.
 
@@ -27,15 +27,15 @@ O sucesso das suas vendas online começa aqui.</p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div className="text-center">
             <div className="h-20 w-20 rounded-full bg-proximanova-blue/10 flex items-center justify-center mx-auto mb-4">
-              <span className="text-3xl font-bold text-proximanova-blue">11+</span>
+              <span className="text-3xl font-bold text-proximanova-blue">5+</span>
             </div>
             <h3 className="text-xl font-semibold mb-2">Anos de Experiência</h3>
-            <p className="text-gray-600">Mais de uma década de expertise em marketplace</p>
+            <p className="text-gray-600">Estamos desde 2020 ajudando empresas a venderem online</p>
           </div>
           
           <div className="text-center">
             <div className="h-20 w-20 rounded-full bg-proximanova-blue/10 flex items-center justify-center mx-auto mb-4">
-              <span className="text-3xl font-bold text-proximanova-blue">300+</span>
+              <span className="text-3xl font-bold text-proximanova-blue">60+</span>
             </div>
             <h3 className="text-xl font-semibold mb-2">Negócios Transformados</h3>
             <p className="text-gray-600">Varejistas que cresceram com nossas soluções</p>
@@ -43,10 +43,10 @@ O sucesso das suas vendas online começa aqui.</p>
           
           <div className="text-center">
             <div className="h-20 w-20 rounded-full bg-proximanova-blue/10 flex items-center justify-center mx-auto mb-4">
-              <span className="text-3xl font-bold text-proximanova-blue">1º</span>
+              <span className="text-3xl font-bold text-proximanova-blue">+50M</span>
             </div>
-            <h3 className="text-xl font-semibold mb-2">No Brasil</h3>
-            <p className="text-gray-600">Ecossistema único de transformação digital do varejo</p>
+            <h3 className="text-xl font-semibold mb-2">Faturamento de Nossos Clientes</h3>
+            <p className="text-gray-600">Mais de 50 milhões de reais faturados anualmente pelos nossos clientes sob nossa gestão</p>
           </div>
         </div>
       </div>
