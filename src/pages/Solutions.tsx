@@ -4,8 +4,10 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import WhatsAppButton from '@/components/common/WhatsAppButton';
 import CallToAction from '@/components/common/CallToAction';
-import { Check, Briefcase, ArrowRight } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import SolutionHeader from '@/components/solutions/SolutionHeader';
+import SolutionsOverview from '@/components/solutions/SolutionsOverview';
+import SolutionSection from '@/components/solutions/SolutionSection';
 
 const Solutions = () => {
   const location = useLocation();
@@ -32,244 +34,99 @@ const Solutions = () => {
     }
   }, [location.hash]);
 
+  const scrollToConsulting = () => consultingRef.current?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToRetailer = () => retailerRef.current?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToSeller = () => sellerRef.current?.scrollIntoView({ behavior: 'smooth' });
+
+  const consultingData = {
+    id: "consulting",
+    title: "Curso + Consultoria",
+    description: [
+      "Our Strategic Consulting service provides a complete analysis of your business, identifying the best opportunities to enter and thrive in digital marketplaces.",
+      "We deliver a customized action plan with clear steps for implementing your digital transformation strategy, supported by expert guidance at every stage."
+    ],
+    features: [
+      "Business diagnosis", 
+      "Market opportunity analysis", 
+      "Competitive positioning", 
+      "Customized action plan", 
+      "Implementation roadmap", 
+      "ROI projections"
+    ],
+    buttonText: "Request a consultation",
+    imageSrc: "/consultoria.jpg",
+    imageAlt: "Strategic consulting session"
+  };
+
+  const retailerData = {
+    id: "digital-retailer",
+    title: "Programa Lojista Digital",
+    description: [
+      "The Digital Retailer Program is a practical solution for physical stores wanting to sell on Mercado Livre quickly and professionally. We guide your team through the entire process.",
+      "Our program includes hands-on training, system setup, and ongoing support to ensure your team has all the tools and knowledge needed to succeed."
+    ],
+    features: [
+      "Account setup assistance", 
+      "Product listing creation", 
+      "Pricing strategy", 
+      "Inventory management training", 
+      "Customer service protocols", 
+      "Marketing best practices",
+      "Performance tracking",
+      "Ongoing support"
+    ],
+    buttonText: "Join the program",
+    imageSrc: "/programa_lojista_digital.jpg",
+    imageAlt: "Digital retailer working on marketplace"
+  };
+
+  const sellerData = {
+    id: "seller-program",
+    title: "Programa Seller",
+    description: [
+      "Our Seller Program is designed for established marketplace sellers looking to scale their operations efficiently and achieve high-performance sales.",
+      "We provide advanced strategies, analytics, and operational support to optimize your marketplace presence, increase visibility, and improve conversion rates."
+    ],
+    features: [
+      "Account performance analysis", 
+      "Advanced listing optimization", 
+      "Advertising strategy and management", 
+      "Competitor benchmarking", 
+      "Inventory optimization", 
+      "Expansion planning",
+      "Brand development",
+      "Growth acceleration"
+    ],
+    buttonText: "Scale your business",
+    imageSrc: "/programa_seller.jpg",
+    imageAlt: "Advanced seller operations"
+  };
+
   return (
     <>
       <Header />
+      <SolutionHeader />
+      <SolutionsOverview 
+        onScrollToConsulting={scrollToConsulting}
+        onScrollToRetailer={scrollToRetailer}
+        onScrollToSeller={scrollToSeller}
+      />
       
-      {/* Page Header */}
-      <div className="bg-proximanova-blue pt-32 pb-16 md:pt-36 md:pb-20 text-white">
-        <div className="container mx-auto text-center">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Our Solutions</h1>
-          <p className="text-xl max-w-3xl mx-auto mb-6">
-            Complete programs designed to meet your business needs at every stage of digital transformation.
-          </p>
-          <div className="h-1 w-24 bg-proximanova-yellow mx-auto"></div>
-        </div>
-      </div>
+      <SolutionSection 
+        {...consultingData}
+        innerRef={consultingRef}
+      />
       
-      {/* Solutions Overview */}
-      <section className="section bg-white">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue mb-4">
-              Solutions for Every Stage of Your Digital Journey
-            </h2>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              Whether you're just starting to explore digital channels or looking to optimize your 
-              existing marketplace operations, we have the right solution for you.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
-            <div 
-              className="solution-card text-center"
-              onClick={() => consultingRef.current?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              <div className="bg-proximanova-blue/10 h-20 w-20 flex items-center justify-center rounded-full mx-auto mb-6">
-                <Briefcase className="h-8 w-8 text-proximanova-blue" />
-              </div>
-              <h3 className="text-xl font-bold text-proximanova-blue mb-3">Curso + Consultoria</h3>
-              <p className="text-gray-600 mb-6">For businesses looking to develop a digital strategy.</p>
-              <button className="text-proximanova-blue font-medium hover:text-proximanova-yellow transition-colors flex items-center justify-center w-full">
-                Learn more
-                <ArrowRight className="h-4 w-4 ml-2" />
-              </button>
-            </div>
-            
-            <div 
-              className="solution-card text-center"
-              onClick={() => retailerRef.current?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              <div className="bg-proximanova-blue/10 h-20 w-20 flex items-center justify-center rounded-full mx-auto mb-6">
-                <span className="text-4xl">🚀</span>
-              </div>
-              <h3 className="text-xl font-bold text-proximanova-blue mb-3">Programa Lojista Digital</h3>
-              <p className="text-gray-600 mb-6">For physical stores starting to sell online.</p>
-              <button className="text-proximanova-blue font-medium hover:text-proximanova-yellow transition-colors flex items-center justify-center w-full">
-                Learn more
-                <ArrowRight className="h-4 w-4 ml-2" />
-              </button>
-            </div>
-            
-            <div 
-              className="solution-card text-center"
-              onClick={() => sellerRef.current?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              <div className="bg-proximanova-blue/10 h-20 w-20 flex items-center justify-center rounded-full mx-auto mb-6">
-                <span className="text-4xl">📈</span>
-              </div>
-              <h3 className="text-xl font-bold text-proximanova-blue mb-3">Programa Seller</h3>
-              <p className="text-gray-600 mb-6">For established sellers looking to scale operations.</p>
-              <button className="text-proximanova-blue font-medium hover:text-proximanova-yellow transition-colors flex items-center justify-center w-full">
-                Learn more
-                <ArrowRight className="h-4 w-4 ml-2" />
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <SolutionSection 
+        {...retailerData}
+        reverseLayout={true}
+        innerRef={retailerRef}
+      />
       
-      {/* Strategic Consulting Section */}
-      <section id="consulting" ref={consultingRef} className="section bg-gray-50">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue mb-4">Curso + Consultoria</h2>
-              <div className="h-1 w-16 bg-proximanova-yellow mb-6"></div>
-              <div className="space-y-4 text-gray-700 mb-6">
-                <p>
-                  Our Strategic Consulting service provides a complete analysis of your business, 
-                  identifying the best opportunities to enter and thrive in digital marketplaces.
-                </p>
-                <p>
-                  We deliver a customized action plan with clear steps for implementing your 
-                  digital transformation strategy, supported by expert guidance at every stage.
-                </p>
-              </div>
-              
-              <div className="space-y-3 mb-8">
-                <h3 className="font-semibold text-lg text-proximanova-blue">What's included:</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
-                  {["Business diagnosis", "Market opportunity analysis", "Competitive positioning", "Customized action plan", "Implementation roadmap", "ROI projections"].map((item, index) => (
-                    <div key={index} className="flex items-start">
-                      <div className="bg-proximanova-blue/10 p-1 rounded-full mr-3 mt-1">
-                        <Check className="h-3 w-3 text-proximanova-blue" />
-                      </div>
-                      <p className="text-sm text-gray-700">{item}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              
-              <Link to="/contact" className="primary-btn">
-                Request a consultation
-              </Link>
-            </div>
-            
-            <div className="relative h-80 md:h-96 rounded-lg shadow-xl overflow-hidden">
-              <img 
-                src="/consultoria.jpg" 
-                alt="Strategic consulting session" 
-                className="absolute w-full h-full object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* Digital Retailer Program Section */}
-      <section id="digital-retailer" ref={retailerRef} className="section bg-white">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1 relative h-80 md:h-96 rounded-lg shadow-xl overflow-hidden">
-              <img 
-                src="/programa_lojista_digital.jpg" 
-                alt="Digital retailer working on marketplace" 
-                className="absolute w-full h-full object-cover"
-              />
-            </div>
-            
-            <div className="order-1 lg:order-2">
-              <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue mb-4">Programa Lojista Digital</h2>
-              <div className="h-1 w-16 bg-proximanova-yellow mb-6"></div>
-              <div className="space-y-4 text-gray-700 mb-6">
-                <p>
-                  The Digital Retailer Program is a practical solution for physical stores wanting to sell on 
-                  Mercado Livre quickly and professionally. We guide your team through the entire process.
-                </p>
-                <p>
-                  Our program includes hands-on training, system setup, and ongoing support to ensure 
-                  your team has all the tools and knowledge needed to succeed.
-                </p>
-              </div>
-              
-              <div className="space-y-3 mb-8">
-                <h3 className="font-semibold text-lg text-proximanova-blue">What's included:</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
-                  {[
-                    "Account setup assistance", 
-                    "Product listing creation", 
-                    "Pricing strategy", 
-                    "Inventory management training", 
-                    "Customer service protocols", 
-                    "Marketing best practices",
-                    "Performance tracking",
-                    "Ongoing support"
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-start">
-                      <div className="bg-proximanova-blue/10 p-1 rounded-full mr-3 mt-1">
-                        <Check className="h-3 w-3 text-proximanova-blue" />
-                      </div>
-                      <p className="text-sm text-gray-700">{item}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              
-              <Link to="/contact" className="primary-btn">
-                Join the program
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* Seller Program Section */}
-      <section id="seller-program" ref={sellerRef} className="section bg-gray-50">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue mb-4">Programa Seller</h2>
-              <div className="h-1 w-16 bg-proximanova-yellow mb-6"></div>
-              <div className="space-y-4 text-gray-700 mb-6">
-                <p>
-                  Our Seller Program is designed for established marketplace sellers looking to 
-                  scale their operations efficiently and achieve high-performance sales.
-                </p>
-                <p>
-                  We provide advanced strategies, analytics, and operational support to optimize your 
-                  marketplace presence, increase visibility, and improve conversion rates.
-                </p>
-              </div>
-              
-              <div className="space-y-3 mb-8">
-                <h3 className="font-semibold text-lg text-proximanova-blue">What's included:</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
-                  {[
-                    "Account performance analysis", 
-                    "Advanced listing optimization", 
-                    "Advertising strategy and management", 
-                    "Competitor benchmarking", 
-                    "Inventory optimization", 
-                    "Expansion planning",
-                    "Brand development",
-                    "Growth acceleration"
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-start">
-                      <div className="bg-proximanova-blue/10 p-1 rounded-full mr-3 mt-1">
-                        <Check className="h-3 w-3 text-proximanova-blue" />
-                      </div>
-                      <p className="text-sm text-gray-700">{item}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              
-              <Link to="/contact" className="primary-btn">
-                Scale your business
-              </Link>
-            </div>
-            
-            <div className="relative h-80 md:h-96 rounded-lg shadow-xl overflow-hidden">
-              <img 
-                src="/programa_seller.jpg" 
-                alt="Advanced seller operations" 
-                className="absolute w-full h-full object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <SolutionSection 
+        {...sellerData}
+        innerRef={sellerRef}
+      />
       
       <CallToAction 
         title="Ready to find the right solution for your business?"
