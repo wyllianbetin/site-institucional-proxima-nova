@@ -1,24 +1,14 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin } from 'lucide-react';
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
-  return (
-    <footer className="bg-proximanova-blue text-white pt-12 pb-6">
+  return <footer className="bg-proximanova-blue text-white pt-12 pb-6">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div className="space-y-4">
             <Link to="/">
-              <img 
-                src="/logo.svg"
-                alt="Próxima Nova Logo" 
-                className="h-8 w-auto"
-                loading="lazy"
-                decoding="async"
-              />
+              <img src="/logo.svg" alt="Próxima Nova Logo" className="h-8 w-auto" loading="lazy" decoding="async" />
             </Link>
             <p className="text-sm leading-relaxed">
               Capacitando o varejo físico a prosperar no ambiente digital com nosso ecossistema completo de soluções.
@@ -94,9 +84,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start">
                 <MapPin className="h-4 w-4 mr-2 text-proximanova-yellow mt-1" />
-                <span className="text-sm">
-                  São Paulo, SP - Brasil
-                </span>
+                <span className="text-sm">Curitiba, PR - Brasil</span>
               </li>
             </ul>
           </div>
@@ -118,8 +106,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
