@@ -59,6 +59,7 @@ const Header = () => {
             className="h-8 md:h-10 w-auto transition-all duration-300"
             loading="eager"
             decoding="async"
+            style={{backgroundColor: 'transparent'}}
           />
         </Link>
 
@@ -72,7 +73,7 @@ const Header = () => {
                 : 'text-white after:w-full' 
               : scrolled 
                 ? 'text-gray-700 hover:text-proximanova-blue' 
-                : 'text-gray-200 hover:text-white'
+                : 'text-white hover:text-white'
           }`} end={link.path === '/'}>
               {link.name}
             </NavLink>)}
