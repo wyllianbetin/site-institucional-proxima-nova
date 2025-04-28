@@ -28,7 +28,8 @@ const Solutions = () => {
             Nossas Soluções
           </h2>
           <div className="h-1 w-20 bg-proximanova-yellow mb-6"></div>
-          <p className="text-lg max-w-3xl mx-auto text-gray-700">Ajudamos empresas em todos os estágios: Desde negócios que ainda não vendem online e desejam implementar uma operação de e-commerce, até sellers que já vendem e buscam otimizar e escalar seus resultados. Confira nossas soluções!</p>
+          <p className="text-lg max-w-3xl mx-auto text-gray-700">Ajudamos empresas em todos os estágios: Desde negócios que ainda não vendem online e desejam implementar uma operação de e-commerce, até sellers que já vendem e buscam otimizar e escalar seus resultados através do Mercado Livre.
+Confira nossas soluções!</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
