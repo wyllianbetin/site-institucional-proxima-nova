@@ -20,8 +20,8 @@ const Hero = () => {
           
           <div className="relative h-64 md:h-80 lg:h-96 overflow-hidden rounded-lg shadow-xl animate-fade-in">
             <img 
-              src="/lovable-uploads/5b2d26bf-edb2-4a6a-96f1-2ed34aab8f89.png" 
-              alt="Mercado Livre expertise and digital transformation services" 
+              src="/lovable-uploads/36592ab6-da2d-4271-bf98-547983d5f0d3.png" 
+              alt="Centro de distribuição do Mercado Livre com ambiente logístico" 
               className="absolute w-full h-full object-cover object-center" 
             />
             <div className="absolute inset-0 bg-proximanova-blue/10"></div>
@@ -30,8 +30,8 @@ const Hero = () => {
       </div>
       
       <div className="absolute bottom-0 left-0 right-0 h-16 bg-white" style={{
-      clipPath: "polygon(0 100%, 100% 0, 100% 100%, 0% 100%)"
-    }}></div>
+        clipPath: "polygon(0 100%, 100% 0, 100% 100%, 0% 100%)"
+      }}></div>
     </div>;
 };
 
