@@ -15,13 +15,11 @@ Oferecemos um ecossistema completo que viabiliza que lojas físicas, marcas, dis
 
 Nosso time é formado por consultores certificados, especialistas em marketplaces e profissionais operacionais, prontos para cuidar de todas as etapas das vendas online de nossos clientes.
 
-Mais do que uma consultoria ou assessoria, somos um fullcommerce. Nós orientamos, executamos e entregamos resultados. Somos comprometidos em proporcionar crescimento real e sustentável para cada empresa que confia na nossa expertise.
+Mais do que uma consultoria ou assessoria, somos um fullcommerce. Nós orientamos, executamos e entregamos resultados.
 
-Nossa missão é simples:
-Transformar o potencial do varejo tradicional em histórias de sucesso no universo do varejo digital.
-
-Bem-vindo à Próxima Nova.
-O sucesso das suas vendas online começa aqui.</p>
+Somos comprometidos em proporcionar crescimento real e sustentável para cada empresa que confia na nossa expertise.
+Nossa missão é simples: Transformar o potencial do varejo tradicional em histórias de sucesso no universo do varejo digital.
+Bem-vindo à Próxima Nova. O sucesso das suas vendas online começa aqui.</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -45,7 +43,7 @@ O sucesso das suas vendas online começa aqui.</p>
             <div className="h-20 w-20 rounded-full bg-proximanova-blue/10 flex items-center justify-center mx-auto mb-4">
               <span className="text-3xl font-bold text-proximanova-blue">+50M</span>
             </div>
-            <h3 className="text-xl font-semibold mb-2">GMV Bruto de Nossos Clientes</h3>
+            <h3 className="text-xl font-semibold mb-2">De GMV Bruto</h3>
             <p className="text-gray-600">Mais de 50 milhões de reais faturados anualmente pelos nossos clientes sob nossa gestão</p>
           </div>
         </div>
