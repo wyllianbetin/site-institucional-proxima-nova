@@ -11,7 +11,15 @@ const Footer = () => {
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div className="space-y-4">
-            <h3 className="text-xl font-bold mb-4">Próxima<span className="text-proximanova-yellow">Nova</span></h3>
+            <Link to="/">
+              <img 
+                src="/logo.svg"
+                alt="Próxima Nova Logo" 
+                className="h-8 w-auto"
+                loading="lazy"
+                decoding="async"
+              />
+            </Link>
             <p className="text-sm leading-relaxed">
               Capacitando o varejo físico a prosperar no ambiente digital com nosso ecossistema completo de soluções.
             </p>
