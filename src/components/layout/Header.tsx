@@ -59,7 +59,6 @@ const Header = () => {
             className="h-8 md:h-10 w-auto transition-all duration-300"
             loading="eager"
             decoding="async"
-            style={{ backgroundColor: 'transparent' }}
           />
         </Link>
 
