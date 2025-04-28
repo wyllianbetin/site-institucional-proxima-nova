@@ -1,10 +1,8 @@
-
 import React from 'react';
 import { Star, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { testimonials } from '@/config/testimonials';
 import BrandLogosCarousel from './BrandLogosCarousel';
-
 const SuccessCases = () => {
   const clientLogos = ["TechStore", "HomeDecor", "FashionOutlet", "SportGoods", "KitchenPlus", "PetShop"];
   return <section className="section bg-gray-50">
@@ -13,7 +11,7 @@ const SuccessCases = () => {
           <div className="bg-proximanova-blue/10 p-3 rounded-full mb-4">
             <Star className="h-6 w-6 text-proximanova-blue" />
           </div>
-          <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue mb-3">Cases de Sucesso</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue mb-3">Casos de Sucesso</h2>
           <div className="h-1 w-20 bg-proximanova-yellow mb-6"></div>
           <p className="text-lg max-w-3xl mx-auto text-gray-700">Veja como essas empresas escalaram as vendas através das nossas soluções!</p>
         </div>
@@ -49,5 +47,4 @@ const SuccessCases = () => {
       </div>
     </section>;
 };
-
 export default SuccessCases;
