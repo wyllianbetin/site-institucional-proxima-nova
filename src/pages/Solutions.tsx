@@ -68,7 +68,7 @@ const Solutions = () => {
               <div className="bg-proximanova-blue/10 h-20 w-20 flex items-center justify-center rounded-full mx-auto mb-6">
                 <Briefcase className="h-8 w-8 text-proximanova-blue" />
               </div>
-              <h3 className="text-xl font-bold text-proximanova-blue mb-3">Strategic Consulting</h3>
+              <h3 className="text-xl font-bold text-proximanova-blue mb-3">Curso + Consultoria</h3>
               <p className="text-gray-600 mb-6">For businesses looking to develop a digital strategy.</p>
               <button className="text-proximanova-blue font-medium hover:text-proximanova-yellow transition-colors flex items-center justify-center w-full">
                 Learn more
@@ -83,7 +83,7 @@ const Solutions = () => {
               <div className="bg-proximanova-blue/10 h-20 w-20 flex items-center justify-center rounded-full mx-auto mb-6">
                 <span className="text-4xl">🚀</span>
               </div>
-              <h3 className="text-xl font-bold text-proximanova-blue mb-3">Digital Retailer Program</h3>
+              <h3 className="text-xl font-bold text-proximanova-blue mb-3">Programa Lojista Digital</h3>
               <p className="text-gray-600 mb-6">For physical stores starting to sell online.</p>
               <button className="text-proximanova-blue font-medium hover:text-proximanova-yellow transition-colors flex items-center justify-center w-full">
                 Learn more
@@ -98,7 +98,7 @@ const Solutions = () => {
               <div className="bg-proximanova-blue/10 h-20 w-20 flex items-center justify-center rounded-full mx-auto mb-6">
                 <span className="text-4xl">📈</span>
               </div>
-              <h3 className="text-xl font-bold text-proximanova-blue mb-3">Seller Program</h3>
+              <h3 className="text-xl font-bold text-proximanova-blue mb-3">Programa Seller</h3>
               <p className="text-gray-600 mb-6">For established sellers looking to scale operations.</p>
               <button className="text-proximanova-blue font-medium hover:text-proximanova-yellow transition-colors flex items-center justify-center w-full">
                 Learn more
@@ -114,7 +114,7 @@ const Solutions = () => {
         <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue mb-4">Strategic Consulting</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue mb-4">Curso + Consultoria</h2>
               <div className="h-1 w-16 bg-proximanova-yellow mb-6"></div>
               <div className="space-y-4 text-gray-700 mb-6">
                 <p>
@@ -170,7 +170,7 @@ const Solutions = () => {
             </div>
             
             <div className="order-1 lg:order-2">
-              <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue mb-4">Digital Retailer Program</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue mb-4">Programa Lojista Digital</h2>
               <div className="h-1 w-16 bg-proximanova-yellow mb-6"></div>
               <div className="space-y-4 text-gray-700 mb-6">
                 <p>
@@ -219,7 +219,7 @@ const Solutions = () => {
         <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue mb-4">Seller Program</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue mb-4">Programa Seller</h2>
               <div className="h-1 w-16 bg-proximanova-yellow mb-6"></div>
               <div className="space-y-4 text-gray-700 mb-6">
                 <p>

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin } from 'lucide-react';
@@ -51,12 +52,12 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <Link to="/solutions#consulting" className="text-sm hover:text-proximanova-yellow transition-colors">
-                  Consultoria Estratégica
+                  Curso + Consultoria
                 </Link>
               </li>
               <li>
                 <Link to="/solutions#digital-retailer" className="text-sm hover:text-proximanova-yellow transition-colors">
-                  Programa Varejista Digital
+                  Programa Lojista Digital
                 </Link>
               </li>
               <li>

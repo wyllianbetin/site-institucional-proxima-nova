@@ -6,13 +6,13 @@ import { Card, CardContent, CardFooter } from '@/components/ui/card';
 
 const Solutions = () => {
   const solutions = [{
-    title: "Consultoria Estratégica",
+    title: "Curso + Consultoria",
     description: "Diagnóstico completo, plano de ação personalizado e consultoria estratégica para transformação digital.",
     icon: "📊",
     link: "/solutions#consulting",
     image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c"
   }, {
-    title: "Programa Varejista Digital",
+    title: "Programa Lojista Digital",
     description: "Uma solução prática para lojas físicas que querem vender no Mercado Livre de forma rápida e profissional.",
     icon: "🚀",
     link: "/solutions#digital-retailer",
