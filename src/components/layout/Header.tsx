@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
@@ -58,16 +59,25 @@ const Header = () => {
             className="h-8 md:h-10 w-auto transition-all duration-300"
             loading="eager"
             decoding="async"
+            style={{ backgroundColor: 'transparent' }}
           />
         </Link>
 
         <nav className="hidden md:flex space-x-8 items-center">
           {navLinks.map(link => <NavLink key={link.path} to={link.path} className={({
             isActive
-          }) => `text-sm font-medium transition-colors hover:text-proximanova-blue relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-proximanova-yellow after:transition-all after:duration-300 ${isActive ? 'text-proximanova-blue after:w-full' : scrolled ? 'text-gray-700' : 'text-gray-800'}`} end={link.path === '/'}>
+          }) => `text-sm font-medium transition-colors hover:text-white relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-proximanova-yellow after:transition-all after:duration-300 ${
+            isActive 
+              ? scrolled 
+                ? 'text-proximanova-blue after:w-full' 
+                : 'text-white after:w-full' 
+              : scrolled 
+                ? 'text-gray-700' 
+                : 'text-gray-200 hover:text-white'
+          }`} end={link.path === '/'}>
               {link.name}
             </NavLink>)}
-          <Button className="bg-proximanova-yellow text-proximanova-blue hover:opacity-90 rounded shadow-sm whitespace-nowrap" size="sm">
+          <Button className="bg-proximanova-yellow text-proximanova-blue hover:bg-proximanova-yellow hover:opacity-90 rounded shadow-sm whitespace-nowrap" size="sm">
             Comece Agora
           </Button>
         </nav>
@@ -85,7 +95,7 @@ const Header = () => {
                 {link.name}
               </NavLink>)}
             <div className="px-4 pt-3">
-              <Button className="w-full bg-proximanova-yellow text-proximanova-blue hover:opacity-90 rounded">
+              <Button className="w-full bg-proximanova-yellow text-proximanova-blue hover:bg-proximanova-yellow hover:opacity-90 rounded">
                 Comece Agora
               </Button>
             </div>
