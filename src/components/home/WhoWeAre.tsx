@@ -1,18 +1,13 @@
-
 import React from 'react';
 import { Users } from 'lucide-react';
-
 const WhoWeAre = () => {
-  return (
-    <section className="section bg-white">
+  return <section className="section bg-white">
       <div className="container mx-auto">
         <div className="flex flex-col items-center text-center mb-12">
           <div className="bg-proximanova-blue/10 p-3 rounded-full mb-4">
             <Users className="h-6 w-6 text-proximanova-blue" />
           </div>
-          <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue mb-3">
-            Quem Somos
-          </h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue mb-3">Sobre nós</h2>
           <div className="h-1 w-20 bg-proximanova-yellow mb-6"></div>
           <p className="text-lg max-w-3xl mx-auto text-gray-700">
             Especialistas em conectar o varejo físico ao mundo digital. Com mais de 11 anos de experiência 
@@ -46,8 +41,6 @@ const WhoWeAre = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default WhoWeAre;
