@@ -4,7 +4,7 @@ import { Users } from 'lucide-react';
 
 const WhoWeAre = () => {
   return (
-    <section className="section bg-[#f5f4e2]">
+    <section className="section bg-white">
       <div className="container mx-auto">
         <div className="flex flex-col items-center text-center mb-12">
           <div className="bg-proximanova-blue/10 p-3 rounded-full mb-4">

@@ -1,6 +1,8 @@
+
 import React from 'react';
 import { Briefcase, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
 const Solutions = () => {
   const solutions = [{
     title: "Consultoria Estratégica",
@@ -18,7 +20,8 @@ const Solutions = () => {
     icon: "📈",
     link: "/solutions#seller-program"
   }];
-  return <section className="section bg-gray-50">
+
+  return <section className="section bg-[#f5f4e2]">
       <div className="container mx-auto">
         <div className="flex flex-col items-center text-center mb-12">
           <div className="bg-proximanova-blue/10 p-3 rounded-full mb-4">
@@ -52,4 +55,5 @@ Confira nossas soluções!</p>
       </div>
     </section>;
 };
+
 export default Solutions;
