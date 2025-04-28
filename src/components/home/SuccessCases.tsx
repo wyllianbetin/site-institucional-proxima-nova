@@ -2,6 +2,8 @@ import React from 'react';
 import { Star, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { testimonials } from '@/config/testimonials';
+import BrandLogosCarousel from './BrandLogosCarousel';
+
 const SuccessCases = () => {
   const clientLogos = ["TechStore", "HomeDecor", "FashionOutlet", "SportGoods", "KitchenPlus", "PetShop"];
   return <section className="section bg-gray-50">
@@ -35,16 +37,9 @@ const SuccessCases = () => {
             </div>)}
         </div>
 
-        <div className="bg-white rounded-xl p-8 mb-10">
-          <h3 className="text-xl font-semibold text-center mb-8">Marcas que confiam em nós</h3>
-          <div className="flex flex-wrap justify-center items-center gap-8">
-            {clientLogos.map((logo, index) => <div key={index} className="bg-gray-100 h-12 px-6 rounded flex items-center justify-center">
-                <span className="font-medium text-gray-700">{logo}</span>
-              </div>)}
-          </div>
-        </div>
+        <BrandLogosCarousel />
 
-        <div className="text-center">
+        <div className="text-center mt-10">
           <Link to="/success-cases" className="inline-flex items-center gap-2 primary-btn">
             View All Success Cases
             <ArrowRight className="h-5 w-5" />
@@ -53,4 +48,5 @@ const SuccessCases = () => {
       </div>
     </section>;
 };
+
 export default SuccessCases;
