@@ -43,7 +43,7 @@ O sucesso das suas vendas online começa aqui.</p>
             <div className="h-20 w-20 rounded-full bg-proximanova-blue/10 flex items-center justify-center mx-auto mb-4">
               <span className="text-3xl font-bold text-proximanova-blue">+50M</span>
             </div>
-            <h3 className="text-xl font-semibold mb-2">De GMV Bruto</h3>
+            <h3 className="text-xl font-semibold mb-2">Mais de R$50 milhões faturados anualmente pelos nossos clientes sob nossa gestão</h3>
             <p className="text-gray-600">Mais de R$50 milhões faturados anualmente por nossos clientes sob nossa gestão</p>
           </div>
         </div>
