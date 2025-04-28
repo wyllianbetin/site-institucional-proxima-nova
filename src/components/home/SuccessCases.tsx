@@ -30,9 +30,7 @@ const SuccessCases = () => {
           </div>
           <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue mb-3">Cases de Sucesso</h2>
           <div className="h-1 w-20 bg-proximanova-yellow mb-6"></div>
-          <p className="text-lg max-w-3xl mx-auto text-gray-700">
-            See how businesses like yours have achieved remarkable results with our solutions.
-          </p>
+          <p className="text-lg max-w-3xl mx-auto text-gray-700">Veja como essas empresas escalaram as vendas através das nossas soluções!</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
