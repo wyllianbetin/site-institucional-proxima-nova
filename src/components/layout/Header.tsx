@@ -66,13 +66,13 @@ const Header = () => {
         <nav className="hidden md:flex space-x-8 items-center">
           {navLinks.map(link => <NavLink key={link.path} to={link.path} className={({
             isActive
-          }) => `text-sm font-medium transition-colors hover:text-white relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-proximanova-yellow after:transition-all after:duration-300 ${
+          }) => `text-sm font-medium transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-proximanova-yellow after:transition-all after:duration-300 ${
             isActive 
               ? scrolled 
                 ? 'text-proximanova-blue after:w-full' 
                 : 'text-white after:w-full' 
               : scrolled 
-                ? 'text-gray-700' 
+                ? 'text-gray-700 hover:text-proximanova-blue' 
                 : 'text-gray-200 hover:text-white'
           }`} end={link.path === '/'}>
               {link.name}
