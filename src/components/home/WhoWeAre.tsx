@@ -11,9 +11,7 @@ const WhoWeAre = () => {
           <div className="h-1 w-20 bg-proximanova-yellow mb-6"></div>
           
           <div className="text-lg max-w-3xl mx-auto text-gray-700 space-y-4">
-            <p>
-              Na Próxima Nova, acreditamos que o presente e o futuro do varejo é cada vez mais digital — e estamos aqui para construir essa transformação ao lado das empresas.
-            </p>
+            <p>Na Próxima Nova, acreditamos que o presente e o futuro do varejo é e será cada vez mais digital — e estamos aqui para construir essa transformação ao lado das empresas.</p>
             
             <p>Oferecemos um ecossistema completo: tecnologia, treinamentos, gestão, operação e logística — tudo em um único parceiro estratégico.
 
