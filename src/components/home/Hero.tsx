@@ -12,7 +12,7 @@ const Hero = () => {
             <p className="text-lg md:text-xl text-gray-100 max-w-lg">Ajudamos empresas iniciarem ou escalarem as vendas através do maior marketplace da América Latina</p>
             <div>
               <Link to="/contact" className="inline-flex items-center gap-2 secondary-btn">
-                Quero digitalizar meu negócio
+                Quero escalar minhas vendas
                 <ArrowRight className="h-5 w-5" />
               </Link>
             </div>
@@ -35,3 +35,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
