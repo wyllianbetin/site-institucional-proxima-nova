@@ -7,7 +7,7 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div className="text-white space-y-6 animate-fade-in">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight hero-text-shadow">Somos especialistas em Mercado Livre</h1>
-            <p className="text-lg md:text-xl text-gray-100 max-w-lg">Ajudamos sua empresa iniciar ou escalar as vendas através do maior marketplace da América Latina</p>
+            <p className="text-lg md:text-xl text-gray-100 max-w-lg">Ajudamos empresas a iniciarem ou escalarem as vendas através do maior marketplace da América Latina</p>
             <div>
               <Link to="/contact" className="inline-flex items-center gap-2 secondary-btn">
                 Quero digitalizar meu negócio
