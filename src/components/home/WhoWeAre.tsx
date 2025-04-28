@@ -27,7 +27,7 @@ O sucesso das suas vendas online começa aqui.</p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div className="text-center">
             <div className="h-20 w-20 rounded-full bg-proximanova-blue/10 flex items-center justify-center mx-auto mb-4">
-              <span className="text-3xl font-bold text-proximanova-blue">5+</span>
+              <span className="text-3xl font-bold text-proximanova-blue">+5</span>
             </div>
             <h3 className="text-xl font-semibold mb-2">Anos de Experiência</h3>
             <p className="text-gray-600">Estamos desde 2020 ajudando empresas a venderem online</p>
@@ -35,7 +35,7 @@ O sucesso das suas vendas online começa aqui.</p>
           
           <div className="text-center">
             <div className="h-20 w-20 rounded-full bg-proximanova-blue/10 flex items-center justify-center mx-auto mb-4">
-              <span className="text-3xl font-bold text-proximanova-blue">60+</span>
+              <span className="text-3xl font-bold text-proximanova-blue">+100</span>
             </div>
             <h3 className="text-xl font-semibold mb-2">Negócios Transformados</h3>
             <p className="text-gray-600">Varejistas que cresceram com nossas soluções</p>
@@ -45,7 +45,7 @@ O sucesso das suas vendas online começa aqui.</p>
             <div className="h-20 w-20 rounded-full bg-proximanova-blue/10 flex items-center justify-center mx-auto mb-4">
               <span className="text-3xl font-bold text-proximanova-blue">+50M</span>
             </div>
-            <h3 className="text-xl font-semibold mb-2">Faturamento de Nossos Clientes</h3>
+            <h3 className="text-xl font-semibold mb-2">GMV Bruto de Nossos Clientes</h3>
             <p className="text-gray-600">Mais de 50 milhões de reais faturados anualmente pelos nossos clientes sob nossa gestão</p>
           </div>
         </div>
