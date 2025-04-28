@@ -16,8 +16,8 @@ const BrandLogosCarousel = () => {
   }));
 
   return (
-    <div className="w-full overflow-hidden bg-white rounded-xl p-8">
-      <h3 className="text-xl font-semibold text-center mb-8">Marcas que confiam em nós</h3>
+    <div className="w-full overflow-hidden bg-white rounded-xl p-6">
+      <h3 className="text-xl font-semibold text-center mb-6">Marcas que confiam em nós</h3>
       
       <Carousel
         opts={{
@@ -26,12 +26,12 @@ const BrandLogosCarousel = () => {
           skipSnaps: false,
           dragFree: true,
         }}
-        className="w-full"
+        className="w-full max-w-[1200px] mx-auto"
       >
-        <CarouselContent className="-ml-2 md:-ml-4">
+        <CarouselContent className="-ml-2 md:-ml-3">
           {brandLogos.map((brand) => (
-            <CarouselItem key={brand.id} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/6">
-              <div className="relative aspect-square overflow-hidden rounded-full border border-gray-200 hover:border-gray-300 transition-colors">
+            <CarouselItem key={brand.id} className="pl-2 md:pl-3 basis-1/3 md:basis-1/4 lg:basis-1/5 xl:basis-1/6">
+              <div className="relative aspect-square overflow-hidden rounded-full border border-gray-200 hover:border-gray-300 transition-colors max-w-[80px] mx-auto">
                 <img
                   src={brand.image}
                   alt={brand.name}
