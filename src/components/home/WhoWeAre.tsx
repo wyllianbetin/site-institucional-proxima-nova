@@ -44,7 +44,7 @@ O sucesso das suas vendas online começa aqui.</p>
               <span className="text-3xl font-bold text-proximanova-blue">+100</span>
             </div>
             <h3 className="text-xl font-semibold mb-2">Negócios Transformados</h3>
-            <p className="text-gray-600">Dezenas de negócios tradicionais já escalaram as vendas online através das nossas soluções</p>
+            <p className="text-gray-600">Já ajudamos dezenas de negócios do varejo tradicional a se tornarem lojistas digitais</p>
           </div>
           
           <div className="text-center">
