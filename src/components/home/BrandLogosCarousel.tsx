@@ -9,11 +9,11 @@ import {
 } from "@/components/ui/carousel";
 
 const BrandLogosCarousel = () => {
-  // Array of 32 brand logos, 8 per page
+  // Array of 32 brand logos with actual image paths
   const brandLogos = Array.from({ length: 32 }, (_, i) => ({
     id: i + 1,
     name: `Brand ${i + 1}`,
-    image: `https://images.unsplash.com/photo-1487887235947-a955ef187fcc?w=100&h=100&fit=crop`
+    image: `/marca${i + 1}-logo.png`
   }));
 
   return (
