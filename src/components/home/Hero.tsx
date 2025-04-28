@@ -1,6 +1,8 @@
+
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
 const Hero = () => {
   return <div className="relative bg-proximanova-blue pt-28 pb-16 md:pt-36 md:pb-24">
       <div className="container mx-auto">
@@ -17,7 +19,11 @@ const Hero = () => {
           </div>
           
           <div className="relative h-64 md:h-80 lg:h-96 overflow-hidden rounded-lg shadow-xl animate-fade-in">
-            <img src="https://raw.githubusercontent.com/wyllianbetin/site-institucional-proxima-nova/refs/heads/main/public/imagem%20principal%20site.webp?token=GHSAT0AAAAAADC52MQ25HYX3F4XVGXLJBZE2AO5XAQ" alt="Centro de distribuição do Mercado Livre com ambiente logístico" className="absolute w-full h-full object-cover object-center" />
+            <img 
+              src="https://drive.google.com/uc?export=view&id=1cd0MUZcQfoSR1ZGWCFAlPdxLBHjq7l1b" 
+              alt="Centro de distribuição do Mercado Livre com ambiente logístico" 
+              className="absolute w-full h-full object-cover object-center" 
+            />
           </div>
         </div>
       </div>
@@ -27,4 +33,5 @@ const Hero = () => {
     }}></div>
     </div>;
 };
+
 export default Hero;
