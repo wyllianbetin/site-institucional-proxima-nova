@@ -29,12 +29,7 @@ const Ecosystem = () => {
             Ecossistema Próxima Nova
           </h2>
           <div className="h-1 w-20 bg-proximanova-yellow mb-6"></div>
-          <p className="text-lg max-w-3xl mx-auto text-gray-700">Na Próxima Nova, desenvolvemos um ecossistema completo para atender nossos clientes em todas as etapas da operação de vendas online.
-
-Nosso ecossistema reúne: Educação, Tecnologia, Gestão, Operação e Logística.
-
-Terceirize a rotina das vendas online e foque no que realmente importa: levar o seu negócio para o próximo nível.
-Deixe a parte operacional — o trabalho chato — com a gente.</p>
+          <p className="text-lg max-w-3xl mx-auto text-gray-700">Na Próxima Nova, desenvolvemos um ecossistema completo para atender nossos clientes em todas as etapas da operação de vendas online. Nosso ecossistema reúne: Educação, Tecnologia, Gestão, Operação e Logística. Terceirize a rotina das vendas online e foque no que realmente importa: levar o seu negócio para o próximo nível. Deixe a parte operacional com a gente.</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
