@@ -2,10 +2,8 @@ import React from 'react';
 import { Star, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { testimonials } from '@/config/testimonials';
-
 const SuccessCases = () => {
   const clientLogos = ["TechStore", "HomeDecor", "FashionOutlet", "SportGoods", "KitchenPlus", "PetShop"];
-
   return <section className="section bg-gray-50">
       <div className="container mx-auto">
         <div className="flex flex-col items-center text-center mb-12">
@@ -18,8 +16,7 @@ const SuccessCases = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white rounded-xl shadow-md p-6 border border-gray-100">
+          {testimonials.map((testimonial, index) => <div key={index} className="bg-white rounded-xl shadow-md p-6 border border-gray-100">
               <div className="flex items-center gap-4 mb-4">
                 <div className="h-12 w-12 rounded-full overflow-hidden">
                   <img src={testimonial.image} alt={testimonial.name} className="h-full w-full object-cover" />
@@ -31,24 +28,19 @@ const SuccessCases = () => {
               </div>
               
               <div className="flex mb-3">
-                {[...Array(testimonial.stars)].map((_, i) => (
-                  <Star key={i} className="h-4 w-4 text-yellow-400 fill-yellow-400" />
-                ))}
+                {[...Array(testimonial.stars)].map((_, i) => <Star key={i} className="h-4 w-4 text-yellow-400 fill-yellow-400" />)}
               </div>
               
               <p className="text-gray-700">"{testimonial.text}"</p>
-            </div>
-          ))}
+            </div>)}
         </div>
 
         <div className="bg-white rounded-xl p-8 mb-10">
-          <h3 className="text-xl font-semibold text-center mb-8">Trusted by retailers across Brazil</h3>
+          <h3 className="text-xl font-semibold text-center mb-8">Marcas que confiam em nós</h3>
           <div className="flex flex-wrap justify-center items-center gap-8">
-            {clientLogos.map((logo, index) => (
-              <div key={index} className="bg-gray-100 h-12 px-6 rounded flex items-center justify-center">
+            {clientLogos.map((logo, index) => <div key={index} className="bg-gray-100 h-12 px-6 rounded flex items-center justify-center">
                 <span className="font-medium text-gray-700">{logo}</span>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
 
@@ -61,5 +53,4 @@ const SuccessCases = () => {
       </div>
     </section>;
 };
-
 export default SuccessCases;
