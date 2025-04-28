@@ -148,7 +148,7 @@ const Solutions = () => {
             
             <div className="relative h-80 md:h-96 rounded-lg shadow-xl overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f" 
+                src="/consultoria.jpg" 
                 alt="Strategic consulting session" 
                 className="absolute w-full h-full object-cover"
               />
@@ -163,7 +163,7 @@ const Solutions = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1 relative h-80 md:h-96 rounded-lg shadow-xl overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d" 
+                src="/programa_lojista_digital.jpg" 
                 alt="Digital retailer working on marketplace" 
                 className="absolute w-full h-full object-cover"
               />
@@ -262,7 +262,7 @@ const Solutions = () => {
             
             <div className="relative h-80 md:h-96 rounded-lg shadow-xl overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6" 
+                src="/programa_seller.jpg" 
                 alt="Advanced seller operations" 
                 className="absolute w-full h-full object-cover"
               />

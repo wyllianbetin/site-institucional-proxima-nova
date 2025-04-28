@@ -10,19 +10,19 @@ const Solutions = () => {
     description: "Diagnóstico completo, plano de ação personalizado e consultoria estratégica para transformação digital.",
     icon: "📊",
     link: "/solutions#consulting",
-    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+    image: "/consultoria.jpg"
   }, {
     title: "Programa Lojista Digital",
     description: "Uma solução prática para lojas físicas que querem vender no Mercado Livre de forma rápida e profissional.",
     icon: "🚀",
     link: "/solutions#digital-retailer",
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+    image: "/programa_lojista_digital.jpg"
   }, {
     title: "Programa Seller",
     description: "Gestão de conta para vendedores estabelecidos que buscam escalar com eficiência usando inteligência de vendas.",
     icon: "📈",
     link: "/solutions#seller-program",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6"
+    image: "/programa_seller.jpg"
   }];
 
   return <section className="section bg-[#f5f4e2]">
