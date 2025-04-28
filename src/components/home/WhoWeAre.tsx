@@ -21,15 +21,12 @@ const WhoWeAre = () => {
             
             
             
-            <p>
-              Mais do que uma consultoria ou assessoria, somos um fullcommerce. Nós orientamos, cuidamos, executamos e entregamos resultados. Somos comprometidos em proporcionar crescimento real e sustentável para cada empresa que confia na nossa expertise.
-            </p>
+            <p>Mais do que uma simples consultoria ou assessoria, somos fullcommerce: orientamos, executamos e entregamos resultados para quem busca crescer no e-commerce.</p>
             
             
             
-            <p className="font-medium">
-              Bem-vindo à Próxima Nova. O sucesso das suas vendas online começa aqui.
-            </p>
+            <p className="font-medium">Bem-vindo à Próxima Nova.
+O sucesso das suas vendas online começa aqui.</p>
           </div>
         </div>
         
