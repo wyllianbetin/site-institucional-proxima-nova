@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Users } from 'lucide-react';
 const WhoWeAre = () => {
@@ -13,15 +14,9 @@ const WhoWeAre = () => {
           <div className="text-lg max-w-3xl mx-auto text-gray-700 space-y-4">
             <p>Na Próxima Nova, acreditamos que o presente e o futuro do varejo é e será cada vez mais digital — e estamos aqui para construir essa transformação ao lado das empresas.</p>
             
-            <p>Oferecemos um ecossistema completo: tecnologia, treinamentos, gestão, operação e logística — tudo em um único parceiro estratégico.
-
-          </p>
-            
-            
+            <p>Oferecemos um ecossistema completo: tecnologia, treinamentos, gestão, operação e logística — tudo em um único parceiro estratégico.</p>
             
             <p>Mais do que uma simples consultoria ou assessoria, somos fullcommerce: orientamos, executamos e entregamos resultados para quem busca crescer no e-commerce.</p>
-            
-            
             
             <p className="font-medium">Bem-vindo à Próxima Nova.
 O sucesso das suas vendas online começa aqui.</p>

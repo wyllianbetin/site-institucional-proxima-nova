@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -25,6 +26,11 @@ const Ecosystem = () => {
     icon: "⚙️",
     description: "We provide comprehensive operational support covering all aspects of marketplace selling. From shipping logistics to customer interactions, product listings to advertising campaigns, our team ensures your day-to-day operations run smoothly and efficiently.",
     features: ["Shipping logistics support", "Customer service excellence", "Product listing optimization", "Advertising campaign management", "Conflict resolution assistance"]
+  }, {
+    title: "Storage & Logistics",
+    icon: "📦",
+    description: "Our storage and logistics solutions help optimize your inventory management and shipping processes. We provide secure warehousing, efficient order fulfillment, and reliable shipping services to ensure your products reach customers quickly and in perfect condition.",
+    features: ["Secure product warehousing", "Efficient order fulfillment", "Fast shipping services", "Inventory tracking", "Returns management"]
   }, {
     title: "Community",
     icon: "👥",

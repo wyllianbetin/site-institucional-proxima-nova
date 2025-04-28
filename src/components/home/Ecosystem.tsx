@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Layers, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -18,6 +19,10 @@ const Ecosystem = () => {
     title: "Operações",
     description: "Suporte para envios, atendimento, anúncios e publicidade.",
     icon: "⚙️"
+  }, {
+    title: "Armazenamento & Logística",
+    description: "Soluções de estoque e envios para maximizar eficiência.",
+    icon: "📦"
   }];
   return <section className="section bg-white">
       <div className="container mx-auto">
@@ -32,7 +37,7 @@ const Ecosystem = () => {
           <p className="text-lg max-w-3xl mx-auto text-gray-700">Na Próxima Nova, desenvolvemos um ecossistema completo para atender nossos clientes em todas as etapas da operação de vendas online. Nosso ecossistema reúne: Educação, Tecnologia, Gestão, Operação e Logística. Terceirize a rotina das vendas online e foque no que realmente importa: levar o seu negócio para o próximo nível. Deixe a parte operacional com a gente.</p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
           {ecosystemComponents.map((component, index) => <div key={index} className="bg-gray-50 rounded-lg p-6 text-center hover:shadow-md transition-shadow duration-300">
               <div className="text-4xl mb-4">{component.icon}</div>
               <h3 className="text-xl font-semibold text-proximanova-blue mb-2">{component.title}</h3>
