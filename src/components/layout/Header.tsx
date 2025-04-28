@@ -54,12 +54,11 @@ const Header = () => {
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center">
           <img 
-            src={scrolled ? "/logo-black.svg" : "/logo-white.svg"}
+            src={scrolled ? "/logo-black.svg" : "/logo.svg"}
             alt="Próxima Nova Logo" 
             className="h-8 md:h-10 w-auto transition-all duration-300"
             loading="eager"
             decoding="async"
-            style={{backgroundColor: 'transparent'}}
           />
         </Link>
 
