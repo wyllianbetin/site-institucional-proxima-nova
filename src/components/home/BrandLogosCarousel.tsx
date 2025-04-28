@@ -1,61 +1,39 @@
-
 import React from 'react';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselPrevious,
-  CarouselNext,
-} from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import { useIsMobile } from "@/hooks/use-mobile";
-
 const BrandLogosCarousel = () => {
   const isMobile = useIsMobile();
-  
+
   // Array of 32 brand logos with actual image paths
-  const brandLogos = Array.from({ length: 32 }, (_, i) => ({
+  const brandLogos = Array.from({
+    length: 32
+  }, (_, i) => ({
     id: i + 1,
     name: `Brand ${i + 1}`,
     image: `/marca${i + 1}-logo.png`
   }));
-
-  return (
-    <div className="w-full overflow-hidden bg-white rounded-xl p-6">
-      <h3 className="text-xl font-semibold text-center mb-6">Marcas que confiam em nós</h3>
+  return <div className="w-full overflow-hidden bg-white rounded-xl p-6">
+      <h3 className="text-xl font-semibold text-center mb-6">Clientes que confiaram em nós!</h3>
       
       <div className="relative max-w-[1200px] mx-auto px-12">
-        <Carousel
-          opts={{
-            align: "start",
-            loop: true,
-            skipSnaps: false,
-            dragFree: true,
-          }}
-          className="w-full"
-        >
+        <Carousel opts={{
+        align: "start",
+        loop: true,
+        skipSnaps: false,
+        dragFree: true
+      }} className="w-full">
           <CarouselContent>
-            {brandLogos.map((brand) => (
-              <CarouselItem 
-                key={brand.id} 
-                className={`${isMobile ? 'basis-1/3' : 'basis-1/8'} pl-4`}
-              >
+            {brandLogos.map(brand => <CarouselItem key={brand.id} className={`${isMobile ? 'basis-1/3' : 'basis-1/8'} pl-4`}>
                 <div className="relative aspect-square overflow-hidden rounded-full border border-gray-200 hover:border-gray-300 transition-colors max-w-[80px] mx-auto">
-                  <img
-                    src={brand.image}
-                    alt={brand.name}
-                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-                  />
+                  <img src={brand.image} alt={brand.name} className="w-full h-full object-cover transition-transform duration-300 hover:scale-110" />
                 </div>
-              </CarouselItem>
-            ))}
+              </CarouselItem>)}
           </CarouselContent>
           
           <CarouselPrevious className="absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2" />
           <CarouselNext className="absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2" />
         </Carousel>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default BrandLogosCarousel;
