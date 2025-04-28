@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -24,7 +23,6 @@ const Hero = () => {
               alt="Centro de distribuição do Mercado Livre com ambiente logístico" 
               className="absolute w-full h-full object-cover object-center" 
             />
-            <div className="absolute inset-0 bg-proximanova-blue/10"></div>
           </div>
         </div>
       </div>
