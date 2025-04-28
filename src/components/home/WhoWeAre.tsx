@@ -36,7 +36,7 @@ O sucesso das suas vendas online começa aqui.</p>
               <span className="text-3xl font-bold text-proximanova-blue">+5</span>
             </div>
             <h3 className="text-xl font-semibold mb-2">Anos de Experiência</h3>
-            <p className="text-gray-600">Estamos desde 2020 ajudando empresas a venderem online</p>
+            <p className="text-gray-600">Estamos desde 2020 ajudando empresas a venderem online através do Mercado Livre</p>
           </div>
           
           <div className="text-center">
