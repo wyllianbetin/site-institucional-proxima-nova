@@ -2,23 +2,27 @@
 import React from 'react';
 import { Briefcase, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Card, CardContent, CardFooter } from '@/components/ui/card';
 
 const Solutions = () => {
   const solutions = [{
     title: "Consultoria Estratégica",
     description: "Diagnóstico completo, plano de ação personalizado e consultoria estratégica para transformação digital.",
     icon: "📊",
-    link: "/solutions#consulting"
+    link: "/solutions#consulting",
+    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c"
   }, {
     title: "Programa Varejista Digital",
     description: "Uma solução prática para lojas físicas que querem vender no Mercado Livre de forma rápida e profissional.",
     icon: "🚀",
-    link: "/solutions#digital-retailer"
+    link: "/solutions#digital-retailer",
+    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
   }, {
     title: "Programa Seller",
     description: "Gestão de conta para vendedores estabelecidos que buscam escalar com eficiência usando inteligência de vendas.",
     icon: "📈",
-    link: "/solutions#seller-program"
+    link: "/solutions#seller-program",
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6"
   }];
 
   return <section className="section bg-[#f5f4e2]">
@@ -36,15 +40,30 @@ Confira nossas soluções!</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          {solutions.map((solution, index) => <div key={index} className="solution-card">
-              <div className="text-4xl mb-4">{solution.icon}</div>
-              <h3 className="text-xl font-bold text-proximanova-blue mb-3">{solution.title}</h3>
-              <p className="text-gray-600 mb-6">{solution.description}</p>
-              <Link to={solution.link} className="inline-flex items-center text-proximanova-blue font-medium hover:text-proximanova-yellow transition-colors">
-                Learn more
-                <ArrowRight className="h-4 w-4 ml-2" />
-              </Link>
-            </div>)}
+          {solutions.map((solution, index) => (
+            <Card key={index} className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="h-48 relative overflow-hidden">
+                <img 
+                  src={solution.image} 
+                  alt={solution.title}
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                />
+                <div className="absolute top-4 left-4 bg-white/90 p-2 rounded-full">
+                  <span className="text-2xl">{solution.icon}</span>
+                </div>
+              </div>
+              <CardContent className="pt-6">
+                <h3 className="text-xl font-bold text-proximanova-blue mb-3">{solution.title}</h3>
+                <p className="text-gray-600 mb-4">{solution.description}</p>
+              </CardContent>
+              <CardFooter className="pt-0">
+                <Link to={solution.link} className="inline-flex items-center text-proximanova-blue font-medium hover:text-proximanova-yellow transition-colors">
+                  Learn more
+                  <ArrowRight className="h-4 w-4 ml-2" />
+                </Link>
+              </CardFooter>
+            </Card>
+          ))}
         </div>
 
         <div className="text-center">
