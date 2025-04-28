@@ -7,20 +7,17 @@ import { Card, CardContent, CardFooter } from '@/components/ui/card';
 const Solutions = () => {
   const solutions = [{
     title: "Curso + Consultoria",
-    description: "Diagnóstico completo, plano de ação personalizado e consultoria estratégica para transformação digital.",
-    icon: "📊",
+    description: "Treinamento e consultoria para quem quer iniciar no e-commerce com suporte e acompanhamento durante 6 meses.",
     link: "/solutions#consulting",
     image: "/consultoria.jpg"
   }, {
     title: "Programa Lojista Digital",
-    description: "Uma solução prática para lojas físicas que querem vender no Mercado Livre de forma rápida e profissional.",
-    icon: "🚀",
+    description: "Implementamos a operação de vendas online para empresas que não têm tempo, equipe ou experiência em marketplaces.",
     link: "/solutions#digital-retailer",
     image: "/programa_lojista_digital.jpg"
   }, {
     title: "Programa Seller",
-    description: "Gestão de conta para vendedores estabelecidos que buscam escalar com eficiência usando inteligência de vendas.",
-    icon: "📈",
+    description: "Aceleramos sellers que já vendem online, otimizando e escalando os resultados no Mercado Livre.",
     link: "/solutions#seller-program",
     image: "/programa_seller.jpg"
   }];
@@ -48,9 +45,6 @@ Confira nossas soluções!</p>
                   alt={solution.title}
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                 />
-                <div className="absolute top-4 left-4 bg-white/90 p-2 rounded-full">
-                  <span className="text-2xl">{solution.icon}</span>
-                </div>
               </div>
               <CardContent className="pt-6">
                 <h3 className="text-xl font-bold text-proximanova-blue mb-3">{solution.title}</h3>
@@ -58,7 +52,7 @@ Confira nossas soluções!</p>
               </CardContent>
               <CardFooter className="pt-0">
                 <Link to={solution.link} className="inline-flex items-center text-proximanova-blue font-medium hover:text-proximanova-yellow transition-colors">
-                  Learn more
+                  Saiba mais
                   <ArrowRight className="h-4 w-4 ml-2" />
                 </Link>
               </CardFooter>

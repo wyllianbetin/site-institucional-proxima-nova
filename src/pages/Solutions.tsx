@@ -42,8 +42,7 @@ const Solutions = () => {
     id: "consulting",
     title: "Curso + Consultoria",
     description: [
-      "Our Strategic Consulting service provides a complete analysis of your business, identifying the best opportunities to enter and thrive in digital marketplaces.",
-      "We deliver a customized action plan with clear steps for implementing your digital transformation strategy, supported by expert guidance at every stage."
+      "Treinamento e consultoria para quem quer iniciar no e-commerce com suporte e acompanhamento durante 6 meses."
     ],
     features: [
       "Business diagnosis", 
@@ -53,7 +52,7 @@ const Solutions = () => {
       "Implementation roadmap", 
       "ROI projections"
     ],
-    buttonText: "Request a consultation",
+    buttonText: "Saiba mais",
     imageSrc: "/consultoria.jpg",
     imageAlt: "Strategic consulting session"
   };
@@ -62,8 +61,7 @@ const Solutions = () => {
     id: "digital-retailer",
     title: "Programa Lojista Digital",
     description: [
-      "The Digital Retailer Program is a practical solution for physical stores wanting to sell on Mercado Livre quickly and professionally. We guide your team through the entire process.",
-      "Our program includes hands-on training, system setup, and ongoing support to ensure your team has all the tools and knowledge needed to succeed."
+      "Implementamos a operação de vendas online para empresas que não têm tempo, equipe ou experiência em marketplaces."
     ],
     features: [
       "Account setup assistance", 
@@ -75,7 +73,7 @@ const Solutions = () => {
       "Performance tracking",
       "Ongoing support"
     ],
-    buttonText: "Join the program",
+    buttonText: "Saiba mais",
     imageSrc: "/programa_lojista_digital.jpg",
     imageAlt: "Digital retailer working on marketplace"
   };
@@ -84,8 +82,7 @@ const Solutions = () => {
     id: "seller-program",
     title: "Programa Seller",
     description: [
-      "Our Seller Program is designed for established marketplace sellers looking to scale their operations efficiently and achieve high-performance sales.",
-      "We provide advanced strategies, analytics, and operational support to optimize your marketplace presence, increase visibility, and improve conversion rates."
+      "Aceleramos sellers que já vendem online, otimizando e escalando os resultados no Mercado Livre."
     ],
     features: [
       "Account performance analysis", 
@@ -97,7 +94,7 @@ const Solutions = () => {
       "Brand development",
       "Growth acceleration"
     ],
-    buttonText: "Scale your business",
+    buttonText: "Saiba mais",
     imageSrc: "/programa_seller.jpg",
     imageAlt: "Advanced seller operations"
   };

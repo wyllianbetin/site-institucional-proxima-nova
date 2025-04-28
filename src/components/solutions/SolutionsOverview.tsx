@@ -1,16 +1,15 @@
 
 import React from 'react';
-import { ArrowRight, Briefcase, Image } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 interface SolutionCardProps {
   title: string;
   description: string;
-  icon: React.ReactNode;
   onClick: () => void;
   imagePath?: string;
 }
 
-const SolutionCard = ({ title, description, icon, onClick, imagePath }: SolutionCardProps) => {
+const SolutionCard = ({ title, description, onClick, imagePath }: SolutionCardProps) => {
   const [imageError, setImageError] = React.useState(false);
 
   const handleImageError = () => {
@@ -20,9 +19,6 @@ const SolutionCard = ({ title, description, icon, onClick, imagePath }: Solution
 
   return (
     <div className="solution-card text-center rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow cursor-pointer bg-white" onClick={onClick}>
-      <div className="bg-proximanova-blue/10 h-20 w-20 flex items-center justify-center rounded-full mx-auto mb-6">
-        {icon}
-      </div>
       {imagePath && !imageError ? (
         <div className="mb-4 h-40 overflow-hidden rounded-md">
           <img 
@@ -36,7 +32,7 @@ const SolutionCard = ({ title, description, icon, onClick, imagePath }: Solution
       <h3 className="text-xl font-bold text-proximanova-blue mb-3">{title}</h3>
       <p className="text-gray-600 mb-6">{description}</p>
       <button className="text-proximanova-blue font-medium hover:text-proximanova-yellow transition-colors flex items-center justify-center w-full">
-        Learn more
+        Saiba mais
         <ArrowRight className="h-4 w-4 ml-2" />
       </button>
     </div>
@@ -70,24 +66,21 @@ const SolutionsOverview = ({
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
           <SolutionCard 
             title="Curso + Consultoria"
-            description="For businesses looking to develop a digital strategy."
-            icon={<Briefcase className="h-8 w-8 text-proximanova-blue" />}
+            description="Treinamento e consultoria para quem quer iniciar no e-commerce com suporte e acompanhamento durante 6 meses."
             onClick={onScrollToConsulting}
             imagePath="/consultoria.jpg"
           />
           
           <SolutionCard 
             title="Programa Lojista Digital"
-            description="For physical stores starting to sell online."
-            icon={<span className="text-4xl">🚀</span>}
+            description="Implementamos a operação de vendas online para empresas que não têm tempo, equipe ou experiência em marketplaces."
             onClick={onScrollToRetailer}
             imagePath="/programa_lojista_digital.jpg"
           />
           
           <SolutionCard 
             title="Programa Seller"
-            description="For established sellers looking to scale operations."
-            icon={<span className="text-4xl">📈</span>}
+            description="Aceleramos sellers que já vendem online, otimizando e escalando os resultados no Mercado Livre."
             onClick={onScrollToSeller}
             imagePath="/programa_seller.jpg"
           />
