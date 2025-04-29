@@ -51,8 +51,18 @@ const Ecosystem = () => {
 
   // Function to calculate arrowhead coordinates for curved lines
   const calculateArrowhead = (index: number, totalItems: number, radius: number, arrowSize: number = 1) => {
+    // Calculate current and next component index (following the specified flow)
+    let nextIndex;
+    // Define the new flow: Educação > Tecnologia > Gestão > Operação > Armazenamento > Logística > Educação
+    if (index === 0) nextIndex = 1;      // Educação -> Tecnologia
+    else if (index === 1) nextIndex = 2; // Tecnologia -> Gestão
+    else if (index === 2) nextIndex = 3; // Gestão -> Operação
+    else if (index === 3) nextIndex = 4; // Operação -> Armazenamento
+    else if (index === 4) nextIndex = 5; // Armazenamento -> Logística
+    else nextIndex = 0;                  // Logística -> Educação
+    
     const currentAngle = ((Math.PI * 2) / totalItems) * index - Math.PI / 2;
-    const nextAngle = ((Math.PI * 2) / totalItems) * ((index + 1) % totalItems) - Math.PI / 2;
+    const nextAngle = ((Math.PI * 2) / totalItems) * nextIndex - Math.PI / 2;
     
     // Calculate a point along the arc between the current and next component
     const midAngle = (currentAngle + nextAngle) / 2;
@@ -69,7 +79,13 @@ const Ecosystem = () => {
     const x2 = x + arrowSize * Math.cos(arrowAngle + Math.PI / 6);
     const y2 = y + arrowSize * Math.sin(arrowAngle + Math.PI / 6);
     
-    return { point: {x, y}, arrow1: {x: x1, y: y1}, arrow2: {x: x2, y: y2} };
+    return { 
+      point: {x, y}, 
+      arrow1: {x: x1, y: y1}, 
+      arrow2: {x: x2, y: y2},
+      currentIndex: index,
+      nextIndex: nextIndex
+    };
   };
 
   return (
@@ -91,10 +107,10 @@ const Ecosystem = () => {
 
         {/* Circular layout for desktop */}
         <div className="hidden md:block relative mb-10">
-          <div className="relative w-full max-w-4xl mx-auto aspect-square">
-            {/* Central logo */}
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-full p-6 shadow-lg z-10 w-40 h-40 flex items-center justify-center">
-              <img src="/logo.svg" alt="Próxima Nova" className="w-32 h-32 object-contain" />
+          <div className="relative w-full max-w-5xl mx-auto aspect-square">
+            {/* Central logo - increased size */}
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-full p-8 shadow-lg z-10 w-48 h-48 flex items-center justify-center">
+              <img src="/logo.svg" alt="Próxima Nova" className="w-36 h-36 object-contain" />
             </div>
 
             {/* Connection lines using SVG - Circular flow with arrows */}
@@ -103,7 +119,7 @@ const Ecosystem = () => {
               <circle 
                 cx="50" 
                 cy="50" 
-                r="36" 
+                r="33" 
                 fill="none" 
                 stroke="#00476240"
                 strokeWidth="0.5"
@@ -113,12 +129,12 @@ const Ecosystem = () => {
               
               {/* Arrows along the circular path */}
               {ecosystemComponents.map((_, index) => {
-                const arrowhead = calculateArrowhead(index, ecosystemComponents.length, 36, 2);
+                const arrowhead = calculateArrowhead(index, ecosystemComponents.length, 33, 2);
                 const isActive = activeComponent === index || 
-                                activeComponent === (index + 1) % ecosystemComponents.length;
+                                activeComponent === arrowhead.nextIndex;
                 
                 return (
-                  <g key={`arrow-${index}`} className="transition-all duration-300">
+                  <g key={`arrow-${index}`} className="transition-all duration-500">
                     {/* Arrow along the circular path */}
                     <polygon 
                       points={`
@@ -127,26 +143,26 @@ const Ecosystem = () => {
                         ${50 + arrowhead.arrow2.x},${50 + arrowhead.arrow2.y}
                       `}
                       fill={isActive ? "#f8d14d" : "#00476280"}
-                      className="transition-all duration-300"
+                      className={`transition-all duration-300 ${isActive ? 'animate-pulse' : ''}`}
                     />
                   </g>
                 );
               })}
             </svg>
 
-            {/* Component cards positioned around the circle */}
+            {/* Component cards positioned around the circle - moved closer together */}
             {ecosystemComponents.map((component, index) => {
-              const { x, y } = calculatePosition(index, ecosystemComponents.length, 36);
+              const { x, y } = calculatePosition(index, ecosystemComponents.length, 33);
               return (
                 <div 
                   key={index}
                   className={`absolute transition-all duration-500 transform -translate-x-1/2 -translate-y-1/2 rounded-full overflow-hidden shadow-md
-                    ${activeComponent === index ? 'scale-150 z-30 shadow-xl' : activeComponent !== null ? 'opacity-70' : ''}
+                    ${activeComponent === index ? 'scale-[1.8] z-30 shadow-xl' : 'z-20'}
                   `}
                   style={{ 
                     left: `calc(50% + ${x}%)`, 
                     top: `calc(50% + ${y}%)`,
-                    width: activeComponent === index ? '22%' : '20%',
+                    width: '20%',
                     aspectRatio: '1/1',
                   }}
                   onMouseEnter={() => setActiveComponent(index)}
@@ -166,9 +182,17 @@ const Ecosystem = () => {
                         />
                         <div className="absolute inset-0 bg-proximanova-blue/60 group-hover:bg-proximanova-blue/80 transition-colors duration-300"></div>
                       </div>
-                      <div className="relative z-10 text-white text-center p-3">
+                      <div className={`relative z-10 text-white text-center p-3 w-full ${activeComponent === index ? 'pt-5' : ''}`}>
                         <h3 className="text-base font-bold mb-1">{component.title}</h3>
-                        <p className="text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">{component.description.split(' ').slice(0, 5).join(' ')}...</p>
+                        {activeComponent === index ? (
+                          <p className="text-xs leading-tight">
+                            {component.description}
+                          </p>
+                        ) : (
+                          <p className="text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            {component.description.split(' ').slice(0, 5).join(' ')}...
+                          </p>
+                        )}
                       </div>
                     </div>
                   </Card>
