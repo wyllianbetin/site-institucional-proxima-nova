@@ -42,7 +42,7 @@ const SolutionsOverview = ({
   return <section className="section bg-white">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue mb-4">Soluções para todas as etapas da sua jornada digital</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue mb-4">Soluções para todas as etapas da sua jornada no Mercado Livre</h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">Não importa se você está apenas começando a explorar canais digitais ou quer otimizar sua operação de vendas online, temos a solução certa para você.</p>
         </div>
         
