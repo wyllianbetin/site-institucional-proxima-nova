@@ -1,23 +1,12 @@
-
 import React from 'react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import WhatsAppButton from '@/components/common/WhatsAppButton';
 import CallToAction from '@/components/common/CallToAction';
 import { Check } from 'lucide-react';
-
 const About = () => {
-  const differentials = [
-    "Ecossistema único no Brasil", 
-    "Especializado em marketplaces",
-    "Mais de 5 anos de expertise em vendas online",
-    "Soluções personalizadas para cada estágio do negócio",
-    "Suporte completo da estratégia à execução",
-    "Foco em crescimento sustentável e lucrativo"
-  ];
-
-  return (
-    <>
+  const differentials = ["Ecossistema único no Brasil", "Especializado em marketplaces", "Mais de 5 anos de expertise em vendas online", "Soluções personalizadas para cada estágio do negócio", "Suporte completo da estratégia à execução", "Foco em crescimento sustentável e lucrativo"];
+  return <>
       <Header />
       
       {/* Page Header */}
@@ -45,11 +34,7 @@ const About = () => {
                   evoluiu para se tornar uma referência nacional em terceirização de gestão e 
                   operação de vendas online.
                 </p>
-                <p>
-                  Desde então, já atuamos ao lado de dezenas de lojistas, fabricantes, distribuidores 
-                  e importadores de todos os portes, ajudando cada um a estruturar, escalar e 
-                  otimizar sua presença nos marketplaces.
-                </p>
+                <p>Desde então, já atuamos ao lado de dezenas de lojistas, fabricantes, distribuidores e importadores de todos os portes, ajudando cada um a estruturar, escalar e otimizar sua presença no Mercado Livre.</p>
                 <p>
                   Nosso foco sempre foi gerar crescimento sustentável com base em planejamento 
                   estratégico, execução profissional e excelência operacional.
@@ -62,11 +47,7 @@ const About = () => {
               </div>
             </div>
             <div className="relative h-80 md:h-96 rounded-lg shadow-xl overflow-hidden">
-              <img 
-                src="/sobrenos.webp" 
-                alt="Próxima Nova team" 
-                className="absolute w-full h-full object-cover"
-              />
+              <img src="/sobrenos.webp" alt="Próxima Nova team" className="absolute w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -120,28 +101,20 @@ const About = () => {
           <div className="h-1 w-16 bg-proximanova-yellow mb-10"></div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
-            {differentials.map((differential, index) => (
-              <div key={index} className="flex items-start">
+            {differentials.map((differential, index) => <div key={index} className="flex items-start">
                 <div className="bg-proximanova-blue/10 p-2 rounded-full mr-4 mt-1">
                   <Check className="h-4 w-4 text-proximanova-blue" />
                 </div>
                 <p className="text-gray-700">{differential}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
       
-      <CallToAction 
-        title="Quer saber mais sobre como podemos ajudar seu negócio?"
-        buttonText="Entre em contato"
-        buttonLink="/contact"
-      />
+      <CallToAction title="Quer saber mais sobre como podemos ajudar seu negócio?" buttonText="Entre em contato" buttonLink="/contact" />
       
       <Footer />
       <WhatsAppButton />
-    </>
-  );
+    </>;
 };
-
 export default About;
