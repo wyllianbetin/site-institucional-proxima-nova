@@ -50,10 +50,9 @@ const EcosystemComponent = ({
                 target.src = "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d";
               }}
             />
-            {/* Reduced opacity in static state, solid on hover */}
-            <div className="absolute inset-0 bg-proximanova-blue/40 group-hover:bg-proximanova-blue transition-colors duration-300"></div>
+            <div className="absolute inset-0 bg-proximanova-blue/60 group-hover:bg-proximanova-blue/80 transition-colors duration-300"></div>
           </div>
-          <div className={`relative z-10 text-white text-center p-3 w-full flex flex-col items-center justify-center h-full ${activeComponent === index ? 'pt-2' : ''}`}>
+          <div className={`relative z-10 text-white text-center p-3 w-full ${activeComponent === index ? 'pt-2' : ''}`}>
             <h3 className="text-base font-bold mb-1">{component.title}</h3>
             {activeComponent === index ? (
               <p className="text-xs leading-tight">
