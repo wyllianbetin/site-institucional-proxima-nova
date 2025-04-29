@@ -153,7 +153,7 @@ const Ecosystem = () => {
           </div>
         </section>)}
       
-      <CallToAction title="Ready to explore our ecosystem?" buttonText="Schedule a demo" buttonLink="/contact" />
+      <CallToAction title="Pronto para explorar nosso ecossistema?" buttonText="Solicite uma reunião" buttonLink="/contact" />
       
       <Footer />
       <WhatsAppButton />
