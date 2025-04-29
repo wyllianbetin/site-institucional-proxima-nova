@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -6,6 +7,7 @@ import CallToAction from '@/components/common/CallToAction';
 import { Book, Layers } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Card, CardContent } from "@/components/ui/card";
+
 const Ecosystem = () => {
   const ecosystemComponents = [{
     title: "Educação",
@@ -31,11 +33,20 @@ const Ecosystem = () => {
     extraContent: <div className="mt-6">
         <h4 className="font-semibold text-lg mb-4">Empresas Parceiras</h4>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {Array.from({
-          length: 6
-        }).map((_, i) => <div key={i} className="bg-gray-100 rounded-lg aspect-video flex items-center justify-center">
-              <div className="text-gray-400 text-sm">Logo Parceiro {i + 1}</div>
-            </div>)}
+          {Array.from({length: 6}).map((_, i) => (
+            <div key={i} className="bg-white rounded-lg overflow-hidden flex items-center justify-center p-4 border border-gray-100 shadow-sm">
+              <img 
+                src={`/logoparceiro${i + 1}.png`} 
+                alt={`Logo Parceiro ${i + 1}`} 
+                className="max-w-full max-h-[60px] object-contain"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.src = "/placeholder.svg";
+                  target.alt = `Logo Parceiro ${i + 1} (não disponível)`;
+                }}
+              />
+            </div>
+          ))}
         </div>
       </div>
   }, {
