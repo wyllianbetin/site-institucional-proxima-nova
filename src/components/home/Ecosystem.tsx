@@ -1,8 +1,6 @@
-
 import React from 'react';
 import { Layers, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const Ecosystem = () => {
   const ecosystemComponentsTop = [{
     title: "Educação",
@@ -17,7 +15,6 @@ const Ecosystem = () => {
     description: "Planejamos estratégias e acompanhamos métricas para impulsionar seu crescimento.",
     icon: "📋"
   }];
-
   const ecosystemComponentsBottom = [{
     title: "Operação",
     description: "Executamos cadastro e revisão de anúncios, atendimento, campanhas de Ads e promoções.",
@@ -31,7 +28,6 @@ const Ecosystem = () => {
     description: "Oferecemos soluções de transporte para as modalidades Flex e Full, integrando sua logística.",
     icon: "🚚"
   }];
-
   return <section className="section bg-white">
       <div className="container mx-auto">
         <div className="flex flex-col items-center text-center mb-12">
@@ -42,9 +38,7 @@ const Ecosystem = () => {
             Ecossistema Próxima Nova
           </h2>
           <div className="h-1 w-20 bg-proximanova-yellow mb-6"></div>
-          <p className="text-lg max-w-3xl mx-auto text-gray-700">Na Próxima Nova, desenvolvemos um ecossistema completo para atender nossos clientes de ponta a ponta.
-Nosso ecossistema reúne:
-Educação, Tecnologia, Gestão, Operação e Armazenamento & Expedição.
+          <p className="text-lg max-w-3xl mx-auto text-gray-700">Desenvolvemos um ecossistema completo para atender nossos clientes de ponta a ponta.
 Terceirize a rotina das vendas online e foque no que realmente importa: levar o seu negócio para o próximo nível. Deixe a parte operacional com a gente.</p>
         </div>
 
