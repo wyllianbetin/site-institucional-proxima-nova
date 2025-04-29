@@ -27,7 +27,7 @@ const EcosystemComponent = ({
     <div 
       key={index}
       className={`absolute transition-all duration-500 transform -translate-x-1/2 -translate-y-1/2 rounded-full overflow-hidden shadow-md
-        ${activeComponent === index ? 'scale-[2.0] z-30 shadow-xl' : 'z-20'}
+        ${activeComponent === index ? 'scale-[1.4] z-30 shadow-xl' : 'z-20'}
       `}
       style={{ 
         left: `calc(50% + ${position.x}%)`, 

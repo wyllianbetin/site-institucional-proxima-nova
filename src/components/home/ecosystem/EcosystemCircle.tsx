@@ -1,9 +1,8 @@
 
 import React from 'react';
 import EcosystemComponent from './EcosystemComponent';
-import EcosystemCircleConnector from './EcosystemCircleConnector';
 import EcosystemLogo from './EcosystemLogo';
-import { calculatePosition, calculateArrowhead } from './EcosystemData';
+import { calculatePosition } from './EcosystemData';
 
 interface EcosystemCircleProps {
   ecosystemComponents: Array<{
@@ -26,16 +25,9 @@ const EcosystemCircle = ({
         {/* Central logo */}
         <EcosystemLogo />
 
-        {/* Connection lines using SVG - Circular flow with arrows */}
-        <EcosystemCircleConnector 
-          ecosystemComponents={ecosystemComponents}
-          activeComponent={activeComponent}
-          calculateArrowhead={calculateArrowhead}
-        />
-
         {/* Component cards positioned around the circle */}
         {ecosystemComponents.map((component, index) => {
-          const position = calculatePosition(index, ecosystemComponents.length, 27);
+          const position = calculatePosition(index, ecosystemComponents.length, 22);
           return (
             <EcosystemComponent
               key={index}
