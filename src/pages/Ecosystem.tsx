@@ -11,37 +11,37 @@ const Ecosystem = () => {
     title: "Educação",
     icon: "🎓",
     description: "Treinamos você e sua equipe para dominar as vendas online e crescer no digital.",
-    features: ["Hands-on marketplace workshops", "Online training courses", "Regular update webinars", "Custom training for your team", "Certification programs"]
+    features: ["Workshops práticos de marketplace", "Cursos de treinamento online", "Webinars regulares de atualização", "Treinamento personalizado para sua equipe", "Programas de certificação"]
   }, {
     title: "Tecnologia",
     icon: "💻",
     description: "Conectamos e integramos seu negócio a sistemas inteligentes para controlar e escalar suas vendas.",
-    features: ["Inventory management systems", "Marketplace integration tools", "Sales analytics dashboards", "Advertising management platforms", "Customer service automation"]
+    features: ["Sistemas de gerenciamento de estoque", "Ferramentas de integração com marketplaces", "Painéis de análise de vendas", "Plataformas de gerenciamento de publicidade", "Automação de atendimento ao cliente"]
   }, {
     title: "Gestão",
     icon: "📋",
     description: "Planejamos estratégias e acompanhamos métricas para impulsionar seu crescimento.",
-    features: ["Strategic planning sessions", "KPI development and tracking", "Growth opportunity identification", "Process optimization", "Regular performance reviews"]
+    features: ["Sessões de planejamento estratégico", "Desenvolvimento e acompanhamento de KPIs", "Identificação de oportunidades de crescimento", "Otimização de processos", "Revisões regulares de desempenho"]
   }, {
     title: "Operação",
     icon: "⚙️",
     description: "Realizamos o cadastro, revisão e otimização de anúncios. Cuidamos do atendimento pré e pós-venda. Gerenciamos campanhas de Ads, Promoções e muito mais.",
-    features: ["Shipping logistics support", "Customer service excellence", "Product listing optimization", "Advertising campaign management", "Conflict resolution assistance"]
+    features: ["Suporte à logística de envios", "Excelência no atendimento ao cliente", "Otimização de listagem de produtos", "Gerenciamento de campanhas publicitárias", "Assistência na resolução de conflitos"]
   }, {
     title: "Armazenamento & Expedição",
     icon: "📦",
     description: "Cuidamos do armazenamento e da expedição dos seus pedidos com segurança, eficiência e agilidade.",
-    features: ["Secure product warehousing", "Efficient order fulfillment", "Fast shipping services", "Inventory tracking", "Returns management"]
+    features: ["Armazenamento seguro de produtos", "Eficiência no processamento de pedidos", "Serviços rápidos de envio", "Rastreamento de estoque", "Gerenciamento de devoluções"]
   }, {
     title: "Logística Flex e Full",
     icon: "🚚",
     description: "Oferecemos soluções de transporte para as modalidades Flex e Full, integrando sua logística.",
-    features: ["Flex and Full transportation solutions", "Logistics integration", "Fast delivery options", "Efficient package tracking", "Cost-effective shipping"]
+    features: ["Soluções de transporte Flex e Full", "Integração logística", "Opções de entrega rápida", "Rastreamento eficiente de pacotes", "Envio com custo-benefício"]
   }, {
-    title: "Community",
+    title: "Comunidade",
     icon: "👥",
-    description: "Join our exclusive community of retailers and marketplace experts. Share experiences, learn from peers, and stay updated on the latest marketplace trends and strategies through our regular events, online forums, and networking opportunities.",
-    features: ["Exclusive retailer groups", "Industry networking events", "Expert roundtables", "Knowledge sharing platforms", "Annual marketplace conference"]
+    description: "Junte-se à nossa comunidade exclusiva de lojistas e especialistas em marketplace. Compartilhe experiências, aprenda com seus pares e mantenha-se atualizado sobre as últimas tendências e estratégias de marketplace através de nossos eventos regulares, fóruns online e oportunidades de networking.",
+    features: ["Grupos exclusivos para lojistas", "Eventos de networking do setor", "Mesas redondas com especialistas", "Plataformas de compartilhamento de conhecimento", "Conferência anual de marketplace"]
   }];
   
   return <>
@@ -52,7 +52,7 @@ const Ecosystem = () => {
         <div className="container mx-auto text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Nosso Ecossistema</h1>
           <p className="text-xl max-w-3xl mx-auto mb-6">
-            A comprehensive approach to digital transformation that covers all aspects of marketplace success.
+            Uma abordagem abrangente para transformação digital que cobre todos os aspectos do sucesso no marketplace.
           </p>
           <div className="h-1 w-24 bg-proximanova-yellow mx-auto"></div>
         </div>
@@ -67,19 +67,19 @@ const Ecosystem = () => {
                 <div className="bg-proximanova-blue/10 p-3 rounded-full mr-4">
                   <Layers className="h-6 w-6 text-proximanova-blue" />
                 </div>
-                <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue">Complete Ecosystem</h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue">Ecossistema Completo</h2>
               </div>
               <div className="h-1 w-16 bg-proximanova-yellow mb-6"></div>
               <div className="space-y-4 text-gray-700">
                 <p>
-                  At Próxima Nova, we've developed a unique ecosystem approach that addresses 
-                  all aspects of digital retail. Rather than focusing on isolated solutions, 
-                  we integrate education, technology, management, operations, and community to 
-                  create a comprehensive framework for marketplace success.
+                  Na Próxima Nova, desenvolvemos uma abordagem única de ecossistema que aborda 
+                  todos os aspectos do varejo digital. Em vez de focar em soluções isoladas, 
+                  integramos educação, tecnologia, gestão, operações e comunidade para 
+                  criar uma estrutura abrangente para o sucesso no marketplace.
                 </p>
                 <p>
-                  Our ecosystem ensures that your business has all the necessary tools, knowledge, 
-                  and support to thrive in the digital environment, regardless of your starting point.
+                  Nosso ecossistema garante que seu negócio tenha todas as ferramentas, conhecimentos 
+                  e suporte necessários para prosperar no ambiente digital, independentemente do seu ponto de partida.
                 </p>
               </div>
             </div>
@@ -92,7 +92,7 @@ const Ecosystem = () => {
                   </div>)}
                 <div className="w-full text-center mt-4">
                   <div className="inline-block bg-proximanova-blue text-white px-6 py-3 rounded-full text-sm font-medium">
-                    Próxima Nova Ecosystem
+                    Ecossistema Próxima Nova
                   </div>
                 </div>
               </div>
@@ -104,12 +104,12 @@ const Ecosystem = () => {
               <div className="bg-proximanova-blue/10 p-3 rounded-full mr-4">
                 <Book className="h-6 w-6 text-proximanova-blue" />
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue">Detailed Components</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue">Componentes Detalhados</h2>
             </div>
             <div className="h-1 w-16 bg-proximanova-yellow mx-auto mb-6"></div>
             <p className="text-gray-700">
-              Explore each component of our ecosystem to understand how they work together 
-              to drive your digital transformation journey.
+              Explore cada componente do nosso ecossistema para entender como eles trabalham juntos 
+              para impulsionar sua jornada de transformação digital.
             </p>
           </div>
         </div>
@@ -127,7 +127,7 @@ const Ecosystem = () => {
                   <p className="text-gray-700 mb-8">{component.description}</p>
                   
                   <div className="space-y-4">
-                    <h3 className="font-semibold text-lg">Key Features:</h3>
+                    <h3 className="font-semibold text-lg">Principais Características:</h3>
                     <ul className="space-y-2">
                       {component.features.map((feature, i) => <li key={i} className="flex items-start">
                           <div className="bg-proximanova-blue/10 p-1 rounded-full mr-3 mt-1">

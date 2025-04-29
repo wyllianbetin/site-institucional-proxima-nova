@@ -1,38 +1,41 @@
+
 import React from 'react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import WhatsAppButton from '@/components/common/WhatsAppButton';
 import CallToAction from '@/components/common/CallToAction';
 import { Star, ArrowRight } from 'lucide-react';
+
 const SuccessCases = () => {
   const successCases = [{
     name: "TechStore",
-    industry: "Electronics Retail",
-    challenge: "A traditional electronics store with declining foot traffic and increasing competition from online retailers.",
-    solution: "Digital Retailer Program with full implementation support.",
-    results: ["300% increase in total sales within 6 months", "Expanded customer base beyond local market", "Achieved Mercado Livre Gold Seller status in under a year"],
-    quote: "Próxima Nova's program transformed our business completely. We're now reaching customers across Brazil and growing every month.",
+    industry: "Varejo de Eletrônicos",
+    challenge: "Uma loja de eletrônicos tradicional com queda no tráfego de clientes presenciais e aumento da concorrência de varejistas online.",
+    solution: "Programa de Lojista Digital com suporte completo de implementação.",
+    results: ["300% de aumento nas vendas totais em 6 meses", "Base de clientes expandida além do mercado local", "Alcançou o status de Vendedor Ouro do Mercado Livre em menos de um ano"],
+    quote: "O programa da Próxima Nova transformou completamente nosso negócio. Agora estamos alcançando clientes em todo o Brasil e crescendo a cada mês.",
     person: "Maria Silva, CEO",
     image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
   }, {
     name: "Home Decor Shop",
-    industry: "Home & Decoration",
-    challenge: "A home decor business with high-quality products but limited market reach and seasonal sales fluctuations.",
-    solution: "Strategic Consulting followed by Seller Program enrollment.",
-    results: ["450% year-over-year growth in online revenue", "Smoothed out seasonal sales through strategic planning", "Expanded product catalog from 50 to 200 items"],
-    quote: "The strategic insights provided by Próxima Nova helped us identify and capture opportunities we never knew existed.",
-    person: "João Mendes, Founder",
+    industry: "Casa & Decoração",
+    challenge: "Um negócio de decoração para casa com produtos de alta qualidade, mas alcance de mercado limitado e flutuações sazonais nas vendas.",
+    solution: "Consultoria Estratégica seguida pela inscrição no Programa Seller.",
+    results: ["450% de crescimento ano a ano na receita online", "Suavização das vendas sazonais através de planejamento estratégico", "Catálogo de produtos expandido de 50 para 200 itens"],
+    quote: "Os insights estratégicos fornecidos pela Próxima Nova nos ajudaram a identificar e capturar oportunidades que nunca soubemos que existiam.",
+    person: "João Mendes, Fundador",
     image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04"
   }, {
     name: "Fashion Outlet",
-    industry: "Fashion & Apparel",
-    challenge: "A fashion retailer struggling with inventory management and high return rates for online sales.",
-    solution: "Ecosystem approach with focus on Operations and Technology components.",
-    results: ["40% reduction in return rates through improved listings", "Inventory turnover increased by 60%", "Customer satisfaction score improved from 3.2/5 to 4.8/5"],
-    quote: "The technological solutions and operational support transformed how we manage our online business, making it much more efficient and profitable.",
-    person: "Ana Costa, Operations Manager",
+    industry: "Moda & Vestuário",
+    challenge: "Um varejista de moda enfrentando dificuldades com gerenciamento de estoque e altas taxas de devolução para vendas online.",
+    solution: "Abordagem de ecossistema com foco nos componentes de Operações e Tecnologia.",
+    results: ["40% de redução nas taxas de devolução através de anúncios aprimorados", "Giro de estoque aumentado em 60%", "Pontuação de satisfação do cliente melhorada de 3,2/5 para 4,8/5"],
+    quote: "As soluções tecnológicas e o suporte operacional transformaram a forma como gerenciamos nosso negócio online, tornando-o muito mais eficiente e lucrativo.",
+    person: "Ana Costa, Gerente de Operações",
     image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
   }];
+  
   return <>
       <Header />
       
@@ -79,17 +82,17 @@ const SuccessCases = () => {
                   
                   <div className="space-y-6 mb-8">
                     <div>
-                      <h4 className="font-semibold mb-2">The Challenge:</h4>
+                      <h4 className="font-semibold mb-2">O Desafio:</h4>
                       <p className="text-gray-700">{caseStudy.challenge}</p>
                     </div>
                     
                     <div>
-                      <h4 className="font-semibold mb-2">Our Solution:</h4>
+                      <h4 className="font-semibold mb-2">Nossa Solução:</h4>
                       <p className="text-gray-700">{caseStudy.solution}</p>
                     </div>
                     
                     <div>
-                      <h4 className="font-semibold mb-2">The Results:</h4>
+                      <h4 className="font-semibold mb-2">Os Resultados:</h4>
                       <ul className="space-y-2">
                         {caseStudy.results.map((result, i) => <li key={i} className="flex items-start">
                             <div className="bg-proximanova-yellow p-1 rounded-full mr-3 mt-1">
@@ -107,7 +110,7 @@ const SuccessCases = () => {
                   </div>
                   
                   <button className="flex items-center text-proximanova-blue hover:text-proximanova-yellow transition-colors font-medium">
-                    Read full case study
+                    Ver caso completo
                     <ArrowRight className="h-4 w-4 ml-2" />
                   </button>
                 </div>
@@ -120,37 +123,38 @@ const SuccessCases = () => {
       <section className="section bg-gray-50">
         <div className="container mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue mb-8 text-center">
-            Impact Metrics
+            Métricas de Impacto
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
             <div className="bg-white rounded-xl shadow-md p-6">
               <div className="text-4xl font-bold text-proximanova-blue mb-4">300+</div>
-              <p className="text-gray-700">Businesses Transformed</p>
+              <p className="text-gray-700">Negócios Transformados</p>
             </div>
             
             <div className="bg-white rounded-xl shadow-md p-6">
               <div className="text-4xl font-bold text-proximanova-blue mb-4">230%</div>
-              <p className="text-gray-700">Average Sales Growth</p>
+              <p className="text-gray-700">Média de Crescimento em Vendas</p>
             </div>
             
             <div className="bg-white rounded-xl shadow-md p-6">
               <div className="text-4xl font-bold text-proximanova-blue mb-4">85%</div>
-              <p className="text-gray-700">Client Retention Rate</p>
+              <p className="text-gray-700">Taxa de Retenção de Clientes</p>
             </div>
             
             <div className="bg-white rounded-xl shadow-md p-6">
               <div className="text-4xl font-bold text-proximanova-blue mb-4">4.8/5</div>
-              <p className="text-gray-700">Client Satisfaction</p>
+              <p className="text-gray-700">Satisfação dos Clientes</p>
             </div>
           </div>
         </div>
       </section>
       
-      <CallToAction title="Ready to become our next success story?" buttonText="Get started now" buttonLink="/contact" />
+      <CallToAction title="Pronto para se tornar nosso próximo caso de sucesso?" buttonText="Comece agora" buttonLink="/contact" />
       
       <Footer />
       <WhatsAppButton />
     </>;
 };
+
 export default SuccessCases;
