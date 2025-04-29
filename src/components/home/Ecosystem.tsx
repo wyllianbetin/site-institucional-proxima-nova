@@ -12,37 +12,31 @@ const Ecosystem = () => {
     {
       title: "Educação",
       description: "Treinamos você e sua equipe para dominar as vendas online e crescer no digital.",
-      icon: "🎓",
       imagePath: "/ecossistema_educacao.webp"
     },
     {
       title: "Tecnologia",
       description: "Conectamos e integramos seu negócio a sistemas inteligentes para controlar e escalar suas vendas.",
-      icon: "💻",
       imagePath: "/ecossistema_tecnologia.webp"
     },
     {
       title: "Gestão",
       description: "Planejamos estratégias e acompanhamos métricas para impulsionar seu crescimento.",
-      icon: "📋",
       imagePath: "/ecossistema_gestao.webp"
     },
     {
       title: "Operação",
-      description: "Realizamos o cadastro, revisão e otimização de anúncios. Cuidamos do atendimento pré e pós-venda. Gerenciamos campanhas de Ads, Promoções e muito mais.",
-      icon: "⚙️",
+      description: "Realizamos o cadastro, revisão e otimização de anúncios. Cuidamos do atendimento pré e pós-venda.",
       imagePath: "/ecossistema_operacao.webp"
     },
     {
       title: "Armazenamento & Expedição",
       description: "Cuidamos do armazenamento e da expedição dos seus pedidos com segurança, eficiência e agilidade.",
-      icon: "📦",
       imagePath: "/ecossistema_expedicao.webp"
     },
     {
       title: "Logística Flex e Full",
       description: "Oferecemos soluções de transporte para as modalidades Flex e Full, integrando sua logística.",
-      icon: "🚚",
       imagePath: "/ecossistema_logistica.webp"
     }
   ];
@@ -53,6 +47,29 @@ const Ecosystem = () => {
     const x = radius * Math.cos(angle);
     const y = radius * Math.sin(angle);
     return { x, y };
+  };
+
+  // Function to calculate arrowhead coordinates for curved lines
+  const calculateArrowhead = (index: number, totalItems: number, radius: number, arrowSize: number = 1) => {
+    const currentAngle = ((Math.PI * 2) / totalItems) * index - Math.PI / 2;
+    const nextAngle = ((Math.PI * 2) / totalItems) * ((index + 1) % totalItems) - Math.PI / 2;
+    
+    // Calculate a point along the arc between the current and next component
+    const midAngle = (currentAngle + nextAngle) / 2;
+    
+    // Adjust the angle to point the arrow in the direction of flow
+    const arrowAngle = midAngle + Math.PI / 2;
+    
+    const x = radius * Math.cos(midAngle);
+    const y = radius * Math.sin(midAngle);
+    
+    // Calculate arrowhead points
+    const x1 = x + arrowSize * Math.cos(arrowAngle - Math.PI / 6);
+    const y1 = y + arrowSize * Math.sin(arrowAngle - Math.PI / 6);
+    const x2 = x + arrowSize * Math.cos(arrowAngle + Math.PI / 6);
+    const y2 = y + arrowSize * Math.sin(arrowAngle + Math.PI / 6);
+    
+    return { point: {x, y}, arrow1: {x: x1, y: y1}, arrow2: {x: x2, y: y2} };
   };
 
   return (
@@ -80,23 +97,39 @@ const Ecosystem = () => {
               <img src="/logo.svg" alt="Próxima Nova" className="w-32 h-32 object-contain" />
             </div>
 
-            {/* Connection lines using SVG */}
+            {/* Connection lines using SVG - Circular flow with arrows */}
             <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-              {/* Lines connecting components to center */}
+              {/* Circular path connecting all components */}
+              <circle 
+                cx="50" 
+                cy="50" 
+                r="36" 
+                fill="none" 
+                stroke="#00476240"
+                strokeWidth="0.5"
+                strokeDasharray="2,1"
+                className="transition-all duration-300"
+              />
+              
+              {/* Arrows along the circular path */}
               {ecosystemComponents.map((_, index) => {
-                const { x, y } = calculatePosition(index, ecosystemComponents.length, 36);
+                const arrowhead = calculateArrowhead(index, ecosystemComponents.length, 36, 2);
+                const isActive = activeComponent === index || 
+                                activeComponent === (index + 1) % ecosystemComponents.length;
+                
                 return (
-                  <line 
-                    key={index}
-                    x1="50" 
-                    y1="50" 
-                    x2={50 + x} 
-                    y2={50 + y}
-                    stroke={activeComponent === index ? "#f8d14d" : "#00476280"}
-                    strokeWidth="0.5"
-                    strokeDasharray={activeComponent === index ? "none" : "1,1"}
-                    className="transition-all duration-300"
-                  />
+                  <g key={`arrow-${index}`} className="transition-all duration-300">
+                    {/* Arrow along the circular path */}
+                    <polygon 
+                      points={`
+                        ${50 + arrowhead.point.x},${50 + arrowhead.point.y} 
+                        ${50 + arrowhead.arrow1.x},${50 + arrowhead.arrow1.y} 
+                        ${50 + arrowhead.arrow2.x},${50 + arrowhead.arrow2.y}
+                      `}
+                      fill={isActive ? "#f8d14d" : "#00476280"}
+                      className="transition-all duration-300"
+                    />
+                  </g>
                 );
               })}
             </svg>
@@ -107,10 +140,14 @@ const Ecosystem = () => {
               return (
                 <div 
                   key={index}
-                  className={`absolute transition-all duration-300 transform -translate-x-1/2 -translate-y-1/2 w-[22%] aspect-square rounded-full overflow-hidden shadow-md ${activeComponent === index ? 'scale-110 z-20 shadow-xl' : activeComponent !== null ? 'opacity-70' : ''}`}
+                  className={`absolute transition-all duration-500 transform -translate-x-1/2 -translate-y-1/2 rounded-full overflow-hidden shadow-md
+                    ${activeComponent === index ? 'scale-150 z-30 shadow-xl' : activeComponent !== null ? 'opacity-70' : ''}
+                  `}
                   style={{ 
                     left: `calc(50% + ${x}%)`, 
-                    top: `calc(50% + ${y}%)` 
+                    top: `calc(50% + ${y}%)`,
+                    width: activeComponent === index ? '22%' : '20%',
+                    aspectRatio: '1/1',
                   }}
                   onMouseEnter={() => setActiveComponent(index)}
                   onMouseLeave={() => setActiveComponent(null)}
@@ -130,7 +167,6 @@ const Ecosystem = () => {
                         <div className="absolute inset-0 bg-proximanova-blue/60 group-hover:bg-proximanova-blue/80 transition-colors duration-300"></div>
                       </div>
                       <div className="relative z-10 text-white text-center p-3">
-                        <div className="text-2xl mb-1">{component.icon}</div>
                         <h3 className="text-base font-bold mb-1">{component.title}</h3>
                         <p className="text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">{component.description.split(' ').slice(0, 5).join(' ')}...</p>
                       </div>
@@ -157,7 +193,6 @@ const Ecosystem = () => {
                   }}
                 />
                 <div className="absolute inset-0 bg-proximanova-blue/70 flex flex-col items-center justify-center p-3 text-center">
-                  <div className="text-2xl mb-1 text-white">{component.icon}</div>
                   <h3 className="text-sm font-bold text-white">{component.title}</h3>
                 </div>
               </div>
