@@ -13,7 +13,7 @@ const BrandLogosCarousel = () => {
     image: `/marca${i + 1}-logo.png`
   }));
   return <div className="w-full overflow-hidden bg-white rounded-xl p-6">
-      <h3 className="text-xl font-semibold text-center mb-6">Clientes que confiaram em nosso trabalho!</h3>
+      <h3 className="text-xl font-semibold text-center mb-6">Clientes que confiam em nosso trabalho!</h3>
       
       <div className="relative max-w-[1200px] mx-auto px-4 md:px-12">
         <Carousel opts={{
