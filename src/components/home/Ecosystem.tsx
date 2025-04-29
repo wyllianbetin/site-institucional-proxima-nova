@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Layers, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -110,4 +109,3 @@ Terceirize a rotina das vendas online e foque no que realmente importa: levar o 
 };
 
 export default Ecosystem;
-

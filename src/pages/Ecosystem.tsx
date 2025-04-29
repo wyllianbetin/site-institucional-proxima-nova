@@ -1,10 +1,9 @@
-
 import React from 'react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import WhatsAppButton from '@/components/common/WhatsAppButton';
 import CallToAction from '@/components/common/CallToAction';
-import { Layers, Graduation, Monitor, ClipboardCheck, Package2, Truck } from 'lucide-react';
+import { Layers, GraduationCap, Monitor, ClipboardCheck, Package2, Truck } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Card, CardContent } from "@/components/ui/card";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -13,7 +12,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 const Ecosystem = () => {
   const ecosystemComponents = [{
     title: "Educação",
-    icon: <Graduation className="h-5 w-5 text-proximanova-yellow" />,
+    icon: <GraduationCap className="h-5 w-5 text-proximanova-yellow" />,
     description: "Treinamos você e sua equipe para dominar as vendas online e crescer no digital.",
     features: ["Treinamento exclusivo para você e sua equipe", "Ao vivo: Presencial ou por vídeo chamada", "O curso contempla 10 Módulos", "Duração de 1h a 1:30h cada módulo", "Aulas semanais ou quinzenais"],
     extraContent: <div className="mt-6">
@@ -268,4 +267,3 @@ const Ecosystem = () => {
 };
 
 export default Ecosystem;
-
