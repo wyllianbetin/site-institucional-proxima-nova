@@ -7,17 +7,17 @@ import { Card, CardContent, CardFooter } from '@/components/ui/card';
 const Solutions = () => {
   const solutions = [{
     title: "Curso + Consultoria",
-    description: "Treinamento e consultoria para quem quer iniciar no e-commerce com suporte e acompanhamento durante 6 meses.",
+    description: "Treinamento e consultoria para quem quer iniciar no Mercado Livre com suporte e acompanhamento durante 6 meses.",
     link: "/solutions#consulting",
     image: "/consultoria.jpg"
   }, {
     title: "Programa Lojista Digital",
-    description: "Implementamos a operação de vendas online para empresas que não têm tempo, equipe ou experiência em marketplaces.",
+    description: "Implementamos e cuidamos da operação de vendas online para empresas que não têm tempo, equipe ou experiência em marketplaces.",
     link: "/solutions#digital-retailer",
     image: "/programa_lojista_digital.jpg"
   }, {
     title: "Programa Seller",
-    description: "Aceleramos sellers que já vendem online, otimizando e escalando os resultados no Mercado Livre.",
+    description: "Aceleramos sellers que já vendem online, cuidando, otimizando e escalando os resultados no Mercado Livre.",
     link: "/solutions#seller-program",
     image: "/programa_seller.jpg"
   }];

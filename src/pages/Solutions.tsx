@@ -42,7 +42,7 @@ const Solutions = () => {
     id: "consulting",
     title: "Curso + Consultoria",
     description: [
-      "Treinamento e consultoria para quem quer iniciar no e-commerce com suporte e acompanhamento durante 6 meses."
+      "Treinamento e consultoria para quem quer iniciar no Mercado Livre com suporte e acompanhamento durante 6 meses."
     ],
     features: [
       "Curso completo de Mercado Livre (ao vivo)", 
@@ -59,7 +59,7 @@ const Solutions = () => {
     id: "digital-retailer",
     title: "Programa Lojista Digital",
     description: [
-      "Implementamos a operação de vendas online para empresas que não têm tempo, equipe ou experiência em marketplaces."
+      "Implementamos e cuidamos da operação de vendas online para empresas que não têm tempo, equipe ou experiência em marketplaces."
     ],
     features: [
       "Implantação completa da operação no Mercado Livre", 
@@ -83,7 +83,7 @@ const Solutions = () => {
     id: "seller-program",
     title: "Programa Seller",
     description: [
-      "Aceleramos sellers que já vendem online, otimizando e escalando os resultados no Mercado Livre."
+      "Aceleramos sellers que já vendem online, cuidando, otimizando e escalando os resultados no Mercado Livre."
     ],
     features: [
       "* Personalize os módulos conforme a sua necessidade",

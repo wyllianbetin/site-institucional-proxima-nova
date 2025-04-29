@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 interface SolutionCardProps {
@@ -47,11 +48,11 @@ const SolutionsOverview = ({
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
-          <SolutionCard title="Curso + Consultoria" description="Treinamento e consultoria para quem quer iniciar no e-commerce com suporte e acompanhamento durante 6 meses." onClick={onScrollToConsulting} imagePath="/consultoria.jpg" />
+          <SolutionCard title="Curso + Consultoria" description="Treinamento e consultoria para quem quer iniciar no Mercado Livre com suporte e acompanhamento durante 6 meses." onClick={onScrollToConsulting} imagePath="/consultoria.jpg" />
           
-          <SolutionCard title="Programa Lojista Digital" description="Implementamos a operação de vendas online para empresas que não têm tempo, equipe ou experiência em marketplaces." onClick={onScrollToRetailer} imagePath="/programa_lojista_digital.jpg" />
+          <SolutionCard title="Programa Lojista Digital" description="Implementamos e cuidamos da operação de vendas online para empresas que não têm tempo, equipe ou experiência em marketplaces." onClick={onScrollToRetailer} imagePath="/programa_lojista_digital.jpg" />
           
-          <SolutionCard title="Programa Seller" description="Aceleramos sellers que já vendem online, otimizando e escalando os resultados no Mercado Livre." onClick={onScrollToSeller} imagePath="/programa_seller.jpg" />
+          <SolutionCard title="Programa Seller" description="Aceleramos sellers que já vendem online, cuidando, otimizando e escalando os resultados no Mercado Livre." onClick={onScrollToSeller} imagePath="/programa_seller.jpg" />
         </div>
       </div>
     </section>;
