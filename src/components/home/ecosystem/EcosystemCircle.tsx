@@ -20,14 +20,17 @@ const EcosystemCircle = ({
   setActiveComponent 
 }: EcosystemCircleProps) => {
   return (
-    <div className="hidden md:block relative mb-10">
-      <div className="relative w-full max-w-5xl mx-auto aspect-square">
+    <div className="hidden md:block relative mb-4">
+      <div className="relative w-full max-w-4xl mx-auto aspect-square">
+        {/* Connection circle */}
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[85%] h-[85%] rounded-full border-8 border-proximanova-blue z-0"></div>
+        
         {/* Central logo */}
         <EcosystemLogo />
 
         {/* Component cards positioned around the circle */}
         {ecosystemComponents.map((component, index) => {
-          const position = calculatePosition(index, ecosystemComponents.length, 22);
+          const position = calculatePosition(index, ecosystemComponents.length, 20);
           return (
             <EcosystemComponent
               key={index}

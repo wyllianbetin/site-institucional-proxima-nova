@@ -44,15 +44,20 @@ const EcosystemComponent = ({
             <img 
               src={component.imagePath}
               alt={component.title}
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              className={`w-full h-full object-cover transition-transform duration-500 
+                ${activeComponent === index ? 'opacity-0' : 'opacity-30'} 
+                group-hover:opacity-0`}
               onError={e => {
                 const target = e.target as HTMLImageElement;
                 target.src = "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d";
               }}
             />
-            <div className="absolute inset-0 bg-proximanova-blue/60 group-hover:bg-proximanova-blue/80 transition-colors duration-300"></div>
+            <div className={`absolute inset-0 
+              ${activeComponent === index ? 'bg-proximanova-blue' : 'bg-proximanova-blue/70'} 
+              group-hover:bg-proximanova-blue transition-colors duration-300`}
+            ></div>
           </div>
-          <div className={`relative z-10 text-white text-center p-3 w-full ${activeComponent === index ? 'pt-2' : ''}`}>
+          <div className={`relative z-10 text-white text-center p-2 w-full ${activeComponent === index ? 'pt-2' : ''}`}>
             <h3 className="text-base font-bold mb-1">{component.title}</h3>
             {activeComponent === index ? (
               <p className="text-xs leading-tight">
