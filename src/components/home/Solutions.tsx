@@ -22,17 +22,17 @@ const Solutions = () => {
     image: "/programa_seller.jpg"
   }];
 
-  return <section className="section bg-[#f5f4e2]">
+  return <section className="section bg-proximanova-blue">
       <div className="container mx-auto">
         <div className="flex flex-col items-center text-center mb-12">
-          <div className="bg-proximanova-blue/10 p-3 rounded-full mb-4">
-            <Briefcase className="h-6 w-6 text-proximanova-blue" />
+          <div className="bg-white/10 p-3 rounded-full mb-4">
+            <Briefcase className="h-6 w-6 text-white" />
           </div>
-          <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue mb-3">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
             Nossas Soluções
           </h2>
           <div className="h-1 w-20 bg-proximanova-yellow mb-6"></div>
-          <p className="text-lg max-w-3xl mx-auto text-gray-700">Ajudamos empresas em todos os estágios: Desde negócios que ainda não vendem online e desejam implementar uma operação de e-commerce, até sellers que já vendem e buscam otimizar e escalar seus resultados através do Mercado Livre.
+          <p className="text-lg max-w-3xl mx-auto text-gray-100">Ajudamos empresas em todos os estágios: Desde negócios que ainda não vendem online e desejam implementar uma operação de e-commerce, até sellers que já vendem e buscam otimizar e escalar seus resultados através do Mercado Livre.
 Confira nossas soluções!</p>
         </div>
 
@@ -61,7 +61,7 @@ Confira nossas soluções!</p>
         </div>
 
         <div className="text-center">
-          <Link to="/solutions" className="primary-btn">
+          <Link to="/solutions" className="bg-white text-proximanova-blue hover:bg-proximanova-yellow hover:text-proximanova-blue transition-colors px-6 py-3 rounded-md font-medium shadow-md">
             Ver Todas as Soluções
           </Link>
         </div>
