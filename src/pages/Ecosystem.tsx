@@ -4,7 +4,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import WhatsAppButton from '@/components/common/WhatsAppButton';
 import CallToAction from '@/components/common/CallToAction';
-import { Book, Layers } from 'lucide-react';
+import { Layers } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -124,20 +124,6 @@ const Ecosystem = () => {
               </div>
             </div>
           </div>
-          
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="flex items-center justify-center mb-4">
-              <div className="bg-proximanova-blue/10 p-3 rounded-full mr-4">
-                <Book className="h-6 w-6 text-proximanova-blue" />
-              </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue">Componentes Detalhados</h2>
-            </div>
-            <div className="h-1 w-16 bg-proximanova-yellow mx-auto mb-6"></div>
-            <p className="text-gray-700">
-              Explore cada componente do nosso ecossistema para entender como eles trabalham juntos 
-              para impulsionar sua jornada de transformação digital.
-            </p>
-          </div>
         </div>
       </section>
       
@@ -186,7 +172,7 @@ const Ecosystem = () => {
           </div>
         </section>)}
       
-      <CallToAction title="Pronto para explorar nosso ecossistema?" buttonText="Solicite uma reunião" buttonLink="/contact" />
+      <CallToAction title="Pronto para explorar nosso ecossistema?" buttonText="Solicite um orçamento" buttonLink="/contact" />
       
       <Footer />
       <WhatsAppButton />
