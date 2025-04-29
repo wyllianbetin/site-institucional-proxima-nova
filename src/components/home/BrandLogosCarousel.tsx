@@ -36,8 +36,8 @@ const BrandLogosCarousel = () => {
             ))}
           </CarouselContent>
           
-          <CarouselPrevious className="absolute -left-3 md:-left-6 top-1/2 -translate-y-1/2 transform scale-75 md:scale-100" />
-          <CarouselNext className="absolute -right-3 md:-right-6 top-1/2 -translate-y-1/2 transform scale-75 md:scale-100" />
+          <CarouselPrevious className="absolute -left-12 md:-left-16 top-1/2 -translate-y-1/2" />
+          <CarouselNext className="absolute -right-12 md:-right-16 top-1/2 -translate-y-1/2" />
         </Carousel>
       </div>
     </div>
