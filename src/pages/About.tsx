@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -9,7 +10,7 @@ const About = () => {
   const differentials = [
     "Ecossistema único no Brasil", 
     "Especializado em marketplaces",
-    "Mais de 11 anos de expertise em vendas online",
+    "Mais de 5 anos de expertise em vendas online",
     "Soluções personalizadas para cada estágio do negócio",
     "Suporte completo da estratégia à execução",
     "Foco em crescimento sustentável e lucrativo"
@@ -36,21 +37,27 @@ const About = () => {
               <div className="h-1 w-16 bg-proximanova-yellow mb-6"></div>
               <div className="space-y-4 text-gray-700">
                 <p>
-                  A Próxima Nova foi fundada em 2012 com uma missão clara: ajudar varejistas 
-                  físicos a navegar com sucesso na jornada de transformação digital. O que começou 
-                  como uma pequena consultoria cresceu e se tornou o principal ecossistema do 
-                  Brasil para o sucesso em marketplaces.
+                  A Próxima Nova foi fundada em 2020 com uma missão clara: ajudar varejistas 
+                  físicos a navegarem com sucesso pela transformação digital.
                 </p>
                 <p>
-                  Ao longo dos anos, trabalhamos com centenas de varejistas de todos os portes, 
-                  ajudando-os a estabelecer, crescer e otimizar sua presença online. Nosso foco 
-                  sempre foi criar crescimento sustentável através de planejamento estratégico e 
-                  excelência operacional.
+                  O que começou como um apoio emergencial a comerciantes locais durante a pandemia, 
+                  evoluiu para se tornar uma referência nacional em terceirização de gestão e 
+                  operação de vendas online.
                 </p>
                 <p>
-                  Hoje, a Próxima Nova oferece um conjunto completo de soluções projetadas para 
-                  abordar todos os aspectos do varejo digital, desde educação e tecnologia até 
-                  gestão e operações.
+                  Desde então, já atuamos ao lado de dezenas de lojistas, fabricantes, distribuidores 
+                  e importadores de todos os portes, ajudando cada um a estruturar, escalar e 
+                  otimizar sua presença nos marketplaces.
+                </p>
+                <p>
+                  Nosso foco sempre foi gerar crescimento sustentável com base em planejamento 
+                  estratégico, execução profissional e excelência operacional.
+                </p>
+                <p>
+                  Hoje, a Próxima Nova oferece um ecossistema completo de soluções para o varejo 
+                  digital — integrando educação, tecnologia, gestão, operação e logística — tudo 
+                  em um único parceiro.
                 </p>
               </div>
             </div>
