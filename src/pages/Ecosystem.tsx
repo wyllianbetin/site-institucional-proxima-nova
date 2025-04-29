@@ -4,15 +4,16 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import WhatsAppButton from '@/components/common/WhatsAppButton';
 import CallToAction from '@/components/common/CallToAction';
-import { Layers } from 'lucide-react';
+import { Layers, Graduation, Monitor, ClipboardCheck, Package2, Truck } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Card, CardContent } from "@/components/ui/card";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const Ecosystem = () => {
   const ecosystemComponents = [{
     title: "Educação",
-    icon: "🎓",
+    icon: <Graduation className="h-5 w-5 text-proximanova-yellow" />,
     description: "Treinamos você e sua equipe para dominar as vendas online e crescer no digital.",
     features: ["Treinamento exclusivo para você e sua equipe", "Ao vivo: Presencial ou por vídeo chamada", "O curso contempla 10 Módulos", "Duração de 1h a 1:30h cada módulo", "Aulas semanais ou quinzenais"],
     extraContent: <div className="mt-6">
@@ -29,7 +30,7 @@ const Ecosystem = () => {
     imagePath: "/ecossistema_educacao.webp"
   }, {
     title: "Tecnologia",
-    icon: "💻",
+    icon: <Monitor className="h-5 w-5 text-proximanova-yellow" />,
     description: "Conectamos e integramos seu negócio a sistemas inteligentes para controlar e escalar suas vendas.",
     features: ["Sistema de Controle de Estoque", "Sistema de Separação de Pedidos", "Sistema de Integração com Marketplaces", "Ferramenta de Pesquisa de Mercado", "Plataforma de Gerenciamento de Publicidade", "Plataforma de Automação de Atendimento", "Plataforma de Conciliação Financeira"],
     extraContent: <div className="mt-6">
@@ -49,25 +50,25 @@ const Ecosystem = () => {
     imagePath: "/ecossistema_tecnologia.webp"
   }, {
     title: "Gestão",
-    icon: "📋",
+    icon: <ClipboardCheck className="h-5 w-5 text-proximanova-yellow" />,
     description: "Planejamos estratégias e acompanhamos métricas para impulsionar seu crescimento.",
     features: ["Sessões de Planejamento Estratégico", "Elaboração de Diagnóstico e Plano de Ação", "Acompanhamento de Métricas e KPIs", "Identificação de Oportunidades de Crescimento", "Otimização de Processos", "Gerenciamento de Equipe e Demandas", "Fechamentos e Conciliação Financeira"],
     imagePath: "/ecossistema_gestao.webp"
   }, {
     title: "Operação",
-    icon: "⚙️",
+    icon: <Layers className="h-5 w-5 text-proximanova-yellow" />,
     description: "Realizamos o cadastro, revisão e otimização de anúncios. Cuidamos do atendimento pré e pós-venda. Gerenciamos campanhas de Ads, Promoções e muito mais.",
     features: ["Cadastro de anúncios", "Revisão e otimização de anúncios", "Gestão de Catálogo", "Gestão de Ads", "Gestão de Promoções", "Gestão de FULL", "Gestão da Minha Página", "Atendimento Pré-Venda", "Atendimento Pós-Venda"],
     imagePath: "/ecossistema_operacao.webp"
   }, {
     title: "Armazenamento & Expedição",
-    icon: "📦",
+    icon: <Package2 className="h-5 w-5 text-proximanova-yellow" />,
     description: "Cuidamos do armazenamento e da expedição dos seus pedidos com segurança, eficiência e agilidade.",
     features: ["Recebimento de Mercadorias", "Armazenamento Seguro", "Picking e Packing", "Gestão e Controle de Estoque", "Logística Reversa"],
     imagePath: "/ecossistema_expedicao.webp"
   }, {
     title: "Logística Flex e Full",
-    icon: "🚚",
+    icon: <Truck className="h-5 w-5 text-proximanova-yellow" />,
     description: "Oferecemos soluções de transporte para as modalidades Flex e Full, integrando sua logística.",
     features: ["Transporte aos Centros Logístico do Full (SP e SC)", "Logística de Envios Flex"],
     imagePath: "/ecossistema_logistica.webp"
@@ -137,6 +138,128 @@ const Ecosystem = () => {
         </div>
       </section>
       
+      {/* Components Detail Section */}
+      <section className="section bg-gray-50">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue mb-3">
+              Componentes do Ecossistema
+            </h2>
+            <div className="h-1 w-20 bg-proximanova-yellow mx-auto mb-6"></div>
+            <p className="text-lg max-w-3xl mx-auto text-gray-700">
+              Explore cada componente do nosso ecossistema e descubra como podemos transformar seu negócio digital.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <Tabs defaultValue="accordion" className="w-full">
+              <TabsList className="grid grid-cols-2 mb-8 w-full">
+                <TabsTrigger value="accordion">Visão Detalhada</TabsTrigger>
+                <TabsTrigger value="cards">Visão em Cards</TabsTrigger>
+              </TabsList>
+              
+              <TabsContent value="accordion" className="space-y-4">
+                <Accordion type="single" collapsible className="w-full">
+                  {ecosystemComponents.map((component, index) => (
+                    <AccordionItem key={index} value={`item-${index}`} className="bg-white rounded-lg overflow-hidden mb-4 border border-gray-200">
+                      <AccordionTrigger className="px-6 py-4 hover:bg-gray-50">
+                        <div className="flex items-center">
+                          <div className="bg-proximanova-blue/10 p-2 rounded-full mr-3">
+                            {component.icon}
+                          </div>
+                          <span className="font-semibold text-xl text-proximanova-blue">{component.title}</span>
+                        </div>
+                      </AccordionTrigger>
+                      <AccordionContent className="px-6 pb-6 pt-2">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                          <div className="md:col-span-1">
+                            <div className="relative rounded-lg overflow-hidden h-48">
+                              <img 
+                                src={component.imagePath} 
+                                alt={component.title} 
+                                className="w-full h-full object-cover"
+                                onError={(e) => {
+                                  const target = e.target as HTMLImageElement;
+                                  target.src = "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d";
+                                }}
+                              />
+                            </div>
+                          </div>
+                          <div className="md:col-span-2">
+                            <p className="text-gray-700 mb-6">{component.description}</p>
+                            
+                            <h4 className="font-semibold text-lg mb-3 text-proximanova-blue">Características</h4>
+                            <ul className="space-y-2 mb-6">
+                              {component.features.map((feature, fIndex) => (
+                                <li key={fIndex} className="flex items-start">
+                                  <div className="bg-proximanova-yellow/20 p-1 rounded-full mr-2 mt-1">
+                                    <div className="h-2 w-2 bg-proximanova-yellow rounded-full"></div>
+                                  </div>
+                                  <span className="text-gray-700">{feature}</span>
+                                </li>
+                              ))}
+                            </ul>
+                            
+                            {component.extraContent && component.extraContent}
+                          </div>
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </TabsContent>
+              
+              <TabsContent value="cards">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {ecosystemComponents.map((component, index) => (
+                    <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
+                      <div className="relative h-48">
+                        <img 
+                          src={component.imagePath} 
+                          alt={component.title} 
+                          className="w-full h-full object-cover"
+                          onError={(e) => {
+                            const target = e.target as HTMLImageElement;
+                            target.src = "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d";
+                          }}
+                        />
+                        <div className="absolute inset-0 bg-proximanova-blue/60 flex items-center justify-center">
+                          <h3 className="text-white text-xl font-semibold">{component.title}</h3>
+                        </div>
+                      </div>
+                      <CardContent className="p-6">
+                        <div className="flex items-center mb-4">
+                          <div className="bg-proximanova-blue/10 p-2 rounded-full mr-3">
+                            {component.icon}
+                          </div>
+                          <h3 className="font-semibold text-xl text-proximanova-blue">{component.title}</h3>
+                        </div>
+                        <p className="text-gray-700 mb-4">{component.description}</p>
+                        <div className="space-y-2">
+                          {component.features.slice(0, 3).map((feature, fIndex) => (
+                            <div key={fIndex} className="flex items-start">
+                              <div className="bg-proximanova-yellow/20 p-1 rounded-full mr-2 mt-1">
+                                <div className="h-2 w-2 bg-proximanova-yellow rounded-full"></div>
+                              </div>
+                              <span className="text-sm text-gray-700">{feature}</span>
+                            </div>
+                          ))}
+                          {component.features.length > 3 && (
+                            <div className="text-sm text-proximanova-blue font-medium mt-2">
+                              + {component.features.length - 3} mais...
+                            </div>
+                          )}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </TabsContent>
+            </Tabs>
+          </div>
+        </div>
+      </section>
+      
       <CallToAction title="Pronto para explorar nosso ecossistema?" buttonText="Solicite um orçamento" buttonLink="/contact" />
       
       <Footer />
@@ -145,3 +268,4 @@ const Ecosystem = () => {
 };
 
 export default Ecosystem;
+

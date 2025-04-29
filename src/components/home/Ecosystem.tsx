@@ -100,8 +100,8 @@ Terceirize a rotina das vendas online e foque no que realmente importa: levar o 
         </div>
 
         <div className="text-center">
-          <Link to="/ecosystem" className="inline-flex items-center gap-2 text-proximanova-blue font-medium hover:text-proximanova-yellow transition-colors">
-            Saiba mais sobre nosso ecossistema
+          <Link to="/ecosystem" className="inline-flex items-center gap-2 bg-proximanova-blue text-white px-6 py-3 rounded-md hover:bg-proximanova-blue/90 transition-colors">
+            Ver detalhes do ecossistema
             <ArrowRight className="h-5 w-5" />
           </Link>
         </div>
@@ -110,3 +110,4 @@ Terceirize a rotina das vendas online e foque no que realmente importa: levar o 
 };
 
 export default Ecosystem;
+
