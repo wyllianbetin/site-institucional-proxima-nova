@@ -39,11 +39,7 @@ const About = () => {
                   Nosso foco sempre foi gerar crescimento sustentável com base em planejamento 
                   estratégico, execução profissional e excelência operacional.
                 </p>
-                <p>
-                  Hoje, a Próxima Nova oferece um ecossistema completo de soluções para o varejo 
-                  digital — integrando educação, tecnologia, gestão, operação e logística — tudo 
-                  em um único parceiro.
-                </p>
+                <p>Hoje, a Próxima Nova oferece uma metodologia própria e um ecossistema completo de soluções para o varejo digital — integrando educação, tecnologia, gestão, operação e logística — tudo em um único parceiro.</p>
               </div>
             </div>
             <div className="relative h-80 md:h-96 rounded-lg shadow-xl overflow-hidden">
