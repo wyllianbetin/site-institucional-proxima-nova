@@ -17,7 +17,7 @@ const Ecosystem = () => {
   }];
   const ecosystemComponentsBottom = [{
     title: "Operação",
-    description: "Executamos cadastro e revisão de anúncios, atendimento, campanhas de Ads e promoções.",
+    description: "Cuidamos do cadastro e revisão de anúncios, do atendimento pré e pós venda, das campanhas de ads, promoções, etc.",
     icon: "⚙️"
   }, {
     title: "Armazenamento & Expedição",
