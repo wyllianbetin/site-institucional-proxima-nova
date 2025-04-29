@@ -1,6 +1,8 @@
+
 import React from 'react';
 import { Layers, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
 const Ecosystem = () => {
   const ecosystemComponentsTop = [{
     title: "Educação",
@@ -8,26 +10,28 @@ const Ecosystem = () => {
     icon: "🎓"
   }, {
     title: "Tecnologia",
-    description: "Conectamos seu negócio a sistemas inteligentes para controlar e escalar suas vendas.",
+    description: "Conectamos e integramos seu negócio a sistemas inteligentes para controlar e escalar suas vendas.",
     icon: "💻"
   }, {
     title: "Gestão",
     description: "Planejamos estratégias e acompanhamos métricas para impulsionar seu crescimento.",
     icon: "📋"
   }];
+  
   const ecosystemComponentsBottom = [{
     title: "Operação",
-    description: "Cuidamos do cadastro e revisão de anúncios, do atendimento pré e pós venda, das campanhas de ads, promoções, etc.",
+    description: "Realizamos o cadastro, revisão e otimização de anúncios. Cuidamos do atendimento pré e pós-venda. Gerenciamos campanhas de Ads, Promoções e muito mais.",
     icon: "⚙️"
   }, {
     title: "Armazenamento & Expedição",
-    description: "Gerenciamos o armazenamento e a expedição dos seus pedidos com eficiência e agilidade.",
+    description: "Cuidamos do armazenamento e da expedição dos seus pedidos com segurança, eficiência e agilidade.",
     icon: "📦"
   }, {
     title: "Logística Flex e Full",
     description: "Oferecemos soluções de transporte para as modalidades Flex e Full, integrando sua logística.",
     icon: "🚚"
   }];
+
   return <section className="section bg-white">
       <div className="container mx-auto">
         <div className="flex flex-col items-center text-center mb-12">
@@ -69,4 +73,5 @@ Terceirize a rotina das vendas online e foque no que realmente importa: levar o 
       </div>
     </section>;
 };
+
 export default Ecosystem;

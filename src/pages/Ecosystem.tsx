@@ -15,7 +15,7 @@ const Ecosystem = () => {
   }, {
     title: "Tecnologia",
     icon: "💻",
-    description: "Conectamos seu negócio a sistemas inteligentes para controlar e escalar suas vendas.",
+    description: "Conectamos e integramos seu negócio a sistemas inteligentes para controlar e escalar suas vendas.",
     features: ["Inventory management systems", "Marketplace integration tools", "Sales analytics dashboards", "Advertising management platforms", "Customer service automation"]
   }, {
     title: "Gestão",
@@ -25,12 +25,12 @@ const Ecosystem = () => {
   }, {
     title: "Operação",
     icon: "⚙️",
-    description: "Cuidamos do cadastro e revisão de anúncios, do atendimento pré e pós venda, das campanhas de ads, promoções, etc.",
+    description: "Realizamos o cadastro, revisão e otimização de anúncios. Cuidamos do atendimento pré e pós-venda. Gerenciamos campanhas de Ads, Promoções e muito mais.",
     features: ["Shipping logistics support", "Customer service excellence", "Product listing optimization", "Advertising campaign management", "Conflict resolution assistance"]
   }, {
     title: "Armazenamento & Expedição",
     icon: "📦",
-    description: "Gerenciamos o armazenamento e a expedição dos seus pedidos com eficiência e agilidade.",
+    description: "Cuidamos do armazenamento e da expedição dos seus pedidos com segurança, eficiência e agilidade.",
     features: ["Secure product warehousing", "Efficient order fulfillment", "Fast shipping services", "Inventory tracking", "Returns management"]
   }, {
     title: "Logística Flex e Full",
@@ -159,4 +159,5 @@ const Ecosystem = () => {
       <WhatsAppButton />
     </>;
 };
+
 export default Ecosystem;
