@@ -5,43 +5,127 @@ import Footer from '@/components/layout/Footer';
 import WhatsAppButton from '@/components/common/WhatsAppButton';
 import CallToAction from '@/components/common/CallToAction';
 import { Book, Layers } from 'lucide-react';
+import { 
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger
+} from '@/components/ui/accordion';
+import {
+  Card,
+  CardContent
+} from "@/components/ui/card";
 
 const Ecosystem = () => {
   const ecosystemComponents = [{
     title: "Educação",
     icon: "🎓",
     description: "Treinamos você e sua equipe para dominar as vendas online e crescer no digital.",
-    features: ["Workshops práticos de marketplace", "Cursos de treinamento online", "Webinars regulares de atualização", "Treinamento personalizado para sua equipe", "Programas de certificação"]
+    features: [
+      "Treinamento exclusivo para você e sua equipe",
+      "Ao vivo: Presencial ou por vídeo chamada",
+      "O curso contempla 10 Módulos",
+      "Duração de 1h a 1:30h cada módulo",
+      "Aulas semanais ou quinzenais"
+    ],
+    extraContent: (
+      <div className="mt-6">
+        <h4 className="font-semibold text-lg mb-4">Grade do Curso</h4>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+          {[
+            "Módulo 1 - Ecossistema Meli",
+            "Módulo 2 - Reputação e Indicadores",
+            "Módulo 3 - Cadastro de Anúncios",
+            "Módulo 4 - Pesquisa de Mercado",
+            "Módulo 5 - Estratégias de Vendas",
+            "Módulo 6 - O Algoritmo do Mercado Livre",
+            "Módulo 7 - Pré-venda e Pós-venda",
+            "Módulo 8 - Mercado Ads e Central de Promoções",
+            "Módulo 9 - FULL",
+            "Módulo 10 - Plataformas e Integradores"
+          ].map((module, i) => (
+            <div key={i} className="flex items-center p-2 bg-gray-50 rounded-md">
+              <div className="bg-proximanova-blue/10 p-1.5 rounded-full mr-2">
+                <div className="h-2 w-2 bg-proximanova-blue rounded-full"></div>
+              </div>
+              <span className="text-sm">{module}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    )
   }, {
     title: "Tecnologia",
     icon: "💻",
     description: "Conectamos e integramos seu negócio a sistemas inteligentes para controlar e escalar suas vendas.",
-    features: ["Sistemas de gerenciamento de estoque", "Ferramentas de integração com marketplaces", "Painéis de análise de vendas", "Plataformas de gerenciamento de publicidade", "Automação de atendimento ao cliente"]
+    features: [
+      "Sistema de Controle de Estoque",
+      "Sistema de Separação de Pedidos",
+      "Sistema de Integração com Marketplaces",
+      "Ferramenta de Pesquisa de Mercado",
+      "Plataforma de Gerenciamento de Publicidade",
+      "Plataforma de Automação de Atendimento",
+      "Plataforma de Conciliação Financeira"
+    ],
+    extraContent: (
+      <div className="mt-6">
+        <h4 className="font-semibold text-lg mb-4">Empresas Parceiras</h4>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          {Array.from({ length: 6 }).map((_, i) => (
+            <div key={i} className="bg-gray-100 rounded-lg aspect-video flex items-center justify-center">
+              <div className="text-gray-400 text-sm">Logo Parceiro {i + 1}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    )
   }, {
     title: "Gestão",
     icon: "📋",
     description: "Planejamos estratégias e acompanhamos métricas para impulsionar seu crescimento.",
-    features: ["Sessões de planejamento estratégico", "Desenvolvimento e acompanhamento de KPIs", "Identificação de oportunidades de crescimento", "Otimização de processos", "Revisões regulares de desempenho"]
+    features: [
+      "Sessões de Planejamento Estratégico",
+      "Elaboração de Diagnóstico e Plano de Ação",
+      "Acompanhamento de Métricas e KPIs",
+      "Identificação de Oportunidades de Crescimento",
+      "Otimização de Processos",
+      "Gerenciamento de Equipe e Demandas",
+      "Fechamentos e Conciliação Financeira"
+    ]
   }, {
     title: "Operação",
     icon: "⚙️",
     description: "Realizamos o cadastro, revisão e otimização de anúncios. Cuidamos do atendimento pré e pós-venda. Gerenciamos campanhas de Ads, Promoções e muito mais.",
-    features: ["Suporte à logística de envios", "Excelência no atendimento ao cliente", "Otimização de listagem de produtos", "Gerenciamento de campanhas publicitárias", "Assistência na resolução de conflitos"]
+    features: [
+      "Cadastro de anúncios",
+      "Revisão e otimização de anúncios",
+      "Gestão de Catálogo",
+      "Gestão de Ads",
+      "Gestão de Promoções",
+      "Gestão de FULL",
+      "Gestão da Minha Página",
+      "Atendimento Pré-Venda",
+      "Atendimento Pós-Venda"
+    ]
   }, {
     title: "Armazenamento & Expedição",
     icon: "📦",
     description: "Cuidamos do armazenamento e da expedição dos seus pedidos com segurança, eficiência e agilidade.",
-    features: ["Armazenamento seguro de produtos", "Eficiência no processamento de pedidos", "Serviços rápidos de envio", "Rastreamento de estoque", "Gerenciamento de devoluções"]
+    features: [
+      "Recebimento de Mercadorias",
+      "Armazenamento Seguro",
+      "Picking e Packing",
+      "Gestão e Controle de Estoque",
+      "Logística Reversa"
+    ]
   }, {
     title: "Logística Flex e Full",
     icon: "🚚",
     description: "Oferecemos soluções de transporte para as modalidades Flex e Full, integrando sua logística.",
-    features: ["Soluções de transporte Flex e Full", "Integração logística", "Opções de entrega rápida", "Rastreamento eficiente de pacotes", "Envio com custo-benefício"]
-  }, {
-    title: "Comunidade",
-    icon: "👥",
-    description: "Junte-se à nossa comunidade exclusiva de lojistas e especialistas em marketplace. Compartilhe experiências, aprenda com seus pares e mantenha-se atualizado sobre as últimas tendências e estratégias de marketplace através de nossos eventos regulares, fóruns online e oportunidades de networking.",
-    features: ["Grupos exclusivos para lojistas", "Eventos de networking do setor", "Mesas redondas com especialistas", "Plataformas de compartilhamento de conhecimento", "Conferência anual de marketplace"]
+    features: [
+      "Transporte aos Centros Logístico do Full (SP e SC)",
+      "Logística de Envios Flex"
+    ]
   }];
   
   return <>
@@ -86,7 +170,7 @@ const Ecosystem = () => {
             
             <div className="rounded-lg bg-gray-50 p-8">
               <div className="flex flex-wrap justify-center gap-4">
-                {ecosystemComponents.slice(0, 6).map((component, index) => <div key={index} className="bg-white rounded-lg shadow-sm p-4 text-center flex flex-col items-center w-40">
+                {ecosystemComponents.map((component, index) => <div key={index} className="bg-white rounded-lg shadow-sm p-4 text-center flex flex-col items-center w-40">
                     <div className="text-3xl mb-2">{component.icon}</div>
                     <h3 className="font-medium text-proximanova-blue">{component.title}</h3>
                   </div>)}
@@ -137,6 +221,8 @@ const Ecosystem = () => {
                         </li>)}
                     </ul>
                   </div>
+                  
+                  {component.extraContent && component.extraContent}
                 </div>
               </div>
               
