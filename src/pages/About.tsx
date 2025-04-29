@@ -63,8 +63,8 @@ const About = () => {
             </div>
             <div className="relative h-80 md:h-96 rounded-lg shadow-xl overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d" 
-                alt="Próxima Nova team at work" 
+                src="/sobrenos.webp" 
+                alt="Próxima Nova team" 
                 className="absolute w-full h-full object-cover"
               />
             </div>
