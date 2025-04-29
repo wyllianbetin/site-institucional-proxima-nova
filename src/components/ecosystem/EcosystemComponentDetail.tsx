@@ -8,7 +8,7 @@ interface EcosystemComponentDetailProps {
 
 const EcosystemComponentDetail = ({ component }: EcosystemComponentDetailProps) => {
   return (
-    <div id={component.id} className="bg-white rounded-lg overflow-hidden border border-gray-200 shadow-md scroll-mt-24">
+    <div id={component.id} className="bg-white rounded-lg overflow-hidden border border-gray-200 shadow-md scroll-mt-36">
       <div className="grid grid-cols-1 md:grid-cols-2">
         {/* Left side content */}
         <div className="p-6">
