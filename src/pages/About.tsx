@@ -1,11 +1,21 @@
+
 import React from 'react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import WhatsAppButton from '@/components/common/WhatsAppButton';
 import CallToAction from '@/components/common/CallToAction';
 import { Check } from 'lucide-react';
+
 const About = () => {
-  const differentials = ["Ecossistema único no Brasil", "Especializado em marketplaces", "Mais de 5 anos de expertise em vendas online", "Soluções personalizadas para cada estágio do negócio", "Suporte completo da estratégia à execução", "Foco em crescimento sustentável e lucrativo"];
+  const differentials = [
+    "Ecossistema e metodologia exclusiva", 
+    "Especialistas em Mercado Livre", 
+    "Mais de 5 anos de expertise em vendas online", 
+    "Soluções personalizadas para cada estágio do negócio", 
+    "Suporte completo da estratégia à execução", 
+    "Foco em crescimento sustentável e lucrativo"
+  ];
+
   return <>
       <Header />
       
@@ -107,10 +117,11 @@ const About = () => {
         </div>
       </section>
       
-      <CallToAction title="Quer saber mais sobre como podemos ajudar seu negócio?" buttonText="Entre em contato" buttonLink="/contact" />
+      <CallToAction title="Quer saber como podemos ajudar seu negócio decolar?" buttonText="Entre em contato" buttonLink="/contact" />
       
       <Footer />
       <WhatsAppButton />
     </>;
 };
+
 export default About;
