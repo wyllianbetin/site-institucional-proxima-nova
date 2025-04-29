@@ -27,18 +27,18 @@ const EcosystemComponent = ({
     <div 
       key={index}
       className={`absolute transition-all duration-500 transform -translate-x-1/2 -translate-y-1/2 rounded-full overflow-hidden shadow-md
-        ${activeComponent === index ? 'scale-[1.8] z-30 shadow-xl' : 'z-20'}
+        ${activeComponent === index ? 'scale-[2.0] z-30 shadow-xl' : 'z-20'}
       `}
       style={{ 
         left: `calc(50% + ${position.x}%)`, 
         top: `calc(50% + ${position.y}%)`,
-        width: '20%',
+        width: '18%',
         aspectRatio: '1/1',
       }}
       onMouseEnter={() => setActiveComponent(index)}
       onMouseLeave={() => setActiveComponent(null)}
     >
-      <Card className="w-full h-full rounded-full overflow-hidden border-4 border-white group">
+      <Card className={`w-full h-full rounded-full overflow-hidden ${activeComponent === index ? 'border-4 border-proximanova-yellow' : 'border-4 border-white'} group`}>
         <div className="relative w-full h-full flex flex-col items-center justify-center">
           <div className="absolute inset-0">
             <img 
@@ -52,7 +52,7 @@ const EcosystemComponent = ({
             />
             <div className="absolute inset-0 bg-proximanova-blue/60 group-hover:bg-proximanova-blue/80 transition-colors duration-300"></div>
           </div>
-          <div className={`relative z-10 text-white text-center p-3 w-full ${activeComponent === index ? 'pt-5' : ''}`}>
+          <div className={`relative z-10 text-white text-center p-3 w-full ${activeComponent === index ? 'pt-2' : ''}`}>
             <h3 className="text-base font-bold mb-1">{component.title}</h3>
             {activeComponent === index ? (
               <p className="text-xs leading-tight">

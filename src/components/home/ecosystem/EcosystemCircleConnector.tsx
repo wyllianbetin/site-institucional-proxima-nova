@@ -28,17 +28,17 @@ const EcosystemCircleConnector = ({
       <circle 
         cx="50" 
         cy="50" 
-        r="33" 
+        r="27" 
         fill="none" 
-        stroke="#00476240"
+        stroke={activeComponent !== null ? "#004762" : "#00476240"}
         strokeWidth="0.5"
-        strokeDasharray="2,1"
+        strokeDasharray={activeComponent !== null ? "0" : "2,1"}
         className="transition-all duration-300"
       />
       
       {/* Arrows along the circular path */}
       {ecosystemComponents.map((_, index) => {
-        const arrowhead = calculateArrowhead(index, ecosystemComponents.length, 33, 2);
+        const arrowhead = calculateArrowhead(index, ecosystemComponents.length, 27, 2);
         const isActive = activeComponent === index || 
                         activeComponent === arrowhead.nextIndex;
         
@@ -52,7 +52,7 @@ const EcosystemCircleConnector = ({
                 ${50 + arrowhead.arrow2.x},${50 + arrowhead.arrow2.y}
               `}
               fill={isActive ? "#f8d14d" : "#00476280"}
-              className={`transition-all duration-300 ${isActive ? 'animate-pulse' : ''}`}
+              className="transition-all duration-300"
             />
           </g>
         );

@@ -42,15 +42,15 @@ export const calculatePosition = (index: number, totalItems: number, radius: num
 
 // Function to calculate arrowhead coordinates for curved lines
 export const calculateArrowhead = (index: number, totalItems: number, radius: number, arrowSize: number = 1) => {
-  // Calculate current and next component index (following the specified flow)
+  // Calculate current and next component index (following the INVERTED specified flow)
   let nextIndex;
-  // Define the flow: Educação > Tecnologia > Gestão > Operação > Armazenamento > Logística > Educação
-  if (index === 0) nextIndex = 1;      // Educação -> Tecnologia
-  else if (index === 1) nextIndex = 2; // Tecnologia -> Gestão
-  else if (index === 2) nextIndex = 3; // Gestão -> Operação
-  else if (index === 3) nextIndex = 4; // Operação -> Armazenamento
-  else if (index === 4) nextIndex = 5; // Armazenamento -> Logística
-  else nextIndex = 0;                  // Logística -> Educação
+  // Define the INVERTED flow: Educação > Logística > Armazenamento > Operação > Gestão > Tecnologia > Educação
+  if (index === 0) nextIndex = 5;      // Educação -> Logística
+  else if (index === 5) nextIndex = 4; // Logística -> Armazenamento
+  else if (index === 4) nextIndex = 3; // Armazenamento -> Operação
+  else if (index === 3) nextIndex = 2; // Operação -> Gestão
+  else if (index === 2) nextIndex = 1; // Gestão -> Tecnologia
+  else nextIndex = 0;                  // Tecnologia -> Educação
   
   const currentAngle = ((Math.PI * 2) / totalItems) * index - Math.PI / 2;
   const nextAngle = ((Math.PI * 2) / totalItems) * nextIndex - Math.PI / 2;

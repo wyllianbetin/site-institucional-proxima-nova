@@ -35,7 +35,7 @@ const EcosystemCircle = ({
 
         {/* Component cards positioned around the circle */}
         {ecosystemComponents.map((component, index) => {
-          const position = calculatePosition(index, ecosystemComponents.length, 33);
+          const position = calculatePosition(index, ecosystemComponents.length, 27);
           return (
             <EcosystemComponent
               key={index}
