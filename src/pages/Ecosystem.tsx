@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -7,7 +6,6 @@ import CallToAction from '@/components/common/CallToAction';
 import { Layers } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Card, CardContent } from "@/components/ui/card";
-
 const Ecosystem = () => {
   const ecosystemComponents = [{
     title: "Educação",
@@ -34,20 +32,15 @@ const Ecosystem = () => {
     extraContent: <div className="mt-6">
         <h4 className="font-semibold text-lg mb-4">Empresas Parceiras</h4>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {Array.from({length: 6}).map((_, i) => (
-            <div key={i} className="bg-white rounded-lg overflow-hidden flex items-center justify-center p-4 border border-gray-100 shadow-sm">
-              <img 
-                src={`/logoparceiro${i + 1}.png`} 
-                alt={`Logo Parceiro ${i + 1}`} 
-                className="max-w-full max-h-[60px] object-contain"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src = "/placeholder.svg";
-                  target.alt = `Logo Parceiro ${i + 1} (não disponível)`;
-                }}
-              />
-            </div>
-          ))}
+          {Array.from({
+          length: 6
+        }).map((_, i) => <div key={i} className="bg-white rounded-lg overflow-hidden flex items-center justify-center p-4 border border-gray-100 shadow-sm">
+              <img src={`/logoparceiro${i + 1}.png`} alt={`Logo Parceiro ${i + 1}`} className="max-w-full max-h-[60px] object-contain" onError={e => {
+            const target = e.target as HTMLImageElement;
+            target.src = "/placeholder.svg";
+            target.alt = `Logo Parceiro ${i + 1} (não disponível)`;
+          }} />
+            </div>)}
         </div>
       </div>,
     imagePath: "/ecossistema_tecnologia.webp"
@@ -76,7 +69,6 @@ const Ecosystem = () => {
     features: ["Transporte aos Centros Logístico do Full (SP e SC)", "Logística de Envios Flex"],
     imagePath: "/ecossistema_logistica.webp"
   }];
-  
   return <>
       <Header />
       
@@ -102,7 +94,7 @@ const Ecosystem = () => {
               </div>
               <div className="h-1 w-16 bg-proximanova-yellow mb-6"></div>
               <div className="space-y-4 text-gray-700">
-                <p>Na Próxima Nova, desenvolvemos uma abordagem única de ecossistema que aborda todos os aspectos do varejo digital. Em vez de focar em soluções isoladas, integramos educação, tecnologia, gestão, operações e logística para criar uma estrutura abrangente para o sucesso do seu marketplace.</p>
+                <p>Na Próxima Nova, desenvolvemos uma metodologia única de ecossistema que inclui todos os aspectos do varejo digital. Em vez de focar em soluções isoladas, integramos educação, tecnologia, gestão, operações e logística para criar uma estrutura completa para o sucesso do seu marketplace.</p>
                 <p>
                   Nosso ecossistema garante que seu negócio tenha todas as ferramentas, conhecimentos 
                   e suporte necessários para prosperar no ambiente digital, independentemente do seu ponto de partida.
@@ -156,15 +148,10 @@ const Ecosystem = () => {
               
               <div className={index % 2 !== 0 ? "order-1 md:order-2" : ""}>
                 <div className="aspect-square relative rounded-lg shadow-xl overflow-hidden">
-                  <img 
-                    src={component.imagePath} 
-                    alt={component.title} 
-                    className="absolute w-full h-full object-cover" 
-                    onError={e => {
-                      const target = e.target as HTMLImageElement;
-                      target.src = "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d";
-                    }} 
-                  />
+                  <img src={component.imagePath} alt={component.title} className="absolute w-full h-full object-cover" onError={e => {
+                const target = e.target as HTMLImageElement;
+                target.src = "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d";
+              }} />
                   <div className="absolute inset-0 bg-proximanova-blue/5"></div>
                 </div>
               </div>
