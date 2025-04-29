@@ -9,16 +9,17 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const Ecosystem = () => {
   const ecosystemComponents = [{
+    id: "educacao",
     title: "Educação",
-    icon: <GraduationCap className="h-6 w-6 text-proximanova-yellow" />,
+    icon: <GraduationCap className="h-6 w-6 text-proximanova-blue" />,
     description: "Treinamos você e sua equipe para dominar as vendas online e crescer no digital.",
     features: ["Treinamento exclusivo para você e sua equipe", "Ao vivo: Presencial ou por vídeo chamada", "O curso contempla 10 Módulos", "Duração de 1h a 1:30h cada módulo", "Aulas semanais ou quinzenais"],
     extraContent: <div className="mt-6">
         <h4 className="font-semibold text-lg mb-4">Grade do Curso</h4>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
           {["Módulo 1 - Ecossistema Meli", "Módulo 2 - Reputação e Indicadores", "Módulo 3 - Cadastro de Anúncios", "Módulo 4 - Pesquisa de Mercado", "Módulo 5 - Estratégias de Vendas", "Módulo 6 - O Algoritmo do Mercado Livre", "Módulo 7 - Pré-venda e Pós-venda", "Módulo 8 - Mercado Ads e Central de Promoções", "Módulo 9 - FULL", "Módulo 10 - Plataformas e Integradores"].map((module, i) => <div key={i} className="flex items-center p-2 bg-gray-50 rounded-md">
-              <div className="bg-proximanova-blue/10 p-1.5 rounded-full mr-2">
-                <div className="h-2 w-2 bg-proximanova-blue rounded-full"></div>
+              <div className="bg-proximanova-yellow/10 p-1.5 rounded-full mr-2">
+                <div className="h-2 w-2 bg-proximanova-yellow rounded-full"></div>
               </div>
               <span className="text-sm">{module}</span>
             </div>)}
@@ -26,8 +27,9 @@ const Ecosystem = () => {
       </div>,
     imagePath: "/ecossistema_educacao.webp"
   }, {
+    id: "tecnologia",
     title: "Tecnologia",
-    icon: <Monitor className="h-6 w-6 text-proximanova-yellow" />,
+    icon: <Monitor className="h-6 w-6 text-proximanova-blue" />,
     description: "Conectamos e integramos seu negócio a sistemas inteligentes para controlar e escalar suas vendas.",
     features: ["Sistema de Controle de Estoque", "Sistema de Separação de Pedidos", "Sistema de Integração com Marketplaces", "Ferramenta de Pesquisa de Mercado", "Plataforma de Gerenciamento de Publicidade", "Plataforma de Automação de Atendimento", "Plataforma de Conciliação Financeira"],
     extraContent: <div className="mt-6">
@@ -46,26 +48,30 @@ const Ecosystem = () => {
       </div>,
     imagePath: "/ecossistema_tecnologia.webp"
   }, {
+    id: "gestao",
     title: "Gestão",
-    icon: <ClipboardCheck className="h-6 w-6 text-proximanova-yellow" />,
+    icon: <ClipboardCheck className="h-6 w-6 text-proximanova-blue" />,
     description: "Planejamos estratégias e acompanhamos métricas para impulsionar seu crescimento.",
     features: ["Sessões de Planejamento Estratégico", "Elaboração de Diagnóstico e Plano de Ação", "Acompanhamento de Métricas e KPIs", "Identificação de Oportunidades de Crescimento", "Otimização de Processos", "Gerenciamento de Equipe e Demandas", "Fechamentos e Conciliação Financeira"],
     imagePath: "/ecossistema_gestao.webp"
   }, {
+    id: "operacao",
     title: "Operação",
-    icon: <Layers className="h-6 w-6 text-proximanova-yellow" />,
+    icon: <Layers className="h-6 w-6 text-proximanova-blue" />,
     description: "Realizamos o cadastro, revisão e otimização de anúncios. Cuidamos do atendimento pré e pós-venda. Gerenciamos campanhas de Ads, Promoções e muito mais.",
     features: ["Cadastro de anúncios", "Revisão e otimização de anúncios", "Gestão de Catálogo", "Gestão de Ads", "Gestão de Promoções", "Gestão de FULL", "Gestão da Minha Página", "Atendimento Pré-Venda", "Atendimento Pós-Venda"],
     imagePath: "/ecossistema_operacao.webp"
   }, {
+    id: "armazenamento",
     title: "Armazenamento & Expedição",
-    icon: <Package2 className="h-6 w-6 text-proximanova-yellow" />,
+    icon: <Package2 className="h-6 w-6 text-proximanova-blue" />,
     description: "Cuidamos do armazenamento e da expedição dos seus pedidos com segurança, eficiência e agilidade.",
     features: ["Recebimento de Mercadorias", "Armazenamento Seguro", "Picking e Packing", "Gestão e Controle de Estoque", "Logística Reversa"],
     imagePath: "/ecossistema_expedicao.webp"
   }, {
+    id: "logistica",
     title: "Logística Flex e Full",
-    icon: <Truck className="h-6 w-6 text-proximanova-yellow" />,
+    icon: <Truck className="h-6 w-6 text-proximanova-blue" />,
     description: "Oferecemos soluções de transporte para as modalidades Flex e Full, integrando sua logística.",
     features: ["Transporte aos Centros Logístico do Full (SP e SC)", "Logística de Envios Flex"],
     imagePath: "/ecossistema_logistica.webp"
@@ -119,7 +125,9 @@ const Ecosystem = () => {
                         }}
                       />
                       <div className="absolute inset-0 bg-proximanova-blue/60 flex items-center justify-center p-4">
-                        <h3 className="text-white text-center font-semibold text-lg">{component.title}</h3>
+                        <a href={`#${component.id}`} className="w-full h-full flex items-center justify-center">
+                          <h3 className="text-white text-center font-semibold text-lg">{component.title}</h3>
+                        </a>
                       </div>
                     </AspectRatio>
                   </div>
@@ -150,7 +158,7 @@ const Ecosystem = () => {
 
           <div className="max-w-5xl mx-auto space-y-16">
             {ecosystemComponents.map((component, index) => (
-              <div key={index} className="bg-white rounded-lg overflow-hidden border border-gray-200 shadow-md">
+              <div key={index} id={component.id} className="bg-white rounded-lg overflow-hidden border border-gray-200 shadow-md">
                 <div className="grid grid-cols-1 md:grid-cols-2">
                   {/* Left side content */}
                   <div className="p-6">
@@ -167,8 +175,8 @@ const Ecosystem = () => {
                     <ul className="space-y-3 mb-6">
                       {component.features.map((feature, fIndex) => (
                         <li key={fIndex} className="flex items-start">
-                          <div className="bg-proximanova-yellow/20 p-1.5 rounded-full mr-3 mt-1">
-                            <div className="h-2 w-2 bg-proximanova-yellow rounded-full"></div>
+                          <div className="bg-proximanova-blue/20 p-1.5 rounded-full mr-3 mt-1">
+                            <div className="h-2 w-2 bg-proximanova-blue rounded-full"></div>
                           </div>
                           <span className="text-gray-700">{feature}</span>
                         </li>
