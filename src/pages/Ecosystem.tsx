@@ -84,12 +84,7 @@ const Ecosystem = () => {
               </div>
               <div className="h-1 w-16 bg-proximanova-yellow mb-6"></div>
               <div className="space-y-4 text-gray-700">
-                <p>
-                  Na Próxima Nova, desenvolvemos uma abordagem única de ecossistema que aborda 
-                  todos os aspectos do varejo digital. Em vez de focar em soluções isoladas, 
-                  integramos educação, tecnologia, gestão, operações e comunidade para 
-                  criar uma estrutura abrangente para o sucesso no marketplace.
-                </p>
+                <p>Na Próxima Nova, desenvolvemos uma abordagem única de ecossistema que aborda todos os aspectos do varejo digital. Em vez de focar em soluções isoladas, integramos educação, tecnologia, gestão, operações e logística para criar uma estrutura abrangente para o sucesso do seu marketplace.</p>
                 <p>
                   Nosso ecossistema garante que seu negócio tenha todas as ferramentas, conhecimentos 
                   e suporte necessários para prosperar no ambiente digital, independentemente do seu ponto de partida.
