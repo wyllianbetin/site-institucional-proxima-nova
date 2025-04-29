@@ -1,11 +1,9 @@
-
 import React from 'react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import WhatsAppButton from '@/components/common/WhatsAppButton';
 import CallToAction from '@/components/common/CallToAction';
 import { Star, ArrowRight } from 'lucide-react';
-
 const SuccessCases = () => {
   const successCases = [{
     name: "TechStore",
@@ -35,7 +33,6 @@ const SuccessCases = () => {
     person: "Ana Costa, Gerente de Operações",
     image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
   }];
-  
   return <>
       <Header />
       
@@ -43,7 +40,7 @@ const SuccessCases = () => {
       <div className="bg-proximanova-blue pt-32 pb-16 md:pt-36 md:pb-20 text-white">
         <div className="container mx-auto text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Casos de Sucesso</h1>
-          <p className="text-xl max-w-3xl mx-auto mb-6">Resultados reais de empresas que fizeram parceria com a Próxima Nova em sua jornada de transformação digital.</p>
+          
           <div className="h-1 w-24 bg-proximanova-yellow mx-auto"></div>
         </div>
       </div>
@@ -156,5 +153,4 @@ const SuccessCases = () => {
       <WhatsAppButton />
     </>;
 };
-
 export default SuccessCases;
