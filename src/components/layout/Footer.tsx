@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin } from 'lucide-react';
@@ -73,9 +72,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center">
                 <Mail className="h-4 w-4 mr-2 text-proximanova-yellow" />
-                <a href="mailto:contato@proximanova.com" className="text-sm hover:text-proximanova-yellow transition-colors">
-                  contato@proximanova.com
-                </a>
+                <a href="mailto:contato@proximanova.com" className="text-sm hover:text-proximanova-yellow transition-colors">contato@proximanova.com.br</a>
               </li>
               <li className="flex items-center">
                 <Phone className="h-4 w-4 mr-2 text-proximanova-yellow" />
