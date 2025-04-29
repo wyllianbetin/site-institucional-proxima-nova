@@ -146,15 +146,7 @@ const Ecosystem = () => {
       {/* Components Detail Section - Horizontal Layout Format with Image on Right */}
       <section className="section bg-gray-50">
         <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue mb-3">
-              Componentes do Ecossistema
-            </h2>
-            <div className="h-1 w-20 bg-proximanova-yellow mx-auto mb-6"></div>
-            <p className="text-lg max-w-3xl mx-auto text-gray-700">
-              Explore cada componente do nosso ecossistema e descubra como podemos transformar seu negócio digital.
-            </p>
-          </div>
+          {/* Removed the title and description div that was here */}
 
           <div className="max-w-5xl mx-auto space-y-16">
             {ecosystemComponents.map((component, index) => (
@@ -216,3 +208,4 @@ const Ecosystem = () => {
 };
 
 export default Ecosystem;
+
