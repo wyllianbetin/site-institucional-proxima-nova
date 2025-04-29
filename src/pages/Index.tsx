@@ -16,8 +16,8 @@ const Index = () => {
       <Header />
       <Hero />
       <WhoWeAre />
-      <Solutions />
       <Ecosystem />
+      <Solutions />
       <SuccessCases />
       <CallToAction 
         title="Pronto para escalar as suas vendas online?"

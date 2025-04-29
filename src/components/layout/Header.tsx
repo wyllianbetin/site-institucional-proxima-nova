@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
@@ -31,12 +32,12 @@ const Header = () => {
       path: '/about'
     },
     {
-      name: 'Soluções',
-      path: '/solutions'
-    },
-    {
       name: 'Ecossistema',
       path: '/ecosystem'
+    },
+    {
+      name: 'Soluções',
+      path: '/solutions'
     },
     {
       name: 'Casos de Sucesso',
