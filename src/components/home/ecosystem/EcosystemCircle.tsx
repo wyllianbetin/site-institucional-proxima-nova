@@ -20,7 +20,7 @@ const EcosystemCircle = ({
   setActiveComponent 
 }: EcosystemCircleProps) => {
   return (
-    <div className="hidden md:block relative mb-10">
+    <div className="hidden md:block relative mb-6">
       <div className="relative w-full max-w-5xl mx-auto aspect-square">
         {/* Central logo */}
         <EcosystemLogo />

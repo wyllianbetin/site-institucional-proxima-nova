@@ -1,4 +1,3 @@
-
 export const ecosystemComponents = [
   {
     title: "Educação",
@@ -27,7 +26,7 @@ export const ecosystemComponents = [
   },
   {
     title: "Logística Flex e Full",
-    description: "Oferecemos soluções de transporte para as modalidades Flex e Full, integrando sua logística.",
+    description: "Oferecemos soluções de transporte para as modalidades Flex e Full.",
     imagePath: "/ecossistema_logistica.webp"
   }
 ];
