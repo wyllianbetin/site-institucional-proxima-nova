@@ -24,7 +24,8 @@ const Ecosystem = () => {
               <span className="text-sm">{module}</span>
             </div>)}
         </div>
-      </div>
+      </div>,
+    imagePath: "/ecossistema_educacao.webp"
   }, {
     title: "Tecnologia",
     icon: "💻",
@@ -48,28 +49,34 @@ const Ecosystem = () => {
             </div>
           ))}
         </div>
-      </div>
+      </div>,
+    imagePath: "/ecossistema_tecnologia.webp"
   }, {
     title: "Gestão",
     icon: "📋",
     description: "Planejamos estratégias e acompanhamos métricas para impulsionar seu crescimento.",
-    features: ["Sessões de Planejamento Estratégico", "Elaboração de Diagnóstico e Plano de Ação", "Acompanhamento de Métricas e KPIs", "Identificação de Oportunidades de Crescimento", "Otimização de Processos", "Gerenciamento de Equipe e Demandas", "Fechamentos e Conciliação Financeira"]
+    features: ["Sessões de Planejamento Estratégico", "Elaboração de Diagnóstico e Plano de Ação", "Acompanhamento de Métricas e KPIs", "Identificação de Oportunidades de Crescimento", "Otimização de Processos", "Gerenciamento de Equipe e Demandas", "Fechamentos e Conciliação Financeira"],
+    imagePath: "/ecossistema_gestao.webp"
   }, {
     title: "Operação",
     icon: "⚙️",
     description: "Realizamos o cadastro, revisão e otimização de anúncios. Cuidamos do atendimento pré e pós-venda. Gerenciamos campanhas de Ads, Promoções e muito mais.",
-    features: ["Cadastro de anúncios", "Revisão e otimização de anúncios", "Gestão de Catálogo", "Gestão de Ads", "Gestão de Promoções", "Gestão de FULL", "Gestão da Minha Página", "Atendimento Pré-Venda", "Atendimento Pós-Venda"]
+    features: ["Cadastro de anúncios", "Revisão e otimização de anúncios", "Gestão de Catálogo", "Gestão de Ads", "Gestão de Promoções", "Gestão de FULL", "Gestão da Minha Página", "Atendimento Pré-Venda", "Atendimento Pós-Venda"],
+    imagePath: "/ecossistema_operacao.webp"
   }, {
     title: "Armazenamento & Expedição",
     icon: "📦",
     description: "Cuidamos do armazenamento e da expedição dos seus pedidos com segurança, eficiência e agilidade.",
-    features: ["Recebimento de Mercadorias", "Armazenamento Seguro", "Picking e Packing", "Gestão e Controle de Estoque", "Logística Reversa"]
+    features: ["Recebimento de Mercadorias", "Armazenamento Seguro", "Picking e Packing", "Gestão e Controle de Estoque", "Logística Reversa"],
+    imagePath: "/ecossistema_expedicao.webp"
   }, {
     title: "Logística Flex e Full",
     icon: "🚚",
     description: "Oferecemos soluções de transporte para as modalidades Flex e Full, integrando sua logística.",
-    features: ["Transporte aos Centros Logístico do Full (SP e SC)", "Logística de Envios Flex"]
+    features: ["Transporte aos Centros Logístico do Full (SP e SC)", "Logística de Envios Flex"],
+    imagePath: "/ecossistema_logistica.webp"
   }];
+  
   return <>
       <Header />
       
@@ -163,10 +170,15 @@ const Ecosystem = () => {
               
               <div className={index % 2 !== 0 ? "order-1 md:order-2" : ""}>
                 <div className="aspect-square relative rounded-lg shadow-xl overflow-hidden">
-                  <img src={`https://images.unsplash.com/photo-148${index + 1}925895917-afdab827c52f`} alt={component.title} className="absolute w-full h-full object-cover" onError={e => {
-                const target = e.target as HTMLImageElement;
-                target.src = "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d";
-              }} />
+                  <img 
+                    src={component.imagePath} 
+                    alt={component.title} 
+                    className="absolute w-full h-full object-cover" 
+                    onError={e => {
+                      const target = e.target as HTMLImageElement;
+                      target.src = "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d";
+                    }} 
+                  />
                   <div className="absolute inset-0 bg-proximanova-blue/5"></div>
                 </div>
               </div>
