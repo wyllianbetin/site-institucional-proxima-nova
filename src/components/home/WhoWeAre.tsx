@@ -11,11 +11,11 @@ const WhoWeAre = () => {
           <div className="h-1 w-20 bg-proximanova-yellow mb-6"></div>
           
           <div className="text-lg max-w-3xl mx-auto text-gray-700 space-y-4">
-            <p>Na Próxima Nova, acreditamos que o presente e o futuro do varejo é e será cada vez mais digital — e estamos aqui para construir essa transformação ao lado das empresas.</p>
+            <p>Na Próxima Nova, acreditamos que o presente e o futuro do varejo será cada vez mais digital — e estamos aqui para construir essa transformação ao lado das empresas.</p>
             
             <p>Oferecemos um ecossistema completo: educação, tecnologia, gestão, operação e logística — tudo em um único parceiro estratégico.</p>
             
-            <p>Mais do que uma simples consultoria ou assessoria, somos fullcommerce: orientamos, executamos, cuidamos e entregamos resultados para quem busca crescer no e-commerce.</p>
+            <p>Mais do que uma simples consultoria ou assessoria, somos fullcommerce: orientamos, executamos, cuidamos e entregamos resultados aos nossos clientes.</p>
             
             <p className="font-medium">Bem-vindo à Próxima Nova.
 O sucesso das suas vendas online começa aqui.</p>
