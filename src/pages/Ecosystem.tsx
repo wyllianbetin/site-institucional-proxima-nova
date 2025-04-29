@@ -150,7 +150,7 @@ const Ecosystem = () => {
 
           <div className="max-w-5xl mx-auto space-y-16">
             {ecosystemComponents.map((component, index) => (
-              <div key={index} id={component.id} className="bg-white rounded-lg overflow-hidden border border-gray-200 shadow-md">
+              <div key={index} id={component.id} className="bg-white rounded-lg overflow-hidden border border-gray-200 shadow-md scroll-mt-24">
                 <div className="grid grid-cols-1 md:grid-cols-2">
                   {/* Left side content */}
                   <div className="p-6">
@@ -208,4 +208,3 @@ const Ecosystem = () => {
 };
 
 export default Ecosystem;
-
