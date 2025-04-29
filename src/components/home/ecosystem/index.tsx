@@ -10,9 +10,9 @@ const EcosystemSection = () => {
   const [activeComponent, setActiveComponent] = useState<number | null>(null);
 
   return (
-    <section className="section bg-[#f5f4e2] py-16 md:py-24">
+    <section className="section bg-[#f5f4e2] py-12 md:py-18">
       <div className="container mx-auto">
-        <div className="flex flex-col items-center text-center mb-8">
+        <div className="flex flex-col items-center text-center mb-4">
           <div className="bg-proximanova-blue/10 p-3 rounded-full mb-4">
             <Layers className="h-6 w-6 text-proximanova-blue" />
           </div>
@@ -36,7 +36,7 @@ const EcosystemSection = () => {
         {/* Mobile version with grid layout */}
         <EcosystemMobileGrid ecosystemComponents={ecosystemComponents} />
 
-        <div className="text-center">
+        <div className="text-center -mt-2">
           <Link to="/ecosystem" className="inline-flex items-center gap-2 bg-proximanova-blue text-white px-6 py-3 rounded-md hover:bg-proximanova-blue/90 transition-colors">
             Saiba mais sobre nosso ecossistema
             <ArrowRight className="h-5 w-5" />
