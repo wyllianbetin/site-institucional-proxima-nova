@@ -2,34 +2,41 @@
 import React from 'react';
 import { Layers, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const Ecosystem = () => {
   const ecosystemComponentsTop = [{
     title: "Educação",
     description: "Treinamos você e sua equipe para dominar as vendas online e crescer no digital.",
-    icon: "🎓"
+    icon: "🎓",
+    imagePath: "/ecossistema_educacao.webp"
   }, {
     title: "Tecnologia",
     description: "Conectamos e integramos seu negócio a sistemas inteligentes para controlar e escalar suas vendas.",
-    icon: "💻"
+    icon: "💻",
+    imagePath: "/ecossistema_tecnologia.webp"
   }, {
     title: "Gestão",
     description: "Planejamos estratégias e acompanhamos métricas para impulsionar seu crescimento.",
-    icon: "📋"
+    icon: "📋",
+    imagePath: "/ecossistema_gestao.webp"
   }];
   
   const ecosystemComponentsBottom = [{
     title: "Operação",
     description: "Realizamos o cadastro, revisão e otimização de anúncios. Cuidamos do atendimento pré e pós-venda. Gerenciamos campanhas de Ads, Promoções e muito mais.",
-    icon: "⚙️"
+    icon: "⚙️",
+    imagePath: "/ecossistema_operacao.webp"
   }, {
     title: "Armazenamento & Expedição",
     description: "Cuidamos do armazenamento e da expedição dos seus pedidos com segurança, eficiência e agilidade.",
-    icon: "📦"
+    icon: "📦",
+    imagePath: "/ecossistema_expedicao.webp"
   }, {
     title: "Logística Flex e Full",
     description: "Oferecemos soluções de transporte para as modalidades Flex e Full, integrando sua logística.",
-    icon: "🚚"
+    icon: "🚚",
+    imagePath: "/ecossistema_logistica.webp"
   }];
 
   return <section className="section bg-white">
@@ -48,20 +55,48 @@ Terceirize a rotina das vendas online e foque no que realmente importa: levar o 
 
         {/* Top row of ecosystem components */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-6">
-          {ecosystemComponentsTop.map((component, index) => <div key={index} className="bg-gray-50 rounded-lg p-6 text-center hover:shadow-md transition-shadow duration-300">
-              <div className="text-4xl mb-4">{component.icon}</div>
-              <h3 className="text-xl font-semibold text-proximanova-blue mb-2">{component.title}</h3>
-              <p className="text-gray-600">{component.description}</p>
-            </div>)}
+          {ecosystemComponentsTop.map((component, index) => (
+            <div key={index} className="relative rounded-lg overflow-hidden h-48 group">
+              <AspectRatio ratio={16/9} className="h-full">
+                <img 
+                  src={component.imagePath} 
+                  alt={component.title} 
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d";
+                  }}
+                />
+                <div className="absolute inset-0 bg-proximanova-blue/70 flex flex-col items-center justify-center p-4 text-center">
+                  <h3 className="text-xl font-semibold text-white mb-2">{component.title}</h3>
+                  <p className="text-white/90 text-sm hidden md:block">{component.description}</p>
+                </div>
+              </AspectRatio>
+            </div>
+          ))}
         </div>
 
         {/* Bottom row of ecosystem components */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
-          {ecosystemComponentsBottom.map((component, index) => <div key={index} className="bg-gray-50 rounded-lg p-6 text-center hover:shadow-md transition-shadow duration-300">
-              <div className="text-4xl mb-4">{component.icon}</div>
-              <h3 className="text-xl font-semibold text-proximanova-blue mb-2">{component.title}</h3>
-              <p className="text-gray-600">{component.description}</p>
-            </div>)}
+          {ecosystemComponentsBottom.map((component, index) => (
+            <div key={index} className="relative rounded-lg overflow-hidden h-48 group">
+              <AspectRatio ratio={16/9} className="h-full">
+                <img 
+                  src={component.imagePath} 
+                  alt={component.title} 
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d";
+                  }}
+                />
+                <div className="absolute inset-0 bg-proximanova-blue/70 flex flex-col items-center justify-center p-4 text-center">
+                  <h3 className="text-xl font-semibold text-white mb-2">{component.title}</h3>
+                  <p className="text-white/90 text-sm hidden md:block">{component.description}</p>
+                </div>
+              </AspectRatio>
+            </div>
+          ))}
         </div>
 
         <div className="text-center">

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -6,6 +7,8 @@ import CallToAction from '@/components/common/CallToAction';
 import { Layers } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Card, CardContent } from "@/components/ui/card";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+
 const Ecosystem = () => {
   const ecosystemComponents = [{
     title: "Educação",
@@ -69,6 +72,7 @@ const Ecosystem = () => {
     features: ["Transporte aos Centros Logístico do Full (SP e SC)", "Logística de Envios Flex"],
     imagePath: "/ecossistema_logistica.webp"
   }];
+  
   return <>
       <Header />
       
@@ -102,16 +106,30 @@ const Ecosystem = () => {
               </div>
             </div>
             
-            <div className="rounded-lg bg-gray-50 p-8">
-              <div className="flex flex-wrap justify-center gap-4">
-                {ecosystemComponents.map((component, index) => <div key={index} className="bg-white rounded-lg shadow-sm p-4 text-center flex flex-col items-center w-40">
-                    <div className="text-3xl mb-2">{component.icon}</div>
-                    <h3 className="font-medium text-proximanova-blue">{component.title}</h3>
-                  </div>)}
-                <div className="w-full text-center mt-4">
-                  <div className="inline-block bg-proximanova-blue text-white px-6 py-3 rounded-full text-sm font-medium">
-                    Ecossistema Próxima Nova
+            <div className="rounded-lg p-4">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                {ecosystemComponents.map((component, index) => (
+                  <div key={index} className="relative rounded-lg overflow-hidden group h-40">
+                    <AspectRatio ratio={1/1} className="h-full">
+                      <img 
+                        src={component.imagePath} 
+                        alt={component.title} 
+                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          target.src = "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d";
+                        }}
+                      />
+                      <div className="absolute inset-0 bg-proximanova-blue/60 flex items-center justify-center p-4">
+                        <h3 className="text-white text-center font-semibold text-lg">{component.title}</h3>
+                      </div>
+                    </AspectRatio>
                   </div>
+                ))}
+              </div>
+              <div className="text-center mt-6">
+                <div className="inline-block bg-proximanova-blue text-white px-6 py-3 rounded-full text-sm font-medium">
+                  Ecossistema Próxima Nova
                 </div>
               </div>
             </div>
@@ -119,50 +137,11 @@ const Ecosystem = () => {
         </div>
       </section>
       
-      {/* Detailed Components */}
-      {ecosystemComponents.map((component, index) => <section key={index} className={`section ${index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}`}>
-          <div className="container mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div className={index % 2 !== 0 ? "order-2 md:order-1" : ""}>
-                <div className="bg-white rounded-xl shadow-lg p-8 h-full">
-                  <div className="text-5xl mb-6">{component.icon}</div>
-                  <h2 className="text-2xl font-bold text-proximanova-blue mb-4">{component.title}</h2>
-                  <div className="h-1 w-12 bg-proximanova-yellow mb-6"></div>
-                  <p className="text-gray-700 mb-8">{component.description}</p>
-                  
-                  <div className="space-y-4">
-                    <h3 className="font-semibold text-lg">Principais Características:</h3>
-                    <ul className="space-y-2">
-                      {component.features.map((feature, i) => <li key={i} className="flex items-start">
-                          <div className="bg-proximanova-blue/10 p-1 rounded-full mr-3 mt-1">
-                            <div className="h-2 w-2 bg-proximanova-blue rounded-full"></div>
-                          </div>
-                          <span className="text-gray-700">{feature}</span>
-                        </li>)}
-                    </ul>
-                  </div>
-                  
-                  {component.extraContent && component.extraContent}
-                </div>
-              </div>
-              
-              <div className={index % 2 !== 0 ? "order-1 md:order-2" : ""}>
-                <div className="aspect-square relative rounded-lg shadow-xl overflow-hidden">
-                  <img src={component.imagePath} alt={component.title} className="absolute w-full h-full object-cover" onError={e => {
-                const target = e.target as HTMLImageElement;
-                target.src = "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d";
-              }} />
-                  <div className="absolute inset-0 bg-proximanova-blue/5"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>)}
-      
       <CallToAction title="Pronto para explorar nosso ecossistema?" buttonText="Solicite um orçamento" buttonLink="/contact" />
       
       <Footer />
       <WhatsAppButton />
     </>;
 };
+
 export default Ecosystem;
