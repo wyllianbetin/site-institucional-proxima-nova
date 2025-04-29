@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Check, Image } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -46,13 +47,24 @@ const SolutionSection = ({
       
       <div className="space-y-3 mb-8">
         <h3 className="font-semibold text-lg text-proximanova-blue">O que está incluso:</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
-          {features.map((item, index) => <div key={index} className="flex items-start">
-              <div className="bg-proximanova-blue/10 p-1 rounded-full mr-3 mt-1">
-                <Check className="h-3 w-3 text-proximanova-blue" />
+        <div className="grid grid-cols-1 gap-y-3">
+          {features.map((item, index) => {
+            // Check if this is the personalization note for Program Seller
+            const isPersonalizationNote = item.startsWith('*');
+            
+            return (
+              <div key={index} className="flex items-start">
+                {!isPersonalizationNote && (
+                  <div className="bg-proximanova-blue/10 p-1 rounded-full mr-3 mt-1">
+                    <Check className="h-3 w-3 text-proximanova-blue" />
+                  </div>
+                )}
+                <p className={`text-sm text-gray-700 ${isPersonalizationNote ? "italic font-medium" : ""}`}>
+                  {item}
+                </p>
               </div>
-              <p className="text-sm text-gray-700">{item}</p>
-            </div>)}
+            );
+          })}
         </div>
       </div>
       

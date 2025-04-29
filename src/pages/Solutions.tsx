@@ -45,12 +45,10 @@ const Solutions = () => {
       "Treinamento e consultoria para quem quer iniciar no e-commerce com suporte e acompanhamento durante 6 meses."
     ],
     features: [
-      "Business diagnosis", 
-      "Market opportunity analysis", 
-      "Competitive positioning", 
-      "Customized action plan", 
-      "Implementation roadmap", 
-      "ROI projections"
+      "Curso completo de Mercado Livre (ao vivo)", 
+      "Consultoria individualizada com foco na prática", 
+      "Diagnóstico da operação e plano de ação personalizado", 
+      "Suporte e acompanhamento mensal durante 6 meses"
     ],
     buttonText: "Saiba mais",
     imageSrc: "/consultoria.jpg",
@@ -64,14 +62,16 @@ const Solutions = () => {
       "Implementamos a operação de vendas online para empresas que não têm tempo, equipe ou experiência em marketplaces."
     ],
     features: [
-      "Account setup assistance", 
-      "Product listing creation", 
-      "Pricing strategy", 
-      "Inventory management training", 
-      "Customer service protocols", 
-      "Marketing best practices",
-      "Performance tracking",
-      "Ongoing support"
+      "Implantação completa da operação no Mercado Livre", 
+      "Curso completo de Mercado Livre (ao vivo)", 
+      "Ativação do termômetro", 
+      "Conquista da medalha de Mercadolíder", 
+      "Cadastro de anúncios (200 anúncios)",
+      "Ativação da logística Flex e Full",
+      "Armazenamento e Expedição de pedidos (optativo)",
+      "Atendimento ao comprador (Pré e Pós-Venda)",
+      "Gestão de campanhas de Ads",
+      "Garantia de resultado em contrato"
     ],
     buttonText: "Saiba mais",
     imageSrc: "/programa_lojista_digital.jpg",
@@ -85,14 +85,18 @@ const Solutions = () => {
       "Aceleramos sellers que já vendem online, otimizando e escalando os resultados no Mercado Livre."
     ],
     features: [
-      "Account performance analysis", 
-      "Advanced listing optimization", 
-      "Advertising strategy and management", 
-      "Competitor benchmarking", 
-      "Inventory optimization", 
-      "Expansion planning",
-      "Brand development",
-      "Growth acceleration"
+      "* Personalize os módulos conforme a sua necessidade",
+      "Módulo de Estratégia e Planejamento", 
+      "Módulo de Inteligência Comercial", 
+      "Módulo de Criação de Novos Anúncios", 
+      "Módulo de Revisão e Otimização de Anúncios Existentes", 
+      "Módulo de Gestão de Ads e Central de Promoções",
+      "Módulo de Gestão de Full",
+      "Módulo de Atendimento Pré-Venda",
+      "Módulo de Atendimento Pós-Venda",
+      "Módulo de Armazenamento e Expedição de Pedidos",
+      "Módulo de Consultoria + Suporte Técnico e Operacional",
+      "Módulo de Fechamento e Conciliação Financeira"
     ],
     buttonText: "Saiba mais",
     imageSrc: "/programa_seller.jpg",
@@ -126,8 +130,8 @@ const Solutions = () => {
       />
       
       <CallToAction 
-        title="Ready to find the right solution for your business?"
-        buttonText="Talk to a specialist"
+        title="Pronto para encontrar a solução ideal para o seu negócio?"
+        buttonText="Fale com um especialista"
         buttonLink="/contact"
       />
       
