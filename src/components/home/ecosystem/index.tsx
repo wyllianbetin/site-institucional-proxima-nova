@@ -36,7 +36,7 @@ const EcosystemSection = () => {
         {/* Mobile version with grid layout */}
         <EcosystemMobileGrid ecosystemComponents={ecosystemComponents} />
 
-        <div className="text-center -mt-4 md:-mt-24 lg:-mt-28">
+        <div className="text-center -mt-4 md:-mt-20 lg:-mt-24">
           <Link to="/ecosystem" className="inline-flex items-center gap-2 bg-proximanova-blue text-white px-6 py-3 rounded-md hover:bg-proximanova-blue/90 transition-colors">
             Saiba mais sobre nosso ecossistema
             <ArrowRight className="h-5 w-5" />

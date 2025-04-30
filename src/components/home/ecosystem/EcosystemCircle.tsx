@@ -2,7 +2,8 @@
 import React from 'react';
 import EcosystemComponent from './EcosystemComponent';
 import EcosystemLogo from './EcosystemLogo';
-import { calculatePosition } from './EcosystemData';
+import EcosystemCircleConnector from './EcosystemCircleConnector';
+import { calculatePosition, calculateArrowhead } from './EcosystemData';
 
 interface EcosystemCircleProps {
   ecosystemComponents: Array<{
@@ -21,13 +22,20 @@ const EcosystemCircle = ({
 }: EcosystemCircleProps) => {
   return (
     <div className="hidden md:block relative mb-0 -mt-8">
-      <div className="relative w-full max-w-5xl mx-auto aspect-[16/12]">
+      <div className="relative w-full max-w-5xl mx-auto aspect-square">
+        {/* Connector lines and arrows */}
+        <EcosystemCircleConnector 
+          ecosystemComponents={ecosystemComponents}
+          activeComponent={activeComponent}
+          calculateArrowhead={calculateArrowhead}
+        />
+        
         {/* Central logo */}
         <EcosystemLogo />
 
         {/* Component cards positioned around the circle */}
         {ecosystemComponents.map((component, index) => {
-          const position = calculatePosition(index, ecosystemComponents.length, 22);
+          const position = calculatePosition(index, ecosystemComponents.length, 20);
           return (
             <EcosystemComponent
               key={index}

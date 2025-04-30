@@ -28,7 +28,7 @@ const EcosystemCircleConnector = ({
       <circle 
         cx="50" 
         cy="50" 
-        r="27" 
+        r="20" 
         fill="none" 
         stroke={activeComponent !== null ? "#004762" : "#00476240"}
         strokeWidth="0.5"
@@ -38,7 +38,7 @@ const EcosystemCircleConnector = ({
       
       {/* Arrows along the circular path */}
       {ecosystemComponents.map((_, index) => {
-        const arrowhead = calculateArrowhead(index, ecosystemComponents.length, 27, 2);
+        const arrowhead = calculateArrowhead(index, ecosystemComponents.length, 20, 2);
         const isActive = activeComponent === index || 
                         activeComponent === arrowhead.nextIndex;
         
