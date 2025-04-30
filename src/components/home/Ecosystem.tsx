@@ -12,37 +12,31 @@ const Ecosystem = () => {
     {
       title: "Educação",
       description: "Treinamos você e sua equipe para dominar as vendas online e crescer no digital.",
-      icon: "🎓",
       imagePath: "/ecossistema_educacao.webp"
     },
     {
       title: "Tecnologia",
       description: "Conectamos e integramos seu negócio a sistemas inteligentes para controlar e escalar suas vendas.",
-      icon: "💻",
       imagePath: "/ecossistema_tecnologia.webp"
     },
     {
       title: "Gestão",
       description: "Planejamos estratégias e acompanhamos métricas para impulsionar seu crescimento.",
-      icon: "📋",
       imagePath: "/ecossistema_gestao.webp"
     },
     {
       title: "Operação",
       description: "Realizamos o cadastro, revisão e otimização de anúncios. Cuidamos do atendimento pré e pós-venda. Gerenciamos campanhas de Ads, Promoções e muito mais.",
-      icon: "⚙️",
       imagePath: "/ecossistema_operacao.webp"
     },
     {
       title: "Armazenamento & Expedição",
       description: "Cuidamos do armazenamento e da expedição dos seus pedidos com segurança, eficiência e agilidade.",
-      icon: "📦",
       imagePath: "/ecossistema_expedicao.webp"
     },
     {
       title: "Logística Flex e Full",
       description: "Oferecemos soluções de transporte para as modalidades Flex e Full, integrando sua logística.",
-      icon: "🚚",
       imagePath: "/ecossistema_logistica.webp"
     }
   ];
@@ -76,15 +70,15 @@ const Ecosystem = () => {
         <div className="hidden md:block relative mb-10">
           <div className="relative w-full max-w-4xl mx-auto aspect-square">
             {/* Central logo */}
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-full p-6 shadow-lg z-10 w-40 h-40 flex items-center justify-center">
-              <img src="/logo.svg" alt="Próxima Nova" className="w-32 h-32 object-contain" />
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-proximanova-blue rounded-full p-6 shadow-lg z-10 w-52 h-52 flex items-center justify-center">
+              <img src="/logo-white.svg" alt="Próxima Nova" className="w-44 h-44 object-contain" />
             </div>
 
             {/* Connection lines using SVG */}
             <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
               {/* Lines connecting components to center */}
               {ecosystemComponents.map((_, index) => {
-                const { x, y } = calculatePosition(index, ecosystemComponents.length, 36);
+                const { x, y } = calculatePosition(index, ecosystemComponents.length, 30);
                 return (
                   <line 
                     key={index}
@@ -103,7 +97,7 @@ const Ecosystem = () => {
 
             {/* Component cards positioned around the circle */}
             {ecosystemComponents.map((component, index) => {
-              const { x, y } = calculatePosition(index, ecosystemComponents.length, 36);
+              const { x, y } = calculatePosition(index, ecosystemComponents.length, 30);
               return (
                 <div 
                   key={index}
@@ -115,7 +109,7 @@ const Ecosystem = () => {
                   onMouseEnter={() => setActiveComponent(index)}
                   onMouseLeave={() => setActiveComponent(null)}
                 >
-                  <Card className="w-full h-full rounded-full overflow-hidden border-4 border-white group">
+                  <Card className="w-full h-full rounded-full overflow-hidden border-4 border-white group-hover:border-proximanova-yellow group">
                     <div className="relative w-full h-full flex flex-col items-center justify-center">
                       <div className="absolute inset-0">
                         <img 
@@ -130,7 +124,6 @@ const Ecosystem = () => {
                         <div className="absolute inset-0 bg-proximanova-blue/60 group-hover:bg-proximanova-blue/80 transition-colors duration-300"></div>
                       </div>
                       <div className="relative z-10 text-white text-center p-3">
-                        <div className="text-2xl mb-1">{component.icon}</div>
                         <h3 className="text-base font-bold mb-1">{component.title}</h3>
                         <p className="text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">{component.description.split(' ').slice(0, 5).join(' ')}...</p>
                       </div>
@@ -157,7 +150,6 @@ const Ecosystem = () => {
                   }}
                 />
                 <div className="absolute inset-0 bg-proximanova-blue/70 flex flex-col items-center justify-center p-3 text-center">
-                  <div className="text-2xl mb-1 text-white">{component.icon}</div>
                   <h3 className="text-sm font-bold text-white">{component.title}</h3>
                 </div>
               </div>
