@@ -19,15 +19,22 @@ const SuccessCases = () => {
     image: "https://raw.githubusercontent.com/wyllianbetin/site-institucional-proxima-nova/refs/heads/main/public/casodesucesso_casadochumbador.webp",
     url: "https://www.mercadolivre.com.br/perfil/casa-do-chumbador"
   }, {
-    name: "Home Decor Shop",
-    industry: "Casa & Decoração",
-    challenge: "Um negócio de decoração para casa com produtos de alta qualidade, mas alcance de mercado limitado e flutuações sazonais nas vendas.",
-    solution: "Consultoria Estratégica seguida pela inscrição no Programa Seller.",
-    results: ["450% de crescimento ano a ano na receita online", "Suavização das vendas sazonais através de planejamento estratégico", "Catálogo de produtos expandido de 50 para 200 itens"],
-    quote: "Os insights estratégicos fornecidos pela Próxima Nova nos ajudaram a identificar e capturar oportunidades que nunca soubemos que existiam.",
-    person: "João Mendes, Fundador",
-    image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04",
-    url: "https://www.mercadolivre.com.br/perfil/home-decor-shop"
+    name: "Fatelli",
+    industry: "Marcenaria",
+    challenge: "A Fatelli é uma loja especializada em produtos para marcenaria, com forte atuação no mercado físico. O principal desafio era validar o Mercado Livre como um canal de vendas viável, partindo do zero, com necessidade de entender a demanda, a curva ABC, os processos rotineiros e a conexão com ERP e HUB.",
+    solution: "Programa Lojista Digital",
+    results: [
+      "Conquista da Medalha de Mercado Líder em 6 meses",
+      "Validação do Canal",
+      "Validação da Curva ABC",
+      "Implementação de HUB",
+      "Ativação do Full",
+      "Vendas todos os dias"
+    ],
+    quote: "Começamos sem nenhuma venda e, em poucos meses, já estávamos faturando diariamente no Mercado Livre. A Próxima Nova não ficou só na teoria: entrou no dia a dia da operação e realmente fez acontecer. Hoje temos uma operação organizada, enxuta e com escalabilidade.",
+    person: "Tiago, sócio e gestor",
+    image: "https://raw.githubusercontent.com/wyllianbetin/site-institucional-proxima-nova/refs/heads/main/public/casodesucesso_fatelli.webp",
+    url: "https://www.mercadolivre.com.br/pagina/fatelli"
   }, {
     name: "Fashion Outlet",
     industry: "Moda & Vestuário",
@@ -123,7 +130,7 @@ const SuccessCases = () => {
                       rel="noopener noreferrer"
                       className="flex items-center"
                     >
-                      Confira a página no Mercado Livre
+                      Confira a página do vendedor no Mercado Livre
                       <ExternalLink className="h-4 w-4 ml-2" />
                     </a>
                   </Button>
