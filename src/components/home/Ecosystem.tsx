@@ -88,7 +88,7 @@ const Ecosystem = () => {
               left: `calc(50% + ${x}%)`,
               top: `calc(50% + ${y}%)`
             }} onMouseEnter={() => setActiveComponent(index)} onMouseLeave={() => setActiveComponent(null)}>
-                  <Card className="w-full h-full rounded-full overflow-hidden border-4 border-white group-hover:border-proximanova-yellow group">
+                  <Card className="w-full h-full rounded-full overflow-hidden border-4 border-white group-hover:border-proximanova-yellow transition-all duration-300 group">
                     <div className="relative w-full h-full flex flex-col items-center justify-center">
                       <div className="absolute inset-0">
                         <img src={component.imagePath} alt={component.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" onError={e => {
