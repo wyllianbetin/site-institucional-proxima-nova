@@ -41,7 +41,7 @@ const Ecosystem = () => {
       y
     };
   };
-  return <section className="section py-16 md:py-24 bg-gray-50">
+  return <section className="section py-16 md:py-24 bg-proximanova-yellow">
       <div className="container mx-auto">
         <div className="flex flex-col items-center text-center mb-4">
           <div className="bg-proximanova-blue/10 p-3 rounded-full mb-4">
