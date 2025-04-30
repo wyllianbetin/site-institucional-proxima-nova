@@ -85,15 +85,15 @@ const WhoWeAre = () => {
 
   return (
     <section className="section bg-white py-16 md:py-24">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto">
         <div className="flex flex-col md:flex-row mb-16 gap-8">
           {/* Container para o texto - ocupa 2/3 da largura em telas médias e grandes */}
-          <div className="md:w-2/3 flex flex-col items-start">
-            <div className="flex items-center mb-4">
-              <div className="bg-proximanova-blue/10 p-3 rounded-full mr-4">
+          <div className="md:w-2/3 flex flex-col items-center text-center">
+            <div className="flex flex-col items-center mb-4">
+              <div className="bg-proximanova-blue/10 p-3 rounded-full">
                 <Users className="h-6 w-6 text-proximanova-blue" />
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue">Sobre Nós</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue mt-4">Sobre Nós</h2>
             </div>
             <div className="h-1 w-20 bg-proximanova-yellow mb-6"></div>
             
@@ -122,27 +122,27 @@ const WhoWeAre = () => {
         {/* Grade para os números estatísticos - agora com melhor agrupamento visual */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 stats-section">
           <div className="flex flex-col items-center text-center">
-            <div className="mb-1">
+            <div>
               <span className="text-6xl font-bold text-proximanova-blue">+{yearsCount}</span>
+              <h3 className="text-xl font-semibold text-proximanova-blue mt-1">Anos de Experiência</h3>
             </div>
-            <h3 className="text-xl font-semibold mb-2 text-proximanova-blue">Anos de Experiência</h3>
-            <p className="text-gray-600">Estamos desde 2020 ajudando empresas a venderem online através do Mercado Livre</p>
+            <p className="text-gray-600 mt-2">Estamos desde 2020 ajudando empresas a venderem online através do Mercado Livre</p>
           </div>
           
           <div className="flex flex-col items-center text-center">
-            <div className="mb-1">
+            <div>
               <span className="text-6xl font-bold text-proximanova-blue">+{businessesCount}</span>
+              <h3 className="text-xl font-semibold text-proximanova-blue mt-1">Negócios Transformados</h3>
             </div>
-            <h3 className="text-xl font-semibold mb-2 text-proximanova-blue">Negócios Transformados</h3>
-            <p className="text-gray-600">Já ajudamos dezenas de negócios do varejo tradicional a se tornarem lojistas digitais</p>
+            <p className="text-gray-600 mt-2">Já ajudamos dezenas de negócios do varejo tradicional a se tornarem lojistas digitais</p>
           </div>
           
           <div className="flex flex-col items-center text-center">
-            <div className="mb-1">
+            <div>
               <span className="text-6xl font-bold text-proximanova-blue">+{gmvCount}M</span>
+              <h3 className="text-xl font-semibold text-proximanova-blue mt-1">De GMV Bruto</h3>
             </div>
-            <h3 className="text-xl font-semibold mb-2 text-proximanova-blue">De GMV Bruto</h3>
-            <p className="text-gray-600">Mais de R$50 milhões faturados anualmente pelos nossos clientes sob nossa gestão</p>
+            <p className="text-gray-600 mt-2">Mais de R$50 milhões faturados anualmente pelos nossos clientes sob nossa gestão</p>
           </div>
         </div>
       </div>
