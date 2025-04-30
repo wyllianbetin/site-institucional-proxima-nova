@@ -1,5 +1,7 @@
+
 import React, { useState, useEffect } from 'react';
 import { Users } from 'lucide-react';
+
 const WhoWeAre = () => {
   // Estados para controlar a contagem de cada número
   const [yearsCount, setYearsCount] = useState(0);
@@ -80,53 +82,69 @@ const WhoWeAre = () => {
       observer.disconnect();
     };
   }, []);
-  return <section className="section bg-white">
+
+  return (
+    <section className="section bg-white">
       <div className="container mx-auto">
-        <div className="flex flex-col items-center text-center mb-12">
-          <div className="bg-proximanova-blue/10 p-3 rounded-full mb-4">
-            <Users className="h-6 w-6 text-proximanova-blue" />
+        <div className="flex flex-col md:flex-row md:items-start mb-12 gap-8">
+          <div className="md:w-2/3 text-left">
+            <div className="flex items-center mb-4">
+              <div className="bg-proximanova-blue/10 p-3 rounded-full mr-4">
+                <Users className="h-6 w-6 text-proximanova-blue" />
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue">Sobre Nós</h2>
+            </div>
+            <div className="h-1 w-20 bg-proximanova-yellow mb-6"></div>
+            
+            <div className="text-lg space-y-4 text-gray-700">
+              <p>Na Próxima Nova, acreditamos que o presente e o futuro do varejo será cada vez mais digital — e estamos aqui para construir essa transformação ao lado das empresas.</p>
+              
+              <p>Oferecemos um ecossistema completo: educação, tecnologia, gestão, operação e logística — tudo em um único parceiro estratégico.</p>
+              
+              <p>Mais do que uma simples consultoria ou assessoria, somos fullcommerce: orientamos, executamos, cuidamos e entregamos resultados aos nossos clientes.</p>
+              
+              <p className="font-medium">Bem-vindo à Próxima Nova.
+              O sucesso das suas vendas online começa aqui.</p>
+            </div>
           </div>
-          <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue mb-3">Sobre Nós</h2>
-          <div className="h-1 w-20 bg-proximanova-yellow mb-6"></div>
           
-          <div className="text-lg max-w-3xl mx-auto text-gray-700 space-y-4">
-            <p>Na Próxima Nova, acreditamos que o presente e o futuro do varejo será cada vez mais digital — e estamos aqui para construir essa transformação ao lado das empresas.</p>
-            
-            <p>Oferecemos um ecossistema completo: educação, tecnologia, gestão, operação e logística — tudo em um único parceiro estratégico.</p>
-            
-            <p>Mais do que uma simples consultoria ou assessoria, somos fullcommerce: orientamos, executamos, cuidamos e entregamos resultados aos nossos clientes.</p>
-            
-            <p className="font-medium">Bem-vindo à Próxima Nova.
-O sucesso das suas vendas online começa aqui.</p>
+          <div className="md:w-1/3 flex justify-center md:justify-end items-center">
+            <img 
+              src="/selo_consultoria_certificada.png" 
+              alt="Selo de Consultoria Certificada do Mercado Livre" 
+              className="max-w-full h-auto max-h-64"
+            />
           </div>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 stats-section">
           <div className="text-center">
-            <div className="h-24 w-40 mx-auto rounded-lg flex items-center justify-center mb-4 shadow-sm border border-gray-200 transition-all hover:shadow-md bg-zinc-50">
-              <span className="text-3xl font-bold text-proximanova-blue">+{yearsCount}</span>
+            <div className="flex flex-col items-center justify-center mb-4">
+              <span className="text-5xl font-bold text-proximanova-blue">+{yearsCount}</span>
             </div>
             <h3 className="text-xl font-semibold mb-2 text-proximanova-blue">Anos de Experiência</h3>
             <p className="text-gray-600">Estamos desde 2020 ajudando empresas a venderem online através do Mercado Livre</p>
           </div>
           
           <div className="text-center">
-            <div className="h-24 w-40 mx-auto rounded-lg flex items-center justify-center mb-4 shadow-sm border border-gray-200 transition-all hover:shadow-md bg-zinc-50">
-              <span className="text-3xl font-bold text-proximanova-blue">+{businessesCount}</span>
+            <div className="flex flex-col items-center justify-center mb-4">
+              <span className="text-5xl font-bold text-proximanova-blue">+{businessesCount}</span>
             </div>
             <h3 className="text-xl font-semibold mb-2 text-proximanova-blue">Negócios Transformados</h3>
             <p className="text-gray-600">Já ajudamos dezenas de negócios do varejo tradicional a se tornarem lojistas digitais</p>
           </div>
           
           <div className="text-center">
-            <div className="h-24 w-40 mx-auto rounded-lg flex items-center justify-center mb-4 shadow-sm border border-gray-200 transition-all hover:shadow-md bg-zinc-50">
-              <span className="text-3xl font-bold text-proximanova-blue">+{gmvCount}M</span>
+            <div className="flex flex-col items-center justify-center mb-4">
+              <span className="text-5xl font-bold text-proximanova-blue">+{gmvCount}M</span>
             </div>
             <h3 className="text-xl font-semibold mb-2 text-proximanova-blue">De GMV Bruto</h3>
             <p className="text-gray-600">Mais de R$50 milhões faturados anualmente pelos nossos clientes sob nossa gestão</p>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default WhoWeAre;
