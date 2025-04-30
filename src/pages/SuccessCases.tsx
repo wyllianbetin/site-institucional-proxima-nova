@@ -17,7 +17,7 @@ const SuccessCases = () => {
     quote: "Sempre tivemos uma loja física muito forte, mas sabíamos que precisávamos entrar no mundo digital. A Próxima Nova nos ajudou a estruturar tudo. Em poucos meses, conquistamos a medalha de MercadoLíder e estamos expandindo nossa operação graças ao trabalho deles.",
     person: "Sócrates, sócio e gestor",
     image: "https://raw.githubusercontent.com/wyllianbetin/site-institucional-proxima-nova/refs/heads/main/public/casodesucesso_casadochumbador.webp",
-    url: "https://www.mercadolivre.com.br/perfil/casa-do-chumbador"
+    url: "https://www.mercadolivre.com.br/loja/casa-do-chumbador"
   }, {
     name: "Fatelli",
     industry: "Marcenaria",
@@ -49,7 +49,7 @@ const SuccessCases = () => {
     ],
     quote: "Já vendíamos no Mercado Livre, mas nossos resultados ainda eram baixos. Tínhamos muito gasto com Ads e pouco retorno. Através da parceria com a Próxima Nova, conseguimos escalar nossas vendas e otimizar os investimentos em publicidade.",
     person: "Rodrigo, Sócio Fundador",
-    image: "https://raw.githubusercontent.com/wyllianbetin/site-institucional-proxima-nova/refs/heads/main/public/topspin-imagem.png",
+    image: "https://raw.githubusercontent.com/wyllianbetin/site-institucional-proxima-nova/refs/heads/main/public/casodesucesso_topspin.webp",
     url: "https://www.mercadolivre.com.br/pagina/topspin"
   }];
   return <>
@@ -86,6 +86,24 @@ const SuccessCases = () => {
                     <div className="relative h-72 md:h-96 rounded overflow-hidden">
                       <img src={caseStudy.image} alt={caseStudy.name} className="absolute w-full h-full object-cover" />
                     </div>
+                  </div>
+                  
+                  <div className="mt-6 flex justify-center">
+                    <Button 
+                      variant="outline" 
+                      className="flex items-center text-proximanova-blue hover:text-proximanova-yellow transition-colors"
+                      asChild
+                    >
+                      <a 
+                        href={caseStudy.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="flex items-center"
+                      >
+                        Confira a página do vendedor no Mercado Livre
+                        <ExternalLink className="h-4 w-4 ml-2" />
+                      </a>
+                    </Button>
                   </div>
                 </div>
                 
@@ -124,22 +142,6 @@ const SuccessCases = () => {
                     <p className="text-gray-700 italic mb-3">"{caseStudy.quote}"</p>
                     <p className="font-medium text-proximanova-blue">{caseStudy.person}</p>
                   </div>
-                  
-                  <Button 
-                    variant="outline" 
-                    className="flex items-center text-proximanova-blue hover:text-proximanova-yellow transition-colors"
-                    asChild
-                  >
-                    <a 
-                      href={caseStudy.url} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="flex items-center"
-                    >
-                      Confira a página do vendedor no Mercado Livre
-                      <ExternalLink className="h-4 w-4 ml-2" />
-                    </a>
-                  </Button>
                 </div>
               </div>
             </div>)}
@@ -155,7 +157,7 @@ const SuccessCases = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
             <div className="bg-white rounded-xl shadow-md p-6">
-              <div className="text-4xl font-bold text-proximanova-blue mb-4">300+</div>
+              <div className="text-4xl font-bold text-proximanova-blue mb-4">60+</div>
               <p className="text-gray-700">Negócios Transformados</p>
             </div>
             
