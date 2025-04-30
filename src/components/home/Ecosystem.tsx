@@ -22,7 +22,7 @@ const Ecosystem = () => {
     imagePath: "/ecossistema_gestao.webp"
   }, {
     title: "Operação",
-    description: "Realizamos o cadastro, revisão e otimização de anúncios. Cuidamos do atendimento pré e pós-venda. Gerenciamos campanhas de Ads, Promoções e muito mais.",
+    description: "Cuidamos das demandas diárias: como cadastro de produtos, otimização de anúncios, campanhas de ads, atendimento ao comprador e muito mais.",
     imagePath: "/ecossistema_operacao.webp"
   }, {
     title: "Armazenamento & Expedição",
