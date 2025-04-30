@@ -44,14 +44,14 @@ const Ecosystem = () => {
   return <section className="section py-16 md:py-24 bg-proximanova-yellow">
       <div className="container mx-auto">
         <div className="flex flex-col items-center text-center mb-4">
-          <div className="p-3 rounded-full mb-4 bg-white/[0.78]">
+          <div className="bg-proximanova-blue/10 p-3 rounded-full mb-4">
             <Layers className="h-6 w-6 text-proximanova-blue" />
           </div>
           <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue mb-3">
             Ecossistema Próxima Nova
           </h2>
           <div className="h-1 w-20 bg-proximanova-yellow mb-6"></div>
-          <p className="text-lg max-w-3xl mx-auto text-proximanova-blue">Desenvolvemos um ecossistema completo para atender nossos clientes de ponta a ponta. Todas as etapas de uma operação de e-commerce centralizadas em um único parceiro. Terceirize a rotina das vendas online e foque no que realmente importa: levar o seu negócio para o próximo nível. Deixe a parte operacional com a gente.</p>
+          <p className="text-lg max-w-3xl mx-auto text-gray-700">Desenvolvemos um ecossistema completo para atender nossos clientes de ponta a ponta. Todas as etapas de uma operação de e-commerce centralizadas em um único parceiro. Terceirize a rotina das vendas online e foque no que realmente importa: levar o seu negócio para o próximo nível. Deixe a parte operacional com a gente.</p>
         </div>
 
         {/* Circular layout for desktop */}
