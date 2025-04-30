@@ -1,6 +1,86 @@
-import React from 'react';
+
+import React, { useState, useEffect } from 'react';
 import { Users } from 'lucide-react';
+
 const WhoWeAre = () => {
+  // Estados para controlar a contagem de cada número
+  const [yearsCount, setYearsCount] = useState(0);
+  const [businessesCount, setBusinessesCount] = useState(0);
+  const [gmvCount, setGmvCount] = useState(0);
+  
+  // Valores finais para cada contador
+  const finalYears = 5;
+  const finalBusinesses = 60;
+  const finalGMV = 50;
+  
+  // Efeito para realizar a animação de contagem
+  useEffect(() => {
+    // Duração da animação em milissegundos
+    const animationDuration = 2000;
+    
+    // Para verificar se o elemento está visível na tela
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Contador de anos
+          let yearsStartTime: number;
+          function animateYears(timestamp: number) {
+            if (!yearsStartTime) yearsStartTime = timestamp;
+            const elapsed = timestamp - yearsStartTime;
+            const progress = Math.min(elapsed / animationDuration, 1);
+            setYearsCount(Math.floor(progress * finalYears));
+            if (progress < 1) {
+              requestAnimationFrame(animateYears);
+            }
+          }
+          
+          // Contador de negócios
+          let businessesStartTime: number;
+          function animateBusinesses(timestamp: number) {
+            if (!businessesStartTime) businessesStartTime = timestamp;
+            const elapsed = timestamp - businessesStartTime;
+            const progress = Math.min(elapsed / animationDuration, 1);
+            setBusinessesCount(Math.floor(progress * finalBusinesses));
+            if (progress < 1) {
+              requestAnimationFrame(animateBusinesses);
+            }
+          }
+          
+          // Contador de GMV
+          let gmvStartTime: number;
+          function animateGMV(timestamp: number) {
+            if (!gmvStartTime) gmvStartTime = timestamp;
+            const elapsed = timestamp - gmvStartTime;
+            const progress = Math.min(elapsed / animationDuration, 1);
+            setGmvCount(Math.floor(progress * finalGMV));
+            if (progress < 1) {
+              requestAnimationFrame(animateGMV);
+            }
+          }
+          
+          // Iniciar as animações
+          requestAnimationFrame(animateYears);
+          requestAnimationFrame(animateBusinesses);
+          requestAnimationFrame(animateGMV);
+          
+          // Parar de observar após iniciar as animações
+          observer.disconnect();
+        }
+      });
+    }, { threshold: 0.2 });
+    
+    // Elemento a ser observado
+    const statsSection = document.querySelector('.stats-section');
+    if (statsSection) {
+      observer.observe(statsSection);
+    }
+    
+    // Limpar o observador ao desmontar o componente
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return <section className="section bg-white">
       <div className="container mx-auto">
         <div className="flex flex-col items-center text-center mb-12">
@@ -22,26 +102,26 @@ O sucesso das suas vendas online começa aqui.</p>
           </div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 stats-section">
           <div className="text-center">
-            <div className="h-20 w-20 rounded-full bg-proximanova-blue/10 flex items-center justify-center mx-auto mb-4">
-              <span className="text-3xl font-bold text-proximanova-blue">+5</span>
+            <div className="h-24 w-48 rounded-lg bg-[#E5DEFF] flex items-center justify-center mx-auto mb-4 shadow-md border border-[#D6BCFA] transition-all hover:shadow-lg">
+              <span className="text-3xl font-bold text-proximanova-blue">+{yearsCount}</span>
             </div>
             <h3 className="text-xl font-semibold mb-2">Anos de Experiência</h3>
             <p className="text-gray-600">Estamos desde 2020 ajudando empresas a venderem online através do Mercado Livre</p>
           </div>
           
           <div className="text-center">
-            <div className="h-20 w-20 rounded-full bg-proximanova-blue/10 flex items-center justify-center mx-auto mb-4">
-              <span className="text-3xl font-bold text-proximanova-blue">+60</span>
+            <div className="h-24 w-48 rounded-lg bg-[#F2FCE2] flex items-center justify-center mx-auto mb-4 shadow-md border border-[#D6BCFA] transition-all hover:shadow-lg">
+              <span className="text-3xl font-bold text-proximanova-blue">+{businessesCount}</span>
             </div>
             <h3 className="text-xl font-semibold mb-2">Negócios Transformados</h3>
             <p className="text-gray-600">Já ajudamos dezenas de negócios do varejo tradicional a se tornarem lojistas digitais</p>
           </div>
           
           <div className="text-center">
-            <div className="h-20 w-20 rounded-full bg-proximanova-blue/10 flex items-center justify-center mx-auto mb-4">
-              <span className="text-3xl font-bold text-proximanova-blue">+50M</span>
+            <div className="h-24 w-48 rounded-lg bg-[#FEF7CD] flex items-center justify-center mx-auto mb-4 shadow-md border border-[#D6BCFA] transition-all hover:shadow-lg">
+              <span className="text-3xl font-bold text-proximanova-blue">+{gmvCount}M</span>
             </div>
             <h3 className="text-xl font-semibold mb-2">De GMV Bruto</h3>
             <p className="text-gray-600">Mais de R$50 milhões faturados anualmente pelos nossos clientes sob nossa gestão</p>
