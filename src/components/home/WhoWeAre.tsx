@@ -104,7 +104,7 @@ O sucesso das suas vendas online começa aqui.</p>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 stats-section">
           <div className="text-center">
-            <div className="h-24 w-48 rounded-lg bg-[#E5DEFF] flex items-center justify-center mx-auto mb-4 shadow-md border border-[#D6BCFA] transition-all hover:shadow-lg">
+            <div className="h-24 w-40 mx-auto rounded-lg bg-gray-100 flex items-center justify-center mb-4 shadow-sm border border-gray-200 transition-all hover:shadow-md">
               <span className="text-3xl font-bold text-proximanova-blue">+{yearsCount}</span>
             </div>
             <h3 className="text-xl font-semibold mb-2">Anos de Experiência</h3>
@@ -112,7 +112,7 @@ O sucesso das suas vendas online começa aqui.</p>
           </div>
           
           <div className="text-center">
-            <div className="h-24 w-48 rounded-lg bg-[#F2FCE2] flex items-center justify-center mx-auto mb-4 shadow-md border border-[#D6BCFA] transition-all hover:shadow-lg">
+            <div className="h-24 w-40 mx-auto rounded-lg bg-gray-100 flex items-center justify-center mb-4 shadow-sm border border-gray-200 transition-all hover:shadow-md">
               <span className="text-3xl font-bold text-proximanova-blue">+{businessesCount}</span>
             </div>
             <h3 className="text-xl font-semibold mb-2">Negócios Transformados</h3>
@@ -120,7 +120,7 @@ O sucesso das suas vendas online começa aqui.</p>
           </div>
           
           <div className="text-center">
-            <div className="h-24 w-48 rounded-lg bg-[#FEF7CD] flex items-center justify-center mx-auto mb-4 shadow-md border border-[#D6BCFA] transition-all hover:shadow-lg">
+            <div className="h-24 w-40 mx-auto rounded-lg bg-gray-100 flex items-center justify-center mb-4 shadow-sm border border-gray-200 transition-all hover:shadow-md">
               <span className="text-3xl font-bold text-proximanova-blue">+{gmvCount}M</span>
             </div>
             <h3 className="text-xl font-semibold mb-2">De GMV Bruto</h3>
