@@ -1,9 +1,12 @@
+
 import React from 'react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import WhatsAppButton from '@/components/common/WhatsAppButton';
 import CallToAction from '@/components/common/CallToAction';
-import { Star, ArrowRight } from 'lucide-react';
+import { Star, ArrowRight, ExternalLink } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+
 const SuccessCases = () => {
   const successCases = [{
     name: "Casa do Chumbador",
@@ -13,7 +16,8 @@ const SuccessCases = () => {
     results: ["Conquista da Medalha de Mercado Líder em 6 meses", "Selo Loja Oficial", "Ativação do Full", "Vendas todos os dias"],
     quote: "Sempre tivemos uma loja física muito forte, mas sabíamos que precisávamos entrar no mundo digital. A Próxima Nova nos ajudou a estruturar tudo. Em poucos meses, conquistamos a medalha de MercadoLíder e estamos expandindo nossa operação graças ao trabalho deles.",
     person: "Sócrates, sócio e gestor",
-    image: "https://raw.githubusercontent.com/wyllianbetin/site-institucional-proxima-nova/refs/heads/main/public/casodesucesso_casadochumbador.webp"
+    image: "https://raw.githubusercontent.com/wyllianbetin/site-institucional-proxima-nova/refs/heads/main/public/casodesucesso_casadochumbador.webp",
+    url: "https://www.mercadolivre.com.br/perfil/casa-do-chumbador"
   }, {
     name: "Home Decor Shop",
     industry: "Casa & Decoração",
@@ -22,7 +26,8 @@ const SuccessCases = () => {
     results: ["450% de crescimento ano a ano na receita online", "Suavização das vendas sazonais através de planejamento estratégico", "Catálogo de produtos expandido de 50 para 200 itens"],
     quote: "Os insights estratégicos fornecidos pela Próxima Nova nos ajudaram a identificar e capturar oportunidades que nunca soubemos que existiam.",
     person: "João Mendes, Fundador",
-    image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04"
+    image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04",
+    url: "https://www.mercadolivre.com.br/perfil/home-decor-shop"
   }, {
     name: "Fashion Outlet",
     industry: "Moda & Vestuário",
@@ -31,7 +36,8 @@ const SuccessCases = () => {
     results: ["40% de redução nas taxas de devolução através de anúncios aprimorados", "Giro de estoque aumentado em 60%", "Pontuação de satisfação do cliente melhorada de 3,2/5 para 4,8/5"],
     quote: "As soluções tecnológicas e o suporte operacional transformaram a forma como gerenciamos nosso negócio online, tornando-o muito mais eficiente e lucrativo.",
     person: "Ana Costa, Gerente de Operações",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+    url: "https://www.mercadolivre.com.br/perfil/fashion-outlet"
   }];
   return <>
       <Header />
@@ -106,10 +112,21 @@ const SuccessCases = () => {
                     <p className="font-medium text-proximanova-blue">{caseStudy.person}</p>
                   </div>
                   
-                  <button className="flex items-center text-proximanova-blue hover:text-proximanova-yellow transition-colors font-medium">
-                    Ver caso completo
-                    <ArrowRight className="h-4 w-4 ml-2" />
-                  </button>
+                  <Button 
+                    variant="outline" 
+                    className="flex items-center text-proximanova-blue hover:text-proximanova-yellow transition-colors"
+                    asChild
+                  >
+                    <a 
+                      href={caseStudy.url} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center"
+                    >
+                      Confira a página no Mercado Livre
+                      <ExternalLink className="h-4 w-4 ml-2" />
+                    </a>
+                  </Button>
                 </div>
               </div>
             </div>)}

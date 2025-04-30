@@ -1,10 +1,12 @@
+
 import React from 'react';
-import { Star, ArrowRight } from 'lucide-react';
+import { Star, ArrowRight, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { testimonials } from '@/config/testimonials';
 import BrandLogosCarousel from './BrandLogosCarousel';
+import { Button } from '@/components/ui/button';
+
 const SuccessCases = () => {
-  const clientLogos = ["TechStore", "HomeDecor", "FashionOutlet", "SportGoods", "KitchenPlus", "PetShop"];
   return <section className="section bg-gray-50">
       <div className="container mx-auto">
         <div className="flex flex-col items-center text-center mb-12">
@@ -39,10 +41,12 @@ const SuccessCases = () => {
         <BrandLogosCarousel />
 
         <div className="text-center mt-10">
-          <Link to="/success-cases" className="inline-flex items-center gap-2 primary-btn">
-            Confira os Casos de Sucesso
-            <ArrowRight className="h-5 w-5" />
-          </Link>
+          <Button asChild variant="default" className="primary-btn">
+            <Link to="/success-cases" className="inline-flex items-center gap-2">
+              Confira os Casos de Sucesso
+              <ArrowRight className="h-5 w-5" />
+            </Link>
+          </Button>
         </div>
       </div>
     </section>;
