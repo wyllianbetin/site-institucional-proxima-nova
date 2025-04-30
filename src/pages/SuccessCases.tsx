@@ -36,15 +36,21 @@ const SuccessCases = () => {
     image: "https://raw.githubusercontent.com/wyllianbetin/site-institucional-proxima-nova/refs/heads/main/public/casodesucesso_fatelli.webp",
     url: "https://www.mercadolivre.com.br/pagina/fatelli"
   }, {
-    name: "Fashion Outlet",
-    industry: "Moda & Vestuário",
-    challenge: "Um varejista de moda enfrentando dificuldades com gerenciamento de estoque e altas taxas de devolução para vendas online.",
-    solution: "Abordagem de ecossistema com foco nos componentes de Operações e Tecnologia.",
-    results: ["40% de redução nas taxas de devolução através de anúncios aprimorados", "Giro de estoque aumentado em 60%", "Pontuação de satisfação do cliente melhorada de 3,2/5 para 4,8/5"],
-    quote: "As soluções tecnológicas e o suporte operacional transformaram a forma como gerenciamos nosso negócio online, tornando-o muito mais eficiente e lucrativo.",
-    person: "Ana Costa, Gerente de Operações",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
-    url: "https://www.mercadolivre.com.br/perfil/fashion-outlet"
+    name: "Top Spin",
+    industry: "Sublimação",
+    challenge: "A Top Spin já atuava no Mercado Livre com vendas recorrentes no segmento de sublimação, mas enfrentava dificuldades para escalar a operação. Os anúncios não estavam otimizados, os custos com Ads eram altos e a estrutura interna carecia de processos e integração tecnológica. O desafio era profissionalizar a gestão, otimizar a publicidade e aumentar a lucratividade da operação juntamente com a escala de vendas.",
+    solution: "Programa Seller",
+    results: [
+      "Conquista da Medalha de MercadoLíder GOLD",
+      "Implementação de ERP",
+      "Otimização das campanhas de ADS",
+      "Gestão de FULL",
+      "Aumento de Receita e Margem"
+    ],
+    quote: "Já vendíamos no Mercado Livre, mas nossos resultados ainda eram baixos. Tínhamos muito gasto com Ads e pouco retorno. Através da parceria com a Próxima Nova, conseguimos escalar nossas vendas e otimizar os investimentos em publicidade.",
+    person: "Rodrigo, Sócio Fundador",
+    image: "https://raw.githubusercontent.com/wyllianbetin/site-institucional-proxima-nova/refs/heads/main/public/topspin-imagem.png",
+    url: "https://www.mercadolivre.com.br/pagina/topspin"
   }];
   return <>
       <Header />
