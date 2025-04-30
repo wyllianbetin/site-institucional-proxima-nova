@@ -84,7 +84,7 @@ const WhoWeAre = () => {
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row mb-16 gap-8">
           {/* Container para o texto - ocupa 2/3 da largura em telas médias e grandes */}
-          <div className="md:w-2/3 flex flex-col items-center text-center bg-[#fefefe] rounded-lg">
+          <div className="md:w-2/3 flex flex-col items-center text-center bg-gray-50 rounded-2xl">
             <div className="flex flex-col items-center mb-4">
               <div className="bg-proximanova-blue/10 p-3 rounded-full">
                 <Users className="h-6 w-6 text-proximanova-blue" />
