@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -6,7 +5,6 @@ import WhatsAppButton from '@/components/common/WhatsAppButton';
 import CallToAction from '@/components/common/CallToAction';
 import { Star, ArrowRight, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-
 const SuccessCases = () => {
   const successCases = [{
     name: "Casa do Chumbador",
@@ -23,14 +21,7 @@ const SuccessCases = () => {
     industry: "Marcenaria",
     challenge: "A Fatelli é uma loja especializada em produtos para marcenaria, com forte atuação no mercado físico. O principal desafio era validar o Mercado Livre como um canal de vendas viável, partindo do zero, com necessidade de entender a demanda, a curva ABC, os processos rotineiros e a conexão com ERP e HUB.",
     solution: "Programa Lojista Digital",
-    results: [
-      "Conquista da Medalha de Mercado Líder em 6 meses",
-      "Validação do Canal",
-      "Validação da Curva ABC",
-      "Implementação de HUB",
-      "Ativação do Full",
-      "Vendas todos os dias"
-    ],
+    results: ["Conquista da Medalha de Mercado Líder em 6 meses", "Validação do Canal", "Validação da Curva ABC", "Implementação de HUB", "Ativação do Full", "Vendas todos os dias"],
     quote: "Começamos sem nenhuma venda e, em poucos meses, já estávamos faturando diariamente no Mercado Livre. A Próxima Nova não ficou só na teoria: entrou no dia a dia da operação e realmente fez acontecer. Hoje temos uma operação organizada, enxuta e com escalabilidade.",
     person: "Tiago, sócio e gestor",
     image: "https://raw.githubusercontent.com/wyllianbetin/site-institucional-proxima-nova/refs/heads/main/public/casodesucesso_fatelli.webp",
@@ -40,13 +31,7 @@ const SuccessCases = () => {
     industry: "Sublimação",
     challenge: "A Top Spin já atuava no Mercado Livre com vendas recorrentes no segmento de sublimação, mas enfrentava dificuldades para escalar a operação. Os anúncios não estavam otimizados, os custos com Ads eram altos e a estrutura interna carecia de processos e integração tecnológica. O desafio era profissionalizar a gestão, otimizar a publicidade e aumentar a lucratividade da operação juntamente com a escala de vendas.",
     solution: "Programa Seller",
-    results: [
-      "Conquista da Medalha de MercadoLíder GOLD",
-      "Implementação de ERP",
-      "Otimização das campanhas de ADS",
-      "Gestão de FULL",
-      "Aumento de Receita e Margem"
-    ],
+    results: ["Conquista da Medalha de MercadoLíder GOLD", "Implementação de ERP", "Otimização das campanhas de ADS", "Gestão de FULL", "Aumento de Receita e Margem"],
     quote: "Já vendíamos no Mercado Livre, mas nossos resultados ainda eram baixos. Tínhamos muito gasto com Ads e pouco retorno. Através da parceria com a Próxima Nova, conseguimos escalar nossas vendas e otimizar os investimentos em publicidade.",
     person: "Rodrigo, Sócio Fundador",
     image: "https://raw.githubusercontent.com/wyllianbetin/site-institucional-proxima-nova/refs/heads/main/public/casodesucesso_topspin.webp",
@@ -75,7 +60,7 @@ const SuccessCases = () => {
               <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue">Histórias de Sucesso</h2>
             </div>
             <div className="h-1 w-16 bg-proximanova-yellow mx-auto mb-6"></div>
-            <p className="text-gray-700 max-w-3xl mx-auto">Descubra como empresas de diferentes setores alcançaram resultados notáveis ​​implementando nossas soluções de transformação digital.</p>
+            <p className="text-gray-700 max-w-3xl mx-auto">Confira como empresas de diferentes setores alcançaram resultados notáveis ​​implementando nossas soluções de transformação digital.</p>
           </div>
           
           {/* Success Cases */}
@@ -89,17 +74,8 @@ const SuccessCases = () => {
                   </div>
                   
                   <div className="mt-6 flex justify-center">
-                    <Button 
-                      variant="outline" 
-                      className="flex items-center text-proximanova-blue hover:text-proximanova-yellow transition-colors"
-                      asChild
-                    >
-                      <a 
-                        href={caseStudy.url} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="flex items-center"
-                      >
+                    <Button variant="outline" className="flex items-center text-proximanova-blue hover:text-proximanova-yellow transition-colors" asChild>
+                      <a href={caseStudy.url} target="_blank" rel="noopener noreferrer" className="flex items-center">
                         Confira a página do vendedor no Mercado Livre
                         <ExternalLink className="h-4 w-4 ml-2" />
                       </a>
