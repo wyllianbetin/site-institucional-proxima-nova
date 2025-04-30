@@ -3,8 +3,10 @@ import { Layers, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Card } from "@/components/ui/card";
+
 const Ecosystem = () => {
   const [activeComponent, setActiveComponent] = useState<number | null>(null);
+  
   const ecosystemComponents = [{
     title: "Educação",
     description: "Treinamos você e sua equipe para dominar as vendas online e crescer no digital.",
@@ -41,6 +43,7 @@ const Ecosystem = () => {
       y
     };
   };
+
   return <section className="section py-16 md:py-24 bg-proximanova-yellow">
       <div className="container mx-auto">
         <div className="flex flex-col items-center text-center mb-4">
@@ -70,7 +73,17 @@ const Ecosystem = () => {
                 x,
                 y
               } = calculatePosition(index, ecosystemComponents.length, 30);
-              return <line key={index} x1="50" y1="50" x2={50 + x} y2={50 + y} stroke={activeComponent === index ? "#f8d14d" : "#00476280"} strokeWidth="0.5" strokeDasharray={activeComponent === index ? "none" : "1,1"} className="transition-all duration-300" />;
+              return <line 
+                key={index} 
+                x1="50" 
+                y1="50" 
+                x2={50 + x} 
+                y2={50 + y} 
+                stroke={activeComponent === index ? "#004762" : "#00476280"} 
+                strokeWidth="0.5" 
+                strokeDasharray={activeComponent === index ? "none" : "1,1"} 
+                className="transition-all duration-300" 
+              />;
             })}
             </svg>
 
@@ -80,17 +93,28 @@ const Ecosystem = () => {
               x,
               y
             } = calculatePosition(index, ecosystemComponents.length, 30);
-            return <div key={index} className={`absolute transition-all duration-300 transform -translate-x-1/2 -translate-y-1/2 w-[24%] aspect-square rounded-full overflow-hidden shadow-md group ${activeComponent === index ? 'scale-110 z-20 shadow-xl' : activeComponent !== null ? 'opacity-70' : ''}`} style={{
-              left: `calc(50% + ${x}%)`,
-              top: `calc(50% + ${y}%)`
-            }} onMouseEnter={() => setActiveComponent(index)} onMouseLeave={() => setActiveComponent(null)}>
-                  <Card className="w-full h-full rounded-full overflow-hidden border-4 border-white hover:border-proximanova-yellow transition-all duration-300">
+            return <div 
+                key={index} 
+                className={`absolute transition-all duration-300 transform -translate-x-1/2 -translate-y-1/2 w-[24%] aspect-square rounded-full overflow-hidden shadow-md group ${activeComponent === index ? 'scale-110 z-20 shadow-xl' : activeComponent !== null ? 'opacity-70' : ''}`} 
+                style={{
+                  left: `calc(50% + ${x}%)`,
+                  top: `calc(50% + ${y}%)`
+                }} 
+                onMouseEnter={() => setActiveComponent(index)} 
+                onMouseLeave={() => setActiveComponent(null)}
+              >
+                  <Card className="w-full h-full rounded-full overflow-hidden border-4 border-white hover:border-proximanova-blue transition-all duration-300">
                     <div className="relative w-full h-full flex flex-col items-center justify-center">
                       <div className="absolute inset-0">
-                        <img src={component.imagePath} alt={component.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" onError={e => {
-                      const target = e.target as HTMLImageElement;
-                      target.src = "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d";
-                    }} />
+                        <img 
+                          src={component.imagePath} 
+                          alt={component.title} 
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+                          onError={e => {
+                            const target = e.target as HTMLImageElement;
+                            target.src = "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d";
+                          }} 
+                        />
                         <div className="absolute inset-0 bg-proximanova-blue/60 group-hover:bg-proximanova-blue/80 transition-colors duration-300"></div>
                       </div>
                       <div className="relative z-10 text-white text-center p-2 md:p-3 flex flex-col justify-center h-full">
@@ -128,4 +152,5 @@ const Ecosystem = () => {
       </div>
     </section>;
 };
+
 export default Ecosystem;
