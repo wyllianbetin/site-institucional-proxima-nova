@@ -1,10 +1,13 @@
+
 import React, { useState } from 'react';
 import { Layers, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Card } from "@/components/ui/card";
+
 const Ecosystem = () => {
   const [activeComponent, setActiveComponent] = useState<number | null>(null);
+  
   const ecosystemComponents = [{
     title: "Educação",
     description: "Treinamos você e sua equipe para dominar as vendas online e crescer no digital.",
@@ -27,7 +30,7 @@ const Ecosystem = () => {
     imagePath: "/ecossistema_expedicao.webp"
   }, {
     title: "Logística Flex e Full",
-    description: "Oferecemos soluções de transporte para as modalidades Flex e Full, integrando sua logística.",
+    description: "Oferecemos soluções de transporte para as modalidades Flex e Full.",
     imagePath: "/ecossistema_logistica.webp"
   }];
 
@@ -41,9 +44,10 @@ const Ecosystem = () => {
       y
     };
   };
+  
   return <section className="section bg-[#f5f4e2] py-16 md:py-24">
       <div className="container mx-auto">
-        <div className="flex flex-col items-center text-center mb-12">
+        <div className="flex flex-col items-center text-center mb-4">
           <div className="bg-proximanova-blue/10 p-3 rounded-full mb-4">
             <Layers className="h-6 w-6 text-proximanova-blue" />
           </div>
@@ -55,7 +59,7 @@ const Ecosystem = () => {
         </div>
 
         {/* Circular layout for desktop */}
-        <div className="hidden md:block relative mb-10">
+        <div className="hidden md:block relative mb-4">
           <div className="relative w-full max-w-4xl mx-auto aspect-square">
             {/* Central logo */}
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-proximanova-blue rounded-full p-6 shadow-lg z-10 w-52 h-52 flex items-center justify-center">
@@ -80,7 +84,7 @@ const Ecosystem = () => {
               x,
               y
             } = calculatePosition(index, ecosystemComponents.length, 30);
-            return <div key={index} className={`absolute transition-all duration-300 transform -translate-x-1/2 -translate-y-1/2 w-[22%] aspect-square rounded-full overflow-hidden shadow-md ${activeComponent === index ? 'scale-110 z-20 shadow-xl' : activeComponent !== null ? 'opacity-70' : ''}`} style={{
+            return <div key={index} className={`absolute transition-all duration-300 transform -translate-x-1/2 -translate-y-1/2 w-[24%] aspect-square rounded-full overflow-hidden shadow-md ${activeComponent === index ? 'scale-110 z-20 shadow-xl' : activeComponent !== null ? 'opacity-70' : ''}`} style={{
               left: `calc(50% + ${x}%)`,
               top: `calc(50% + ${y}%)`
             }} onMouseEnter={() => setActiveComponent(index)} onMouseLeave={() => setActiveComponent(null)}>
@@ -93,9 +97,9 @@ const Ecosystem = () => {
                     }} />
                         <div className="absolute inset-0 bg-proximanova-blue/60 group-hover:bg-proximanova-blue/80 transition-colors duration-300"></div>
                       </div>
-                      <div className="relative z-10 text-white text-center p-3">
+                      <div className="relative z-10 text-white text-center p-2 md:p-3 flex flex-col justify-between h-full">
                         <h3 className="text-base font-bold mb-1">{component.title}</h3>
-                        <p className="text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">{component.description.split(' ').slice(0, 5).join(' ')}...</p>
+                        <p className="text-xs md:text-[0.7rem] transition-opacity duration-300">{component.description}</p>
                       </div>
                     </div>
                   </Card>
@@ -119,9 +123,9 @@ const Ecosystem = () => {
             </div>)}
         </div>
 
-        <div className="text-center">
+        <div className="text-center mt-2">
           <Link to="/ecosystem" className="inline-flex items-center gap-2 bg-proximanova-blue text-white px-6 py-3 rounded-md hover:bg-proximanova-blue/90 transition-colors">
-            Ver detalhes do ecossistema
+            Saiba mais sobre nosso ecossistema
             <ArrowRight className="h-5 w-5" />
           </Link>
         </div>
