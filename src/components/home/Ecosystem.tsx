@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Layers, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -103,7 +104,7 @@ const Ecosystem = () => {
                 onMouseEnter={() => setActiveComponent(index)} 
                 onMouseLeave={() => setActiveComponent(null)}
               >
-                  <Card className="w-full h-full rounded-full overflow-hidden border-4 border-white hover:border-proximanova-blue transition-all duration-300">
+                  <Card className="w-full h-full rounded-full overflow-hidden border-6 border-transparent hover:border-proximanova-blue transition-all duration-300">
                     <div className="relative w-full h-full flex flex-col items-center justify-center">
                       <div className="absolute inset-0">
                         <img 
@@ -115,7 +116,7 @@ const Ecosystem = () => {
                             target.src = "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d";
                           }} 
                         />
-                        <div className="absolute inset-0 bg-proximanova-blue/60 group-hover:bg-proximanova-blue/80 transition-colors duration-300"></div>
+                        <div className="absolute inset-0 bg-transparent group-hover:bg-proximanova-blue/80 transition-colors duration-300"></div>
                       </div>
                       <div className="relative z-10 text-white text-center p-2 md:p-3 flex flex-col justify-center h-full">
                         <h3 className="text-base font-bold whitespace-pre-wrap">{component.title}</h3>
