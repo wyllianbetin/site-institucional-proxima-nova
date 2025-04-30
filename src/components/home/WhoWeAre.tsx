@@ -106,23 +106,23 @@ O sucesso das suas vendas online começa aqui.</p>
             <div className="h-24 w-40 mx-auto rounded-lg flex items-center justify-center mb-4 shadow-sm border border-gray-200 transition-all hover:shadow-md bg-zinc-50">
               <span className="text-3xl font-bold text-proximanova-blue">+{yearsCount}</span>
             </div>
-            <h3 className="text-xl font-semibold mb-2">Anos de Experiência</h3>
+            <h3 className="text-xl font-semibold mb-2 text-proximanova-blue">Anos de Experiência</h3>
             <p className="text-gray-600">Estamos desde 2020 ajudando empresas a venderem online através do Mercado Livre</p>
           </div>
           
           <div className="text-center">
-            <div className="h-24 w-40 mx-auto rounded-lg flex items-center justify-center mb-4 shadow-sm border border-gray-200 transition-all hover:shadow-md bg-gray-50">
+            <div className="h-24 w-40 mx-auto rounded-lg flex items-center justify-center mb-4 shadow-sm border border-gray-200 transition-all hover:shadow-md bg-zinc-50">
               <span className="text-3xl font-bold text-proximanova-blue">+{businessesCount}</span>
             </div>
-            <h3 className="text-xl font-semibold mb-2">Negócios Transformados</h3>
+            <h3 className="text-xl font-semibold mb-2 text-proximanova-blue">Negócios Transformados</h3>
             <p className="text-gray-600">Já ajudamos dezenas de negócios do varejo tradicional a se tornarem lojistas digitais</p>
           </div>
           
           <div className="text-center">
-            <div className="h-24 w-40 mx-auto rounded-lg flex items-center justify-center mb-4 shadow-sm border border-gray-200 transition-all hover:shadow-md bg-gray-50">
+            <div className="h-24 w-40 mx-auto rounded-lg flex items-center justify-center mb-4 shadow-sm border border-gray-200 transition-all hover:shadow-md bg-zinc-50">
               <span className="text-3xl font-bold text-proximanova-blue">+{gmvCount}M</span>
             </div>
-            <h3 className="text-xl font-semibold mb-2">De GMV Bruto</h3>
+            <h3 className="text-xl font-semibold mb-2 text-proximanova-blue">De GMV Bruto</h3>
             <p className="text-gray-600">Mais de R$50 milhões faturados anualmente pelos nossos clientes sob nossa gestão</p>
           </div>
         </div>
