@@ -1,25 +1,23 @@
-
 import React, { useState, useEffect } from 'react';
 import { Users } from 'lucide-react';
-
 const WhoWeAre = () => {
   // Estados para controlar a contagem de cada número
   const [yearsCount, setYearsCount] = useState(0);
   const [businessesCount, setBusinessesCount] = useState(0);
   const [gmvCount, setGmvCount] = useState(0);
-  
+
   // Valores finais para cada contador
   const finalYears = 5;
   const finalBusinesses = 60;
   const finalGMV = 50;
-  
+
   // Efeito para realizar a animação de contagem
   useEffect(() => {
     // Duração da animação em milissegundos
     const animationDuration = 2000;
-    
+
     // Para verificar se o elemento está visível na tela
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           // Contador de anos
@@ -33,7 +31,7 @@ const WhoWeAre = () => {
               requestAnimationFrame(animateYears);
             }
           }
-          
+
           // Contador de negócios
           let businessesStartTime: number;
           function animateBusinesses(timestamp: number) {
@@ -45,7 +43,7 @@ const WhoWeAre = () => {
               requestAnimationFrame(animateBusinesses);
             }
           }
-          
+
           // Contador de GMV
           let gmvStartTime: number;
           function animateGMV(timestamp: number) {
@@ -57,30 +55,31 @@ const WhoWeAre = () => {
               requestAnimationFrame(animateGMV);
             }
           }
-          
+
           // Iniciar as animações
           requestAnimationFrame(animateYears);
           requestAnimationFrame(animateBusinesses);
           requestAnimationFrame(animateGMV);
-          
+
           // Parar de observar após iniciar as animações
           observer.disconnect();
         }
       });
-    }, { threshold: 0.2 });
-    
+    }, {
+      threshold: 0.2
+    });
+
     // Elemento a ser observado
     const statsSection = document.querySelector('.stats-section');
     if (statsSection) {
       observer.observe(statsSection);
     }
-    
+
     // Limpar o observador ao desmontar o componente
     return () => {
       observer.disconnect();
     };
   }, []);
-
   return <section className="section bg-white">
       <div className="container mx-auto">
         <div className="flex flex-col items-center text-center mb-12">
@@ -104,7 +103,7 @@ O sucesso das suas vendas online começa aqui.</p>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 stats-section">
           <div className="text-center">
-            <div className="h-24 w-40 mx-auto rounded-lg bg-gray-100 flex items-center justify-center mb-4 shadow-sm border border-gray-200 transition-all hover:shadow-md">
+            <div className="h-24 w-40 mx-auto rounded-lg flex items-center justify-center mb-4 shadow-sm border border-gray-200 transition-all hover:shadow-md bg-zinc-50">
               <span className="text-3xl font-bold text-proximanova-blue">+{yearsCount}</span>
             </div>
             <h3 className="text-xl font-semibold mb-2">Anos de Experiência</h3>
@@ -112,7 +111,7 @@ O sucesso das suas vendas online começa aqui.</p>
           </div>
           
           <div className="text-center">
-            <div className="h-24 w-40 mx-auto rounded-lg bg-gray-100 flex items-center justify-center mb-4 shadow-sm border border-gray-200 transition-all hover:shadow-md">
+            <div className="h-24 w-40 mx-auto rounded-lg flex items-center justify-center mb-4 shadow-sm border border-gray-200 transition-all hover:shadow-md bg-gray-50">
               <span className="text-3xl font-bold text-proximanova-blue">+{businessesCount}</span>
             </div>
             <h3 className="text-xl font-semibold mb-2">Negócios Transformados</h3>
@@ -120,7 +119,7 @@ O sucesso das suas vendas online começa aqui.</p>
           </div>
           
           <div className="text-center">
-            <div className="h-24 w-40 mx-auto rounded-lg bg-gray-100 flex items-center justify-center mb-4 shadow-sm border border-gray-200 transition-all hover:shadow-md">
+            <div className="h-24 w-40 mx-auto rounded-lg flex items-center justify-center mb-4 shadow-sm border border-gray-200 transition-all hover:shadow-md bg-gray-50">
               <span className="text-3xl font-bold text-proximanova-blue">+{gmvCount}M</span>
             </div>
             <h3 className="text-xl font-semibold mb-2">De GMV Bruto</h3>
