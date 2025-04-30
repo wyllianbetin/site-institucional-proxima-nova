@@ -6,14 +6,14 @@ import CallToAction from '@/components/common/CallToAction';
 import { Star, ArrowRight } from 'lucide-react';
 const SuccessCases = () => {
   const successCases = [{
-    name: "TechStore",
-    industry: "Varejo de Eletrônicos",
-    challenge: "Uma loja de eletrônicos tradicional com queda no tráfego de clientes presenciais e aumento da concorrência de varejistas online.",
-    solution: "Programa de Lojista Digital com suporte completo de implementação.",
-    results: ["300% de aumento nas vendas totais em 6 meses", "Base de clientes expandida além do mercado local", "Alcançou o status de Vendedor Ouro do Mercado Livre em menos de um ano"],
-    quote: "O programa da Próxima Nova transformou completamente nosso negócio. Agora estamos alcançando clientes em todo o Brasil e crescendo a cada mês.",
-    person: "Maria Silva, CEO",
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
+    name: "Casa do Chumbador",
+    industry: "Construção",
+    challenge: "A Casa do Chumbador é uma loja tradicional com décadas de atuação no mercado da construção civil, mas ainda não vendia através dos marketplaces. O desafio era iniciar as vendas no Mercado Livre do zero, validar o portifólio de produtos, tangibilizar as nuances técnicas dos itens para os anúncios, treinar a equipe interna e se posicionar com uma loja referência e especializada no nicho de fixações.",
+    solution: "Programa Lojista Digital",
+    results: ["Conquista da Medalha de Mercado Líder em 6 meses", "Selo Loja Oficial", "Ativação do Full", "Vendas todos os dias"],
+    quote: "Sempre tivemos uma loja física muito forte, mas sabíamos que precisávamos entrar no mundo digital. A Próxima Nova nos ajudou a estruturar tudo. Em poucos meses, conquistamos a medalha de MercadoLíder e estamos expandindo nossa operação graças ao trabalho deles.",
+    person: "Sócrates, sócio e gestor",
+    image: "https://raw.githubusercontent.com/wyllianbetin/site-institucional-proxima-nova/refs/heads/main/public/casodesucesso_casadochumbador.webp"
   }, {
     name: "Home Decor Shop",
     industry: "Casa & Decoração",
