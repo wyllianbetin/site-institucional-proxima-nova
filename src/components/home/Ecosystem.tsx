@@ -1,13 +1,10 @@
-
 import React, { useState } from 'react';
 import { Layers, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Card } from "@/components/ui/card";
-
 const Ecosystem = () => {
   const [activeComponent, setActiveComponent] = useState<number | null>(null);
-  
   const ecosystemComponents = [{
     title: "Educação",
     description: "Treinamos você e sua equipe para dominar as vendas online e crescer no digital.",
@@ -44,8 +41,7 @@ const Ecosystem = () => {
       y
     };
   };
-  
-  return <section className="section bg-[#f5f4e2] py-16 md:py-24">
+  return <section className="section py-16 md:py-24 bg-gray-50">
       <div className="container mx-auto">
         <div className="flex flex-col items-center text-center mb-4">
           <div className="bg-proximanova-blue/10 p-3 rounded-full mb-4">
