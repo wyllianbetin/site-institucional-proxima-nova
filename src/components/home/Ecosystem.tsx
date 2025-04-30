@@ -104,7 +104,7 @@ const Ecosystem = () => {
                 onMouseEnter={() => setActiveComponent(index)} 
                 onMouseLeave={() => setActiveComponent(null)}
               >
-                  <Card className="w-full h-full rounded-full overflow-hidden border-4 border-white hover:border-proximanova-blue transition-all duration-300">
+                  <Card className="w-full h-full rounded-full overflow-hidden border-[6px] border-white hover:border-proximanova-blue transition-all duration-300">
                     <div className="relative w-full h-full flex flex-col items-center justify-center">
                       <div className="absolute inset-0">
                         <img 
@@ -120,8 +120,8 @@ const Ecosystem = () => {
                         <div className="absolute inset-0 bg-transparent group-hover:bg-proximanova-blue/80 transition-colors duration-300"></div>
                       </div>
                       <div className="relative z-10 text-white text-center p-2 md:p-3 flex flex-col justify-center h-full">
-                        {/* Dark gradient background for title readability */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent group-hover:bg-transparent transition-colors duration-300"></div>
+                        {/* Blue gradient background for title readability */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-proximanova-blue/70 via-proximanova-blue/40 to-transparent group-hover:bg-transparent transition-colors duration-300"></div>
                         <h3 className="relative z-10 text-base font-bold whitespace-pre-wrap text-white drop-shadow-md">{component.title}</h3>
                         <p className="relative z-10 text-xs md:text-[0.7rem] mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">{component.description}</p>
                       </div>
@@ -140,7 +140,7 @@ const Ecosystem = () => {
               const target = e.target as HTMLImageElement;
               target.src = "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d";
             }} />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent flex flex-col items-center justify-center p-3 text-center">
+                <div className="absolute inset-0 bg-gradient-to-t from-proximanova-blue/70 via-proximanova-blue/40 to-transparent flex flex-col items-center justify-center p-3 text-center">
                   <h3 className="text-sm font-bold text-white drop-shadow-md whitespace-pre-wrap">{component.title}</h3>
                 </div>
               </div>
