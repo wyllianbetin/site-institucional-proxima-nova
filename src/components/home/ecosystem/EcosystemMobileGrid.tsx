@@ -12,7 +12,7 @@ interface EcosystemMobileGridProps {
 
 const EcosystemMobileGrid = ({ ecosystemComponents }: EcosystemMobileGridProps) => {
   return (
-    <div className="md:hidden grid grid-cols-2 gap-4 mb-4">
+    <div className="md:hidden grid grid-cols-2 gap-4 mb-6">
       {ecosystemComponents.map((component, index) => (
         <EcosystemMobileComponent key={index} component={component} index={index} />
       ))}
