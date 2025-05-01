@@ -8,17 +8,17 @@ const Solutions = () => {
   const solutions = [{
     title: "Curso + Consultoria",
     description: "Treinamento e consultoria para quem quer iniciar no Mercado Livre com suporte e acompanhamento durante 6 meses.",
-    link: "/solutions#consulting",
+    link: "/solutions",
     image: "/consultoria.jpg"
   }, {
     title: "Programa Lojista Digital",
     description: "Implementamos e cuidamos da operação de vendas online para empresas que não têm tempo, equipe ou experiência em marketplaces.",
-    link: "/solutions#digital-retailer",
+    link: "/solutions",
     image: "/programa_lojista_digital.jpg"
   }, {
     title: "Programa Seller",
     description: "Aceleramos sellers que já vendem online, cuidando, otimizando e escalando os resultados no Mercado Livre.",
-    link: "/solutions#seller-program",
+    link: "/solutions",
     image: "/programa_seller.jpg"
   }];
 
@@ -39,12 +39,12 @@ Confira nossas soluções!</p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {solutions.map((solution, index) => (
             <Link key={index} to={solution.link} className="block">
-              <Card className="overflow-hidden border-0 shadow-lg transition-all duration-300 h-full hover:shadow-xl hover:scale-[1.02] border border-gray-100">
+              <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
                 <div className="h-48 relative overflow-hidden">
                   <img 
                     src={solution.image} 
                     alt={solution.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                   />
                 </div>
                 <CardContent className="pt-6">
@@ -52,7 +52,7 @@ Confira nossas soluções!</p>
                   <p className="text-gray-600 mb-4">{solution.description}</p>
                 </CardContent>
                 <CardFooter className="pt-0 flex justify-center">
-                  <span className="saiba-mais-button inline-flex items-center text-proximanova-blue font-medium transition-colors duration-300">
+                  <span className="inline-flex items-center text-proximanova-blue font-medium hover:text-proximanova-yellow transition-colors">
                     Saiba mais
                     <ArrowRight className="h-4 w-4 ml-2" />
                   </span>
@@ -68,19 +68,6 @@ Confira nossas soluções!</p>
           </Link>
         </div>
       </div>
-
-      <style>
-        {`
-          .saiba-mais-button {
-            color: #004762;
-            transition: color 0.3s ease;
-          }
-          
-          .saiba-mais-button:hover {
-            color: #f8d14d !important;
-          }
-        `}
-      </style>
     </section>;
 };
 

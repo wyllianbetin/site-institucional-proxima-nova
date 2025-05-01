@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import Hero from '@/components/home/Hero';
 import WhoWeAre from '@/components/home/WhoWeAre';
 import Solutions from '@/components/home/Solutions';
@@ -10,6 +10,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import WhatsAppButton from '@/components/common/WhatsAppButton';
 import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const Index = () => {
   const location = useLocation();
