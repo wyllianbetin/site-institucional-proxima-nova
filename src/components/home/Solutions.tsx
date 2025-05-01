@@ -39,12 +39,12 @@ Confira nossas soluções!</p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {solutions.map((solution, index) => (
             <Link key={index} to={solution.link} className="block">
-              <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
+              <Card className="overflow-hidden border-0 shadow-lg transition-all duration-300 h-full card-neon-effect">
                 <div className="h-48 relative overflow-hidden">
                   <img 
                     src={solution.image} 
                     alt={solution.title}
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-500"
                   />
                 </div>
                 <CardContent className="pt-6">
@@ -68,6 +68,52 @@ Confira nossas soluções!</p>
           </Link>
         </div>
       </div>
+
+      <style>
+        {`
+          .card-neon-effect {
+            position: relative;
+            transition: all 0.3s ease;
+          }
+          
+          .card-neon-effect:hover {
+            box-shadow: 
+              0 0 5px rgba(155, 135, 245, 0.5),
+              0 0 15px rgba(155, 135, 245, 0.5),
+              0 0 30px rgba(155, 135, 245, 0.5);
+            transform: translateY(-5px);
+          }
+          
+          .card-neon-effect::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 0.5rem;
+            padding: 2px;
+            background: linear-gradient(
+              135deg, 
+              #9b87f5, 
+              #D946EF, 
+              #1EAEDB, 
+              #8B5CF6
+            );
+            -webkit-mask: 
+              linear-gradient(#fff 0 0) content-box, 
+              linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+          }
+          
+          .card-neon-effect:hover::before {
+            opacity: 1;
+          }
+        `}
+      </style>
     </section>;
 };
 
