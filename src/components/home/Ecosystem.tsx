@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Layers, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -104,7 +103,7 @@ const Ecosystem = () => {
                 onMouseEnter={() => setActiveComponent(index)} 
                 onMouseLeave={() => setActiveComponent(null)}
               >
-                  <Card className="w-full h-full rounded-full overflow-hidden border-[6px] border-white hover:border-proximanova-blue transition-all duration-300">
+                  <Card className="w-full h-full rounded-full overflow-hidden border-[6px] border-white hover:border-white transition-all duration-300">
                     <div className="relative w-full h-full flex flex-col items-center justify-center">
                       <div className="absolute inset-0">
                         <img 
