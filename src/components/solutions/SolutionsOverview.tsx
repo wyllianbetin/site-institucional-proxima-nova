@@ -1,12 +1,13 @@
-
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+
 interface SolutionCardProps {
   title: string;
   description: string;
   onClick: () => void;
   imagePath?: string;
 }
+
 const SolutionCard = ({
   title,
   description,
@@ -30,11 +31,13 @@ const SolutionCard = ({
       </button>
     </div>;
 };
+
 interface SolutionsOverviewProps {
   onScrollToConsulting: () => void;
   onScrollToRetailer: () => void;
   onScrollToSeller: () => void;
 }
+
 const SolutionsOverview = ({
   onScrollToConsulting,
   onScrollToRetailer,
@@ -43,6 +46,14 @@ const SolutionsOverview = ({
   return <section className="section bg-white">
       <div className="container mx-auto">
         <div className="text-center mb-16">
+          {/* Partner logo added above the title */}
+          <div className="flex justify-center mb-6">
+            <img 
+              src="/logo_parceiro_certificado_mercadolivre.png" 
+              alt="Parceiro Oficial Certificado Mercado Livre" 
+              className="h-20 object-contain"
+            />
+          </div>
           <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue mb-4">Soluções para todas as etapas da sua jornada no Mercado Livre</h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">Não importa se você ainda não vende online ou se já vende e quer melhorar os resultados, temos a solução certa para você.</p>
         </div>
@@ -57,4 +68,5 @@ const SolutionsOverview = ({
       </div>
     </section>;
 };
+
 export default SolutionsOverview;
