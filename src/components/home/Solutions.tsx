@@ -1,5 +1,5 @@
 
-import React, { useState, useRef, useEffect } from 'react';
+import React from 'react';
 import { Briefcase, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
@@ -44,7 +44,7 @@ Confira nossas soluções!</p>
                   <img 
                     src={solution.image} 
                     alt={solution.title}
-                    className="w-full h-full object-cover transition-transform duration-500"
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 <CardContent className="pt-6">
@@ -79,9 +79,8 @@ Confira nossas soluções!</p>
           .card-neon-effect:hover {
             box-shadow: 
               0 0 5px rgba(155, 135, 245, 0.5),
-              0 0 15px rgba(155, 135, 245, 0.5),
-              0 0 30px rgba(155, 135, 245, 0.5);
-            transform: translateY(-5px);
+              0 0 15px rgba(155, 135, 245, 0.5);
+            transform: scale(1.03);
           }
           
           .card-neon-effect::before {
