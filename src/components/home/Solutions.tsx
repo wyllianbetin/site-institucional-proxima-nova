@@ -8,17 +8,17 @@ const Solutions = () => {
   const solutions = [{
     title: "Curso + Consultoria",
     description: "Treinamento e consultoria para quem quer iniciar no Mercado Livre com suporte e acompanhamento durante 6 meses.",
-    link: "/solutions",
+    link: "/solutions#consulting",
     image: "/consultoria.jpg"
   }, {
     title: "Programa Lojista Digital",
     description: "Implementamos e cuidamos da operação de vendas online para empresas que não têm tempo, equipe ou experiência em marketplaces.",
-    link: "/solutions",
+    link: "/solutions#digital-retailer",
     image: "/programa_lojista_digital.jpg"
   }, {
     title: "Programa Seller",
     description: "Aceleramos sellers que já vendem online, cuidando, otimizando e escalando os resultados no Mercado Livre.",
-    link: "/solutions",
+    link: "/solutions#seller-program",
     image: "/programa_seller.jpg"
   }];
 
@@ -52,7 +52,7 @@ Confira nossas soluções!</p>
                   <p className="text-gray-600 mb-4">{solution.description}</p>
                 </CardContent>
                 <CardFooter className="pt-0 flex justify-center">
-                  <span className="inline-flex items-center text-proximanova-blue font-medium hover:text-proximanova-yellow transition-colors">
+                  <span className="inline-flex items-center text-proximanova-blue font-medium hover:text-proximanova-yellow transition-colors saiba-mais">
                     Saiba mais
                     <ArrowRight className="h-4 w-4 ml-2" />
                   </span>
@@ -78,8 +78,8 @@ Confira nossas soluções!</p>
           
           .card-neon-effect:hover {
             box-shadow: 
-              0 0 5px rgba(155, 135, 245, 0.5),
-              0 0 15px rgba(155, 135, 245, 0.5);
+              0 0 5px rgba(200, 83, 27, 0.6),
+              0 0 15px rgba(212, 105, 91, 0.5);
             transform: scale(1.03);
           }
           
@@ -94,10 +94,10 @@ Confira nossas soluções!</p>
             padding: 2px;
             background: linear-gradient(
               135deg, 
-              #9b87f5, 
-              #D946EF, 
-              #1EAEDB, 
-              #8B5CF6
+              #F1C94B, 
+              #C8531B, 
+              #D4695B, 
+              #F1C94B
             );
             -webkit-mask: 
               linear-gradient(#fff 0 0) content-box, 
@@ -110,6 +110,10 @@ Confira nossas soluções!</p>
           
           .card-neon-effect:hover::before {
             opacity: 1;
+          }
+          
+          .saiba-mais:hover {
+            color: #f8d14d !important;
           }
         `}
       </style>
