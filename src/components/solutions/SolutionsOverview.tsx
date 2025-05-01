@@ -47,6 +47,15 @@ const SolutionsOverview = ({
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">Não importa se você ainda não vende online ou se já vende e quer melhorar os resultados, temos a solução certa para você.</p>
         </div>
         
+        {/* Added partner logo below the intro paragraph */}
+        <div className="flex justify-center mb-10 mt-6">
+          <img 
+            src="/logo_parceiro_certificado_mercadolivre.png" 
+            alt="Parceiro Oficial Certificado Mercado Livre" 
+            className="h-20 object-contain"
+          />
+        </div>
+        
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
           <SolutionCard title="Curso + Consultoria" description="Treinamento e consultoria para quem quer iniciar no Mercado Livre com suporte e acompanhamento durante 6 meses." onClick={onScrollToConsulting} imagePath="/consultoria.jpg" />
           
