@@ -52,7 +52,7 @@ Confira nossas soluções!</p>
                   <p className="text-gray-600 mb-4">{solution.description}</p>
                 </CardContent>
                 <CardFooter className="pt-0 flex justify-center">
-                  <span className="inline-flex items-center text-proximanova-blue font-medium hover:text-proximanova-yellow transition-colors saiba-mais">
+                  <span className="inline-flex items-center text-proximanova-blue font-medium transition-colors duration-300 saiba-mais-btn">
                     Saiba mais
                     <ArrowRight className="h-4 w-4 ml-2" />
                   </span>
@@ -78,8 +78,8 @@ Confira nossas soluções!</p>
           
           .card-neon-effect:hover {
             box-shadow: 
-              0 0 5px rgba(200, 83, 27, 0.6),
-              0 0 15px rgba(212, 105, 91, 0.5);
+              0 0 5px rgba(200, 200, 201, 0.6),
+              0 0 15px rgba(159, 158, 161, 0.5);
             transform: scale(1.03);
           }
           
@@ -94,10 +94,10 @@ Confira nossas soluções!</p>
             padding: 2px;
             background: linear-gradient(
               135deg, 
-              #F1C94B, 
-              #C8531B, 
-              #D4695B, 
-              #F1C94B
+              #FFFFFF, 
+              #C8C8C9, 
+              #9F9EA1, 
+              #aaadb0
             );
             -webkit-mask: 
               linear-gradient(#fff 0 0) content-box, 
@@ -112,7 +112,12 @@ Confira nossas soluções!</p>
             opacity: 1;
           }
           
-          .saiba-mais:hover {
+          .saiba-mais-btn {
+            color: #004762;
+            transition: color 0.3s ease;
+          }
+          
+          .saiba-mais-btn:hover {
             color: #f8d14d !important;
           }
         `}
