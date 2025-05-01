@@ -42,17 +42,22 @@ const SolutionsOverview = ({
 }: SolutionsOverviewProps) => {
   return <section className="section bg-white">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <h2 className="text-2xl md:text-3xl font-bold text-proximanova-blue mb-4">Soluções para todas as etapas da sua jornada no Mercado Livre</h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">Não importa se você ainda não vende online ou se já vende e quer melhorar os resultados, temos a solução certa para você.</p>
         </div>
         
-        {/* Added partner logo below the intro paragraph */}
-        <div className="flex justify-center mb-10 mt-6">
+        {/* Partner logos with increased size and added second logo */}
+        <div className="flex justify-center items-center space-x-8 mb-10 mt-2">
           <img 
             src="/logo_parceiro_certificado_mercadolivre.png" 
             alt="Parceiro Oficial Certificado Mercado Livre" 
-            className="h-20 object-contain"
+            className="h-24 object-contain"
+          />
+          <img 
+            src="/selo_consultoria_certificada.png" 
+            alt="Selo Consultoria Certificada" 
+            className="h-24 object-contain"
           />
         </div>
         
