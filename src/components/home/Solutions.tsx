@@ -39,7 +39,7 @@ Confira nossas soluções!</p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {solutions.map((solution, index) => (
             <Link key={index} to={solution.link} className="block">
-              <Card className="overflow-hidden border-0 shadow-lg transition-all duration-300 h-full card-neon-effect">
+              <Card className="overflow-hidden border-0 shadow-lg transition-all duration-300 h-full hover:shadow-xl hover:scale-[1.02] border border-gray-100">
                 <div className="h-48 relative overflow-hidden">
                   <img 
                     src={solution.image} 
@@ -52,7 +52,7 @@ Confira nossas soluções!</p>
                   <p className="text-gray-600 mb-4">{solution.description}</p>
                 </CardContent>
                 <CardFooter className="pt-0 flex justify-center">
-                  <span className="inline-flex items-center text-proximanova-blue font-medium transition-colors duration-300 saiba-mais-btn">
+                  <span className="saiba-mais-button inline-flex items-center text-proximanova-blue font-medium transition-colors duration-300">
                     Saiba mais
                     <ArrowRight className="h-4 w-4 ml-2" />
                   </span>
@@ -71,53 +71,12 @@ Confira nossas soluções!</p>
 
       <style>
         {`
-          .card-neon-effect {
-            position: relative;
-            transition: all 0.3s ease;
-          }
-          
-          .card-neon-effect:hover {
-            box-shadow: 
-              0 0 5px rgba(200, 200, 201, 0.6),
-              0 0 15px rgba(159, 158, 161, 0.5);
-            transform: scale(1.03);
-          }
-          
-          .card-neon-effect::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            border-radius: 0.5rem;
-            padding: 2px;
-            background: linear-gradient(
-              135deg, 
-              #FFFFFF, 
-              #C8C8C9, 
-              #9F9EA1, 
-              #aaadb0
-            );
-            -webkit-mask: 
-              linear-gradient(#fff 0 0) content-box, 
-              linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-          }
-          
-          .card-neon-effect:hover::before {
-            opacity: 1;
-          }
-          
-          .saiba-mais-btn {
+          .saiba-mais-button {
             color: #004762;
             transition: color 0.3s ease;
           }
           
-          .saiba-mais-btn:hover {
+          .saiba-mais-button:hover {
             color: #f8d14d !important;
           }
         `}
