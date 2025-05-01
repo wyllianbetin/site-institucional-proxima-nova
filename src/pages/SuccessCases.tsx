@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import WhatsAppButton from '@/components/common/WhatsAppButton';
 import CallToAction from '@/components/common/CallToAction';
 import { Star, ArrowRight, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useLocation } from 'react-router-dom';
+
 const SuccessCases = () => {
+  const location = useLocation();
+  
+  useEffect(() => {
+    // Scroll to top on page load
+    window.scrollTo(0, 0);
+  }, []);
+
   const successCases = [{
     name: "Casa do Chumbador",
     industry: "Construção",
@@ -37,6 +46,7 @@ const SuccessCases = () => {
     image: "https://raw.githubusercontent.com/wyllianbetin/site-institucional-proxima-nova/refs/heads/main/public/casodesucesso_topspin.webp",
     url: "https://www.mercadolivre.com.br/pagina/topspin"
   }];
+  
   return <>
       <Header />
       

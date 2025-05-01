@@ -9,8 +9,17 @@ import CallToAction from '@/components/common/CallToAction';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import WhatsAppButton from '@/components/common/WhatsAppButton';
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const Index = () => {
+  const location = useLocation();
+  
+  useEffect(() => {
+    // Scroll to top on page load
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Header />

@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import WhatsAppButton from '@/components/common/WhatsAppButton';
@@ -9,8 +8,16 @@ import EcosystemHeader from '@/components/ecosystem/EcosystemHeader';
 import EcosystemOverview from '@/components/ecosystem/EcosystemOverview';
 import EcosystemDetailComponents from '@/components/ecosystem/EcosystemDetailComponents';
 import { EcosystemComponentType } from '@/types/ecosystem';
+import { useLocation } from 'react-router-dom';
 
 const Ecosystem = () => {
+  const location = useLocation();
+  
+  useEffect(() => {
+    // Scroll to top on page load
+    window.scrollTo(0, 0);
+  }, []);
+
   const ecosystemComponents: EcosystemComponentType[] = [{
     id: "educacao",
     title: "Educação",
@@ -30,8 +37,8 @@ const Ecosystem = () => {
       </div>,
     imagePath: "/ecossistema_educacao.webp"
   }, {
-    id: "tecnologia",
     title: "Tecnologia",
+    id: "tecnologia",
     icon: <Monitor className="h-6 w-6 text-proximanova-blue" />,
     description: "Conectamos e integramos seu negócio a sistemas inteligentes para controlar e escalar suas vendas.",
     features: ["Sistema de Controle de Estoque", "Sistema de Separação de Pedidos", "Sistema de Integração com Marketplaces", "Ferramenta de Pesquisa de Mercado", "Plataforma de Gerenciamento de Publicidade", "Plataforma de Automação de Atendimento", "Plataforma de Conciliação Financeira"],

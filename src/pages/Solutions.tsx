@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -16,7 +15,10 @@ const Solutions = () => {
   const sellerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Handle scroll to section based on URL hash
+    // Default to scrolling to top
+    window.scrollTo(0, 0);
+    
+    // Then handle scroll to section based on URL hash if needed
     const hash = location.hash;
     
     if (hash === '#consulting' && consultingRef.current) {
