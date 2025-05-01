@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Layers } from 'lucide-react';
+import { Layers, ArrowRight } from 'lucide-react';
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { EcosystemComponentType } from '@/types/ecosystem';
 
@@ -39,9 +39,10 @@ const EcosystemOverview = ({
                   const target = e.target as HTMLImageElement;
                   target.src = "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d";
                 }} />
-                    <div className="absolute inset-0 bg-proximanova-blue/60 flex items-center justify-center p-3">
-                      <a href={`#${component.id}`} className="w-full h-full flex items-center justify-center">
+                    <div className="absolute inset-0 bg-gradient-to-t from-proximanova-blue/70 via-proximanova-blue/40 to-transparent flex items-center justify-center p-3">
+                      <a href={`#${component.id}`} className="w-full h-full flex flex-col items-center justify-center">
                         <h3 className="text-white text-center font-semibold text-sm md:text-base">{component.title}</h3>
+                        <ArrowRight className="h-4 w-4 text-white mt-2 opacity-70" />
                       </a>
                     </div>
                   </AspectRatio>

@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -27,7 +28,18 @@ const Ecosystem = () => {
     extraContent: <div className="mt-6">
         <h4 className="font-semibold text-lg mb-4">Grade do Curso</h4>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-          {["Módulo 1 - Ecossistema Meli", "Módulo 2 - Reputação e Indicadores", "Módulo 3 - Cadastro de Anúncios", "Módulo 4 - Pesquisa de Mercado", "Módulo 5 - Estratégias de Vendas", "Módulo 6 - O Algoritmo do Mercado Livre", "Módulo 7 - Pré-venda e Pós-venda", "Módulo 8 - Mercado Ads e Central de Promoções", "Módulo 9 - FULL", "Módulo 10 - Plataformas e Integradores"].map((module, i) => <div key={i} className="flex items-center p-2 bg-gray-50 rounded-md">
+          {[
+            <><strong>Módulo 1:</strong> Ecossistema Meli</>, 
+            <><strong>Módulo 2:</strong> Reputação e Indicadores</>, 
+            <><strong>Módulo 3:</strong> Cadastro de Anúncios</>, 
+            <><strong>Módulo 4:</strong> Pesquisa de Mercado</>, 
+            <><strong>Módulo 5:</strong> Estratégias de Vendas</>, 
+            <><strong>Módulo 6:</strong> O Algoritmo do Mercado Livre</>, 
+            <><strong>Módulo 7:</strong> Pré-venda e Pós-venda</>, 
+            <><strong>Módulo 8:</strong> Mercado Ads e Central de Promoções</>, 
+            <><strong>Módulo 9:</strong> FULL</>, 
+            <><strong>Módulo 10:</strong> Plataformas e Integradores</>
+          ].map((module, i) => <div key={i} className="flex items-center p-2 bg-gray-50 rounded-md">
               <div className="bg-proximanova-yellow/10 p-1.5 rounded-full mr-2">
                 <div className="h-2 w-2 bg-proximanova-yellow rounded-full"></div>
               </div>
@@ -68,7 +80,7 @@ const Ecosystem = () => {
     id: "operacao",
     title: "Operação",
     icon: <Layers className="h-6 w-6 text-proximanova-blue" />,
-    description: "Realizamos o cadastro, revisão e otimização de anúncios. Cuidamos do atendimento pré e pós-venda. Gerenciamos campanhas de Ads, Promoções e muito mais.",
+    description: "Cuidamos das demandas diárias: como cadastro de produtos, otimização de anúncios, campanhas de ads, atendimento ao comprador e muito mais.",
     features: ["Cadastro de anúncios", "Revisão e otimização de anúncios", "Gestão de Catálogo", "Gestão de Ads", "Gestão de Promoções", "Gestão de FULL", "Gestão da Minha Página", "Atendimento Pré-Venda", "Atendimento Pós-Venda"],
     imagePath: "/ecossistema_operacao.webp"
   }, {
